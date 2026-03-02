@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Personal portfolio website" />
+  <title>Eman Ansar | Portfolio</title>
+  <meta name="description" content="Research portfolio: computer vision, NLP, ML systems, and writing." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#">Your Name</a>
+      <a class="logo" href="#">Eman Ansar</a>
       <nav class="nav">
         <a href="#about">About</a>
+        <a href="#academic">Academic</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -22,25 +24,17 @@
 
   <main>
     <section class="hero">
-          <section id="academic" class="section alt">
-            <div class="container">
-              <h2>Academic Background</h2>
-              <p>
-                Briefly describe your research interests, education, and any academic achievements or affiliations here. You can list degrees, institutions, research areas, and notable publications or awards.
-              </p>
-              <ul class="academics">
-                <li><strong>PhD Student</strong> – University Name (2025–Present)</li>
-                <li><strong>MSc in Subject</strong> – University Name (2023–2025)</li>
-                <li><strong>Research Focus:</strong> Your main research topics or interests</li>
-              </ul>
-            </div>
-          </section>
-      <div class="container hero-inner">
+      <div class="container hero-inner hero-with-photo">
+        <div class="hero-photo">
+          <!-- Put your image in: assets/img/profile.png -->
+          <img src="assets/img/profile.png" alt="Photo of Eman Ansar" class="profile-pic profile-pic-large left-align" />
+        </div>
+
         <div>
-          <p class="eyebrow">Aviation • Tech • Management</p>
-          <h1>Hi, I’m <span class="accent">Your Name</span>.</h1>
+          <p class="eyebrow">Research • Computer Vision • HCI • NLP • ML Systems</p>
+          <h1>Hi, I’m <span class="accent">Eman Ansar</span>.</h1>
           <p class="lead">
-            I build things, learn fast, and like solving real problems. This is my personal portfolio.
+            I’m an M.Phil. (Research) student in Computer Science & Engineering at HKUST, working at the intersection of computer vision, HCI, and visualization. My current research explores cognitive and embodied patterns in expert chess, alongside work in Arabic NLP and resource-efficient speech language models.
           </p>
           <div class="cta">
             <a class="btn" href="#projects">View Projects</a>
@@ -49,89 +43,292 @@
         </div>
 
         <div class="hero-card">
-          <div class="avatar" aria-hidden="true">YN</div>
+          <div class="avatar" aria-hidden="true">EA</div>
           <ul class="quickfacts">
-            <li><strong>Location:</strong> Qatar</li>
-            <li><strong>Email:</strong> you@example.com</li>
-            <li><strong>Focus:</strong> Aviation & Tech</li>
+            <li><strong>Location:</strong> Hong Kong / Qatar (home)</li>
+            <li><strong>Email:</strong> eansar@connect.ust.hk</li>
+            <li><strong>Current:</strong> DataVisards Lab, HKUST</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="academic" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Academic Background</h2>
+          <p class="prose">
+            My work lives where vision meets interaction. I study how people think, move, and make decisions, especially in high-skill settings like expert chess.
+            Sometimes that means building a computer vision pipeline. Sometimes it means designing a user study or a visualization that makes patterns obvious.
+            Along the way, I also work on Arabic NLP evaluation and on training speech and audio language models without burning a small planet of compute.
+          </p>
+        </div>
+
+        <div class="academic-layout">
+          <div>
+            <h3 class="minihead">Education</h3>
+            <ul class="academics">
+              <li class="entry">
+                <div class="entry-top">
+                  <strong>M.Phil. (Research), Computer Science & Engineering</strong>
+                  <span class="entry-meta">HKUST • Sep 2025 to May 2027 • CGPA 4.15/4.30</span>
+                </div>
+                <div class="entry-body">
+                  <span class="pill">Fully funded PGS</span>
+                  <p class="thesis">
+                    <span class="thesis-label">Thesis</span>
+                    <span class="paper-tag">Computer Vision Based Chess Analytics</span>
+                    <span class="thesis-rest">
+                      I use vision plus visualization to study embodied cognition and decision-making in expert play.
+                    </span>
+                  </p>
+                  <p class="muted">DataVisards Lab • Advisor: Dr. Arpit Narechania</p>
+                </div>
+              </li>
+
+              <li class="entry">
+                <div class="entry-top">
+                  <strong>BSc, Computer Science (Machine Learning concentration)</strong>
+                  <span class="entry-meta">Carnegie Mellon University • Sep 2021 to May 2025 • College Honors</span>
+                </div>
+                <div class="entry-body">
+                  <p class="thesis">
+                    <span class="thesis-label">Senior Honors Thesis</span>
+                    <span class="paper-tag">Optimizing Speech Language Models</span>
+                    <span class="thesis-rest">
+                      Focused on compute-aware pretraining and efficient representation learning.
+                    </span>
+                  </p>
+                  <p class="muted">ML & Signal Processing Lab • Advisor: Dr. Bhiksha Raj</p>
+                </div>
+              </li>
+
+              <li class="entry">
+                <div class="entry-top">
+                  <strong>A Levels</strong>
+                  <span class="entry-meta">Qatar • All schooling completed in Qatar</span>
+                </div>
+                <div class="entry-body">
+                  <p>4 A*s in Mathematics, Chemistry, Biology, and Physics.</p>
+                </div>
+              </li>
+
+              <li class="entry">
+                <div class="entry-top">
+                  <strong>Spanish Language Exchange Program</strong>
+                  <span class="entry-meta">Universidad de Salamanca • Summer 2023</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <aside>
+            <h3 class="minihead">Selected output</h3>
+            <ul class="outputs">
+              <li>
+                <strong>IEEE VCIP 2024</strong>
+                <span>Thermal feature descriptors for solar panel image stitching. First author, and I presented it solo.</span>
+              </li>
+              <li>
+                <strong>Arabic AES (under revision)</strong>
+                <span>Cross-lingual automated essay scoring that stays robust across prompts.</span>
+              </li>
+              <li>
+                <strong>Chess cognition (in preparation)</strong>
+                <span>A CHI manuscript on social and embodied signatures of thinking in chess.</span>
+              </li>
+              <li>
+                <strong>VerLM (arXiv)</strong>
+                <span>Explaining face verification using natural language.</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="container">
-        <h2>About</h2>
-        <p>
-          Write a short bio here: what you do, what you're learning, what you're aiming for, and what you enjoy building.
-        </p>
+    <h2>About</h2>
 
+    <div class="journal">
+
+      <p class="entry-date">Field Notes</p>
+
+      <p>
+        I’ve always liked lifting the lid.
+        Not just seeing the output, but asking what machinery is humming underneath.
+      </p>
+
+      <p>
+        Lately that machinery looks like vision pipelines, pose tracking, and identity graphs.
+        Sometimes it’s Arabic essays, where I’m less interested in the score and more interested in what the score thinks it sees.
+        Other days it’s speech models, and the quiet obsession becomes efficiency. How much compute is enough? How much is waste?
+      </p>
+
+      <p>
+        I care about cognition. About the small physical signals that leak out when someone is thinking.
+        A shoulder shift. A pause. A gaze that lingers half a second longer than expected.
+        Chess is perfect for this. It pretends to be about pieces. It’s really about the mind.
+      </p>
+
+      <p>
+        We live in a very image-forward world.
+        Scroll. Swipe. React.
+        I’m more interested in what sits underneath that.
+        Words. Attention. Reasoning. The invisible architecture of a thought.
+      </p>
+
+      <p>
+        If I could, I would skip the highlight reel and talk directly to the brain.
+        Since I can’t, I design studies.
+        I build models.
+        I get as close as the data allows.
+      </p>
+
+      <p>
+        I also teach.
+        There’s a specific moment I love — when something clicks for someone else.
+        It’s quiet. Almost imperceptible.
+        But you can see it.
+      </p>
+
+    </div>
         <div class="chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">GitHub</span>
-          <span class="chip">Aviation</span>
+          <span class="chip">Python</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">HCI</span>
+          <span class="chip">Visualization</span>
+          <span class="chip">NLP</span>
+          <span class="chip">ML Systems</span>
+          <span class="chip">OpenCV</span>
+          <span class="chip">Docker</span>
+          <span class="chip">SLURM</span>
+          <span class="chip">Azure</span>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section alt">
-          <section id="writing" class="section">
-            <div class="container">
-              <h2>Blogs & Poems</h2>
-              <p>Share your thoughts, research blogs, or creative writing here. Add links or text for your posts and poems.</p>
-              <div class="writing-list">
-                <article class="writing-item">
-                  <h3>Sample Blog Title</h3>
-                  <p>A short excerpt or description of your blog post or poem.</p>
-                  <a href="#" class="btn btn-ghost">Read More</a>
-                </article>
-                <!-- Add more blog/poem entries as needed -->
-              </div>
-            </div>
-          </section>
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
-          <p>Show 3–6 projects. Add links and short outcomes.</p>
+          <p>Selected work. Swap in your real links when you’re ready.</p>
         </div>
 
         <div class="grid">
           <article class="card">
-            <h3>Project One</h3>
-            <p>1–2 lines describing the project and the value it provides.</p>
+            <h3>CV-Based Chess Analytics (M.Phil. Thesis)</h3>
+            <p>
+              I combine livestream video, Stockfish-derived difficulty, and timing signals to study expert decision-making in chess.
+              I built a behavior pipeline with 3D pose and mesh estimation, plus identity tracking. Then I model movement signatures over time.
+            </p>
             <div class="tags">
-              <span>HTML</span><span>CSS</span><span>JS</span>
+              <span>CV</span><span>Pose/Mesh</span><span>Time-series</span><span>Multimodal</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Live</a>
+              <a href="#" target="_blank" rel="noreferrer">Paper (in prep)</a>
               <a href="#" target="_blank" rel="noreferrer">Code</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>Project Two</h3>
-            <p>What it does, what you learned, or the result.</p>
+            <h3>Prompt-Agnostic Arabic Automated Essay Scoring</h3>
+            <p>
+              I built a cross-prompt evaluation setup over QAES and CAST. I implemented PAIR-Net with prompt-conditioned cross-attention and caching,
+              and ALiF-Net for Arabic linguistic features. Then I ran augmentation experiments to push agreement closer to human scoring.
+            </p>
             <div class="tags">
-              <span>Python</span><span>Data</span>
+              <span>NLP</span><span>Arabic</span><span>Evaluation</span><span>Deep Learning</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Live</a>
+              <a href="#" target="_blank" rel="noreferrer">Preprint</a>
               <a href="#" target="_blank" rel="noreferrer">Code</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>Project Three</h3>
-            <p>Short description with a measurable detail if possible.</p>
+            <h3>Thermal Feature Descriptors for Image Stitching (VCIP 2024)</h3>
+            <p>
+              Thermal images are noisy and unfriendly. I tested classic keypoint detectors and descriptors for thermal registration under domain shift,
+              including SIFT, SURF, ORB, BRISK, and AKAZE. The result is a practical benchmark with clear winners, published at IEEE VCIP 2024.
+            </p>
             <div class="tags">
-              <span>React</span><span>API</span>
+              <span>Thermal CV</span><span>Image Registration</span><span>Benchmarking</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Live</a>
+              <a href="#" target="_blank" rel="noreferrer">DOI</a>
+              <a href="#" target="_blank" rel="noreferrer">Slides</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Speech/Audio LLM Pretraining (Senior Honors Thesis)</h3>
+            <p>
+              I explored resource-efficient pretraining strategies for speech language models. I prototyped compression-based representations using deep
+              compression autoencoders. I also built synthetic supervision to model speech errors at scale.
+            </p>
+            <div class="tags">
+              <span>Speech</span><span>Representation Learning</span><span>Efficiency</span>
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noreferrer">Thesis</a>
               <a href="#" target="_blank" rel="noreferrer">Code</a>
             </div>
+          </article>
+
+          <article class="card">
+            <h3>Real-time Captioning App Prototype (Microsoft)</h3>
+            <p>
+              I led a team building a multilingual, real-time captioning prototype using Azure and PowerApps. We added accessibility features like
+              text-to-speech and translation. It earned 2nd place in a hackathon, which was a fun week.
+            </p>
+            <div class="tags">
+              <span>Azure</span><span>Accessibility</span><span>Product</span>
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+              <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Shopper App Backend (Snoonu)</h3>
+            <p>
+              I built a scalable backend using .NET 8 and MongoDB. The design uses modular services and DTOs, plus unit tests to keep it sane.
+              I also Dockerized deployment and tuned it for high-concurrency order and inventory workflows.
+            </p>
+            <div class="tags">
+              <span>.NET 8</span><span>MongoDB</span><span>Docker</span><span>Backend</span>
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+              <a href="#" target="_blank" rel="noreferrer">Architecture</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing" class="section">
+      <div class="container">
+        <h2>Blogs & Poems</h2>
+        <p>
+          I write research notes when I’m trying to understand something. I write poems when I’m trying to say it cleanly.
+        </p>
+
+        <div class="writing-list">
+          <article class="writing-item">
+            <h3>Research Notes</h3>
+            <p>Short write-ups on experiments, papers I’m reading, and small lessons from building models.</p>
+            <a href="#" class="btn btn-ghost">Read</a>
+          </article>
+
+          <article class="writing-item">
+            <h3>Poetry</h3>
+            <p>Published in CMU student journals. Performed at open-mics. I’m always collecting new lines.</p>
+            <a href="#" class="btn btn-ghost">Read</a>
           </article>
         </div>
       </div>
@@ -142,18 +339,99 @@
         <h2>Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-meta">2025 — Present</div>
+            <div class="timeline-meta">Oct 2025 to Present</div>
             <div>
-              <h3>Role Title • Company/School</h3>
-              <p>2–3 bullets about impact, responsibilities, or achievements.</p>
+              <h3>Postgraduate Research Assistant • DataVisards Lab, HKUST</h3>
+              <p>
+                I work on embodied cognition in expert chess. I built a CV pipeline with 3D pose/mesh estimation and identity tracking.
+                I model behavioral dynamics over time and connect movement patterns to decision difficulty. A CHI manuscript is in progress.
+              </p>
             </div>
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-meta">2024 — 2025</div>
+            <div class="timeline-meta">Apr 2025 to Present</div>
             <div>
-              <h3>Role Title • Organization</h3>
-              <p>What you did and what changed because of your work.</p>
+              <h3>Research Assistant • NLP Lab, Carnegie Mellon University</h3>
+              <p>
+                I work on cross-lingual Arabic automated essay scoring. This includes benchmark construction, model implementation
+                (PAIR-Net and ALiF-Net), and experiments aimed at improving agreement with human raters.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">Aug 2024 to May 2025</div>
+            <div>
+              <h3>Undergraduate Student Researcher • ML & Signal Processing Lab, CMU</h3>
+              <p>
+                I wrote my senior honors thesis on compute-aware pretraining for speech language models. I explored compression-based representations
+                and built scalable synthetic supervision for speech error modeling.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">May 2023 to Jul 2025</div>
+            <div>
+              <h3>Computer Vision Research Assistant • IMPAQTLab, CMU</h3>
+              <p>
+                I studied descriptor robustness in thermal imagery for solar panel stitching. I implemented and benchmarked classic methods,
+                then wrote and presented the work as first author at IEEE VCIP 2024.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">Apr 2024 to May 2025</div>
+            <div>
+              <h3>Teaching Assistant • Deep Learning (11-785), CMU</h3>
+              <p>
+                I led recitations and supported implementation-heavy assignments for 250+ students. I taught core ideas behind Transformers and LLMs,
+                CNNs, and autoencoders. I also answered a lot of “why is my loss NaN” questions.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">May 2024 to Aug 2024</div>
+            <div>
+              <h3>Backend Software Engineer Intern • Snoonu</h3>
+              <p>
+                I built backend services with .NET 8 and MongoDB, using a modular architecture and unit tests. I shipped Dockerized deployments
+                and was recognized for “Most Promising Project.”
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">May 2023 to Jun 2023</div>
+            <div>
+              <h3>Artificial Intelligence Intern • Microsoft (Qatar)</h3>
+              <p>
+                I led a team building a multilingual real-time captioning prototype using Azure and PowerApps. We placed 2nd in a hackathon.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">May 2023 to Jul 2023</div>
+            <div>
+              <h3>AI Cybersecurity Research Intern • Qatar Computing Research Institute</h3>
+              <p>
+                I used STIX and knowledge-graph methods to structure cyber threat intelligence. I also curated and benchmarked CTI datasets.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">Jun 2024 to Aug 2024</div>
+            <div>
+              <h3>Computer Vision Research Intern (Part-time) • HMC Surgical Lab</h3>
+              <p>
+                I built segmentation and detection pipelines for surgical instrument detection using SAM, SegFormer, and YOLOv8.
+                I tuned preprocessing and improved performance in real operating room data.
+              </p>
             </div>
           </div>
         </div>
@@ -163,10 +441,10 @@
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
-        <p>Best way to reach you:</p>
+        <p>Best way to reach me:</p>
 
         <div class="contact">
-          <a class="btn" href="mailto:you@example.com">Email Me</a>
+          <a class="btn" href="mailto:eansar@andrew.cmu.edu">Email Me</a>
           <a class="btn btn-ghost" href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
@@ -176,7 +454,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+      <small>© <span id="year"></span> Eman Ansar. All rights reserved.</small>
       <button class="linklike" id="themeToggle" type="button">Toggle theme</button>
     </div>
   </footer>
