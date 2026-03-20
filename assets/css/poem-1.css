@@ -1,0 +1,78 @@
+/* Postcard Poem Styles for poem-1.html */
+.postcard {
+  max-width: 480px;
+  margin: 0 auto 40px auto;
+  background: #1d1b26;
+  border: 2px solid #2a2735;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 28px 24px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.postcard-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.postcard-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.35rem;
+  color: #b79ad6;
+  margin: 0;
+}
+.postcard-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: #8ea68c;
+  margin: 0;
+}
+.stamp {
+  width: 48px;
+  height: 48px;
+  background: url('../img/stamp.svg') no-repeat center/cover, rgba(220,199,150,0.06);
+  border: 2px dashed rgba(220,199,150,0.28);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(220,199,150,0.12);
+  animation: fly-in-stamp 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes fly-in-stamp {
+  0% { transform: translateY(-60px) scale(0.5) rotate(-18deg); opacity: 0; }
+  60% { transform: translateY(8px) scale(1.08) rotate(2deg); opacity: 1; }
+  100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+}
+.postcard-body {
+  font-size: 1.08rem;
+  color: #f2edf7;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 2.1;
+  margin-bottom: 18px;
+}
+.postcard-photo-block {
+  max-width: 420px;
+  margin: 0 auto 32px auto;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #2a2735;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+  padding: 18px 16px;
+  text-align: center;
+}
+.photo-label {
+  font-family: 'Caveat', cursive;
+  color: #dcc796;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+}
+.postcard-photo {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 2px solid #2a2735;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  margin: 0 auto;
+  transform: rotate(90deg) scale(1.25);
+  transition: transform 0.3s;
+  cursor: zoom-in;
+}
