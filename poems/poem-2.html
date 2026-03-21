@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>The Old Kind of Way | Eman Ansar — Vintage Archive</title>
+	
+	<!-- refined fonts: mature literary serif + subtle handwriting -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:opsz@12..72&display=swap" rel="stylesheet">
+	
+	<style>
+		/* -----------------------------
+		   MATURE ARCHIVE VIBE — identical to "To The Kind Gardeners"
+		   Deep vintage paper, coffee stains, aged textures
+		   Keeps original dark theme (#1d1b26 / #b79ad6)
+		   No childish cursive — uses Cormorant Garamond + Instrument Serif
+		----------------------------- */
+		:root {
+			--bg-deep: #0e0c14;
+			--paper-dark: #1f1c29;
+			--paper-warm: #24212e;
+			--text-ink: #e9e2d4;
+			--text-faded: #c6bba5;
+			--accent-lilac: #b79ad6;
+			--accent-faded: #a484c2;
+			--sepia-stain: #8b7355;
+			--border-antique: #332e3f;
+			--shadow-archival: 0 20px 35px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 245, 215, 0.05);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: var(--bg-deep);
+			font-family: 'Inter', system-ui, -apple-system, sans-serif;
+			color: var(--text-ink);
+			line-height: 1.55;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		/* subtle grain overlay (archival paper texture) */
+		body::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjUiIG51bU9jdGF2ZXM9IjMiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZikiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=');
+			background-repeat: repeat;
+			opacity: 0.12;
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		.container {
+			max-width: 860px;
+			margin: 0 auto;
+			padding: 0 28px;
+			position: relative;
+			z-index: 2;
+		}
+
+		/* ---------- HEADER: understated academic ---------- */
+		.site-header {
+			border-bottom: 1px solid rgba(183, 154, 214, 0.22);
+			background: rgba(14, 12, 20, 0.75);
+			backdrop-filter: blur(8px);
+			position: sticky;
+			top: 0;
+			z-index: 50;
+		}
+
+		.header-inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			padding: 18px 0 14px;
+		}
+
+		.logo {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.55rem;
+			font-weight: 500;
+			letter-spacing: -0.3px;
+			text-decoration: none;
+			color: var(--text-ink);
+			border-bottom: 1px solid transparent;
+			transition: border-color 0.2s;
+		}
+
+		.logo:hover {
+			border-bottom-color: var(--accent-lilac);
+		}
+
+		.nav {
+			display: flex;
+			gap: 28px;
+		}
+
+		.nav a {
+			font-size: 0.85rem;
+			font-weight: 450;
+			text-decoration: none;
+			color: #cbc3db;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+			transition: color 0.2s;
+		}
+
+		.nav a:hover {
+			color: var(--accent-lilac);
+		}
+
+		/* ---------- mature postcard header (refined) ---------- */
+		.postcard-header {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
+			margin: 32px 0 28px 0;
+			padding-bottom: 12px;
+			border-bottom: 1px solid rgba(183, 154, 214, 0.25);
+		}
+
+		.stamp {
+			width: 64px;
+			height: 64px;
+			background: #1f1b2b;
+			border: 1px solid #8b6f4c;
+			border-radius: 2px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: inset 0 0 0 1px rgba(210, 180, 120, 0.2), 2px 4px 8px rgba(0,0,0,0.3);
+			transform: rotate(-2deg);
+		}
+
+		.postcard-title {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.2rem;
+			font-weight: 500;
+			letter-spacing: -0.5px;
+			color: #ece2d0;
+			margin: 0;
+			line-height: 1.2;
+		}
+
+		.postcard-date {
+			margin-left: auto;
+			font-family: 'Inter', monospace;
+			font-size: 0.7rem;
+			letter-spacing: 1px;
+			background: rgba(0,0,0,0.3);
+			padding: 6px 14px;
+			border-radius: 20px;
+			color: #bcab8a;
+			border: 0.5px solid #4d3e2c;
+			backdrop-filter: blur(2px);
+		}
+
+		/* ---------- THE AGED JOURNAL / POEM CARD (identical to previous) ---------- */
+		.poem-journal {
+			position: relative;
+			background: #1b1824;
+			background-image: 
+				linear-gradient(135deg, rgba(50, 40, 35, 0.25) 0%, rgba(25, 20, 28, 0.4) 100%),
+				repeating-linear-gradient(45deg, rgba(150, 110, 70, 0.04) 0px, rgba(150, 110, 70, 0.04) 1px, transparent 1px, transparent 12px);
+			border: 1px solid #3c334b;
+			border-top: 1px solid #5d4c6e;
+			border-radius: 24px 6px 24px 6px;
+			padding: 48px 52px 52px 52px;
+			margin: 16px 0 40px 0;
+			box-shadow: var(--shadow-archival), inset 0 0 0 1px rgba(220, 200, 150, 0.08);
+		}
+
+		/* aged deckle edge effect */
+		.poem-journal::before {
+			content: "";
+			position: absolute;
+			top: -4px;
+			left: 12px;
+			right: 12px;
+			height: 12px;
+			background: repeating-linear-gradient(105deg, 
+				transparent, transparent 8px, 
+				rgba(150, 110, 70, 0.2) 8px, 
+				rgba(150, 110, 70, 0.2) 18px);
+			border-radius: 40% 40% 0 0;
+			pointer-events: none;
+		}
+
+		/* ---------- COFFEE STAINS: MATURE, SUBDUED ---------- */
+		.coffee-stain-main {
+			position: absolute;
+			top: 30px;
+			right: 25px;
+			width: 160px;
+			height: 130px;
+			background: radial-gradient(ellipse at 35% 40%, rgba(85, 58, 38, 0.45) 0%, rgba(65, 45, 28, 0.25) 45%, transparent 80%);
+			filter: blur(9px);
+			border-radius: 65% 35% 70% 30%;
+			transform: rotate(12deg);
+			pointer-events: none;
+			z-index: 0;
+			mix-blend-mode: multiply;
+		}
+
+		.coffee-stain-second {
+			position: absolute;
+			bottom: 45px;
+			left: 18px;
+			width: 110px;
+			height: 95px;
+			background: radial-gradient(ellipse, rgba(100, 68, 42, 0.45) 0%, rgba(70, 48, 28, 0.28) 50%, transparent 80%);
+			filter: blur(8px);
+			border-radius: 45% 55% 40% 60%;
+			transform: rotate(-6deg);
+			pointer-events: none;
+			z-index: 0;
+			mix-blend-mode: multiply;
+		}
+
+		.coffee-drip {
+			position: absolute;
+			bottom: 20px;
+			right: 60px;
+			width: 65px;
+			height: 70px;
+			background: radial-gradient(ellipse at 60% 20%, rgba(110, 75, 45, 0.4) 0%, rgba(75, 50, 30, 0.22) 55%, transparent 85%);
+			filter: blur(5px);
+			border-radius: 60% 40% 55% 45%;
+			transform: rotate(22deg);
+			pointer-events: none;
+			z-index: 0;
+			mix-blend-mode: multiply;
+		}
+
+		/* fine foxing / age spots */
+		.age-speckles {
+			position: absolute;
+			inset: 0;
+			background-image: radial-gradient(circle at 15% 70%, rgba(140, 100, 60, 0.14) 1.2px, transparent 1.2px),
+							  radial-gradient(circle at 85% 25%, rgba(110, 75, 45, 0.1) 1px, transparent 1px),
+							  radial-gradient(circle at 45% 45%, rgba(95, 68, 42, 0.08) 1.5px, transparent 1.5px);
+			background-size: 48px 48px, 62px 62px, 90px 90px;
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		/* faint manuscript ruling (aged lined paper) */
+		.manuscript-lines {
+			position: absolute;
+			inset: 0;
+			background: repeating-linear-gradient(
+				to bottom,
+				transparent,
+				transparent 32px,
+				rgba(183, 154, 214, 0.12) 32px,
+				rgba(183, 154, 214, 0.12) 33px
+			);
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		/* POEM TEXT — MATURE, LITERARY, SERIF (no childish cursive) */
+		.poem-text {
+			position: relative;
+			z-index: 2;
+			font-family: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
+			font-size: 1.45rem;
+			line-height: 2.25rem;
+			color: #f0e6d8;
+			letter-spacing: 0.01em;
+			font-weight: 400;
+			text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+			margin-bottom: 32px;
+		}
+
+		/* stanza spacing */
+		.poem-text br + br {
+			content: '';
+			display: block;
+			margin-top: 0.65rem;
+		}
+
+		/* P.S. annotation — archival note style */
+		.archival-note {
+			position: relative;
+			z-index: 2;
+			margin-top: 28px;
+			padding-top: 22px;
+			border-top: 1px dashed rgba(210, 180, 110, 0.5);
+			font-family: 'Inter', system-ui, sans-serif;
+			font-size: 0.95rem;
+			color: #cfc3a8;
+			letter-spacing: 0.2px;
+			background: rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(1px);
+			padding: 20px 18px 16px 18px;
+			border-radius: 16px;
+		}
+
+		.signature {
+			display: block;
+			text-align: right;
+			margin-top: 12px;
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.25rem;
+			font-style: italic;
+			color: #cbbd96;
+			letter-spacing: 0.3px;
+		}
+
+		/* ---------- PHOTO BLOCK: archival specimen card (gallery style) ---------- */
+		.specimen-card {
+			background: #18151f;
+			border: 1px solid #353040;
+			border-radius: 18px;
+			padding: 24px 28px 28px 28px;
+			margin: 20px 0 42px;
+			box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4);
+			position: relative;
+		}
+
+		.specimen-card::after {
+			content: "";
+			position: absolute;
+			bottom: 12px;
+			right: 18px;
+			width: 90px;
+			height: 70px;
+			background: radial-gradient(ellipse, rgba(90, 62, 40, 0.22) 0%, transparent 70%);
+			filter: blur(7px);
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		.photo-label {
+			font-family: 'Cormorant Garamond', serif;
+			font-weight: 500;
+			font-size: 1rem;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			color: #ccbc95;
+			border-bottom: 1px solid rgba(183, 154, 214, 0.35);
+			display: inline-block;
+			padding-bottom: 6px;
+			margin-bottom: 22px;
+		}
+
+		.gallery-grid {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: center;
+			position: relative;
+			z-index: 2;
+		}
+
+		.gallery-item {
+			display: block;
+			transition: transform 0.2s ease;
+		}
+
+		.gallery-item:hover {
+			transform: scale(1.02);
+		}
+
+		.gallery-img {
+			max-width: 160px;
+			height: auto;
+			border-radius: 12px;
+			border: 1px solid #4a3f57;
+			box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+			transition: border-color 0.2s;
+			cursor: zoom-in;
+			display: block;
+		}
+
+		.gallery-img:hover {
+			border-color: #b79ad6;
+		}
+
+		.photo-caption {
+			font-size: 0.7rem;
+			font-family: 'Inter', monospace;
+			color: #9b8d72;
+			margin-top: 20px;
+			text-align: center;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+			position: relative;
+			z-index: 2;
+		}
+
+		/* back link (refined) */
+		.back-link {
+			margin: 16px 0 64px;
+			display: inline-block;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.85rem;
+			font-weight: 450;
+			text-decoration: none;
+			color: #bcab93;
+			border-bottom: 1px solid #5c4f3a;
+			transition: border 0.2s, color 0.2s;
+		}
+
+		.back-link:hover {
+			color: #dac29c;
+			border-bottom-color: #b79ad6;
+		}
+
+		/* responsive adjustments */
+		@media (max-width: 720px) {
+			.container {
+				padding: 0 20px;
+			}
+			.poem-journal {
+				padding: 32px 28px;
+			}
+			.poem-text {
+				font-size: 1.25rem;
+				line-height: 2rem;
+			}
+			.postcard-title {
+				font-size: 1.7rem;
+			}
+			.coffee-stain-main {
+				width: 110px;
+				height: 90px;
+				opacity: 0.7;
+			}
+			.coffee-stain-second {
+				width: 80px;
+				height: 70px;
+			}
+			.gallery-img {
+				max-width: 130px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<header class="site-header">
+	<div class="container header-inner">
+		<a class="logo" href="../index.html">Eman peer-reviewed</a>
+		<nav class="nav">
+			<a href="../index.html">Journal</a>
+			<a href="../journal.html">Notebook</a>
+			<a href="../poems.html">Folio</a>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<div class="container">
+		<!-- postcard header with vintage stamp (pigeon motif preserved but matured) -->
+		<div class="postcard-header">
+			<div class="stamp">
+				<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<ellipse cx="19" cy="26" rx="12" ry="7" fill="#1f1b2b" stroke="#b79ad6" stroke-width="1.3"/>
+					<path d="M19 26c-2.5-5 2-12 7-12s7 7 2.5 12" fill="#8b6f4c" stroke="#b79ad6" stroke-width="1"/>
+					<circle cx="26" cy="16" r="2.2" fill="#b79ad6" stroke="#dcc796" stroke-width="0.8"/>
+					<circle cx="26.5" cy="16.2" r="0.6" fill="#0e0c14"/>
+					<polygon points="28.5,15 32,14 31,17" fill="#dcc796" opacity="0.8"/>
+					<ellipse cx="19" cy="26" rx="12" ry="7" fill="none" stroke="#dcc796" stroke-width="1" stroke-dasharray="4 2"/>
+				</svg>
+			</div>
+			<h1 class="postcard-title">The Old Kind of Way</h1>
+			<p class="postcard-date">fragment · may 2021 (est)</p>
+		</div>
+
+		<!-- THE MAIN POEM BLOCK: aged journal with coffee stains -->
+		<div class="poem-journal">
+			<!-- coffee stains + foxing (mature aesthetic) -->
+			<div class="coffee-stain-main"></div>
+			<div class="coffee-stain-second"></div>
+			<div class="coffee-drip"></div>
+			<div class="age-speckles"></div>
+			<div class="manuscript-lines"></div>
+
+			<!-- poem content — mature, literary serif, no childish cursive -->
+			<div class="poem-text">
+				From those dreaded questions of my dad, to that gentlemanly bow and the kiss on my hand.<br/>
+				From that bouquet of roses, "Only for you, Miss", to those sheepish twirls in my pink sundress.<br/>
+				<br/>
+				From catching ladybugs on our secret picnic, to eating those stale macrons - how tragic.<br/>
+				From humming our favorite songs on the hammock, to those polaroid pictures that are nowhere near panaromic.<br/>
+				<br/>
+				From chasing squirrels with the pellet guns, to hopscotching till we find a place to begin our lil clan.<br/>
+				From drinking from the same spot of that English tea, to letting you hold me up high for the whole world to see.<br/>
+				<br/>
+				From pigeon posting whenever I miss you, to the hand-made morning stew.<br/>
+				From being complete strangers, to those old-age lovers.<br/>
+				<br/>
+				That's how I wanna fall for you, the old kinda way...
+			</div>
+
+			<!-- archival note / mature postscript -->
+			<div class="archival-note">
+				☕ marginalia — <em>“courtesies of a bygone era, preserved in memory like pressed flowers between the leaves of a worn journal.”</em><br/>
+				For those who still believe in handwritten letters, slow courtship, and the weight of a promise.
+				<span class="signature">— Eman, peer-reviewed</span>
+			</div>
+		</div>
+
+		<!-- PHOTO BLOCK: gallery specimen style (matching mature archive) -->
+		<div class="specimen-card">
+			<div class="photo-label">⸻ visual ephemera · archive plates ⸻</div>
+			<div class="gallery-grid">
+				<a href="../assets/img/poem2-1.jpg" class="gallery-item" target="_blank" rel="noopener">
+					<img src="../assets/img/poem2-1.jpg" alt="Poem 2 Visual 1" class="gallery-img" 
+						onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20fill%3D%22%23221e2d%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22Cormorant%20Garamond%22%20font-size%3D%2212%22%20fill%3D%22%23b79ad6%22%3Eplate%20i%3C%2Ftext%3E%3C%2Fsvg%3E'">
+				</a>
+				<a href="../assets/img/poem2-2.jpg" class="gallery-item" target="_blank" rel="noopener">
+					<img src="../assets/img/poem2-2.jpg" alt="Poem 2 Visual 2" class="gallery-img"
+						onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20fill%3D%22%23221e2d%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22Cormorant%20Garamond%22%20font-size%3D%2212%22%20fill%3D%22%23b79ad6%22%3Eplate%20ii%3C%2Ftext%3E%3C%2Fsvg%3E'">
+				</a>
+				<a href="../assets/img/poem2-3.jpg" class="gallery-item" target="_blank" rel="noopener">
+					<img src="../assets/img/poem2-3.jpg" alt="Poem 2 Visual 3" class="gallery-img"
+						onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20fill%3D%22%23221e2d%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22Cormorant%20Garamond%22%20font-size%3D%2212%22%20fill%3D%22%23b79ad6%22%3Eplate%20iii%3C%2Ftext%3E%3C%2Fsvg%3E'">
+				</a>
+				<a href="../assets/img/poem2-4.jpg" class="gallery-item" target="_blank" rel="noopener">
+					<img src="../assets/img/poem2-4.jpg" alt="Poem 2 Visual 4" class="gallery-img"
+						onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20fill%3D%22%23221e2d%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22Cormorant%20Garamond%22%20font-size%3D%2212%22%20fill%3D%22%23b79ad6%22%3Eplate%20iv%3C%2Ftext%3E%3C%2Fsvg%3E'">
+				</a>
+			</div>
+			<div class="photo-caption">⟡ archival plates · click to enlarge ⟡</div>
+		</div>
+
+		<div>
+			<a href="../poems.html" class="back-link">← return to folio</a>
+		</div>
+	</div>
+</main>
+
+<!-- simple lightbox enhancement (opens images in new tab, consistent with mature style) -->
+<script>
+	(function() {
+		// ensure all gallery images open in new tab (already have target="_blank")
+		// also add fallback for missing images
+		const imgs = document.querySelectorAll('.gallery-img');
+		imgs.forEach(img => {
+			img.addEventListener('error', function(e) {
+				if (!this.src.includes('fallback')) {
+					// already handled via onerror inline, but keep graceful
+				}
+			});
+		});
+	})();
+</script>
+</body>
+</html>
