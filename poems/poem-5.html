@@ -1,10 +1,9 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A Wish, A Hope | Eman Ansar — Vintage Archive</title>
+  <title>Let Me Drown | Eman Ansar — Vintage Archive</title>
   
   <!-- refined fonts: mature literary serif + subtle handwriting -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +42,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* subtle grain overlay (archival paper texture) */
     body::before {
       content: "";
       position: fixed;
@@ -66,7 +64,6 @@
       z-index: 2;
     }
 
-    /* ---------- HEADER: understated academic ---------- */
     .site-header {
       border-bottom: 1px solid rgba(183, 154, 214, 0.22);
       background: rgba(14, 12, 20, 0.75);
@@ -117,7 +114,6 @@
       color: var(--accent-lilac);
     }
 
-    /* ---------- mature postcard header (refined) ---------- */
     .postcard-header {
       display: flex;
       align-items: center;
@@ -164,7 +160,6 @@
       backdrop-filter: blur(2px);
     }
 
-    /* ---------- THE AGED JOURNAL / POEM CARD ---------- */
     .poem-journal {
       position: relative;
       background: #1b1824;
@@ -179,7 +174,6 @@
       box-shadow: var(--shadow-archival), inset 0 0 0 1px rgba(220, 200, 150, 0.08);
     }
 
-    /* aged deckle edge effect */
     .poem-journal::before {
       content: "";
       position: absolute;
@@ -195,7 +189,6 @@
       pointer-events: none;
     }
 
-    /* ---------- COFFEE STAINS: MATURE, SUBDUED ---------- */
     .coffee-stain-main {
       position: absolute;
       top: 30px;
@@ -241,7 +234,6 @@
       mix-blend-mode: multiply;
     }
 
-    /* fine foxing / age spots */
     .age-speckles {
       position: absolute;
       inset: 0;
@@ -253,7 +245,6 @@
       z-index: 0;
     }
 
-    /* faint manuscript ruling (aged lined paper) */
     .manuscript-lines {
       position: absolute;
       inset: 0;
@@ -268,7 +259,6 @@
       z-index: 0;
     }
 
-    /* POEM TEXT — MATURE, LITERARY, SERIF */
     .poem-text {
       position: relative;
       z-index: 2;
@@ -282,14 +272,43 @@
       margin-bottom: 32px;
     }
 
-    /* stanza spacing */
     .poem-text br + br {
       content: '';
       display: block;
       margin-top: 0.65rem;
     }
 
-    /* P.S. annotation — archival note style */
+    /* section dividers for longer poem */
+    .section-divider {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin: 32px 0 28px;
+      font-family: 'Inter', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: #9b8d72;
+    }
+    
+    .section-divider span {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 0.5px solid #4d3e2c;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 2;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #dac29c;
+      margin: 24px 0 16px 0;
+      padding-left: 16px;
+      border-left: 3px solid #b79ad6;
+    }
+
     .archival-note {
       position: relative;
       z-index: 2;
@@ -317,7 +336,6 @@
       letter-spacing: 0.3px;
     }
 
-    /* page count indicator */
     .page-count {
       position: relative;
       z-index: 2;
@@ -331,89 +349,6 @@
       padding-top: 16px;
     }
 
-    /* ---------- PHOTO BLOCK: archival specimen card ---------- */
-    .specimen-card {
-      background: #18151f;
-      border: 1px solid #353040;
-      border-radius: 18px;
-      padding: 24px 28px 28px 28px;
-      margin: 20px 0 42px;
-      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4);
-      position: relative;
-    }
-
-    .specimen-card::after {
-      content: "";
-      position: absolute;
-      bottom: 12px;
-      right: 18px;
-      width: 90px;
-      height: 70px;
-      background: radial-gradient(ellipse, rgba(90, 62, 40, 0.22) 0%, transparent 70%);
-      filter: blur(7px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .photo-label {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: 1rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #ccbc95;
-      border-bottom: 1px solid rgba(183, 154, 214, 0.35);
-      display: inline-block;
-      padding-bottom: 6px;
-      margin-bottom: 22px;
-    }
-
-    .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .gallery-item {
-      display: block;
-      transition: transform 0.2s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.02);
-    }
-
-    .gallery-img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 12px;
-      border: 1px solid #4a3f57;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
-      transition: border-color 0.2s;
-      cursor: zoom-in;
-      display: block;
-    }
-
-    .gallery-img:hover {
-      border-color: #b79ad6;
-    }
-
-    .photo-caption {
-      font-size: 0.7rem;
-      font-family: 'Inter', monospace;
-      color: #9b8d72;
-      margin-top: 20px;
-      text-align: center;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* back link */
     .back-link {
       margin: 16px 0 64px;
       display: inline-block;
@@ -431,7 +366,6 @@
       border-bottom-color: #b79ad6;
     }
 
-    /* responsive */
     @media (max-width: 720px) {
       .container {
         padding: 0 20px;
@@ -455,8 +389,8 @@
         width: 80px;
         height: 70px;
       }
-      .gallery-img {
-        max-width: 150px;
+      .section-title {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -476,7 +410,6 @@
 
 <main>
   <div class="container">
-    <!-- postcard header with vintage stamp (wish/heart motif) -->
     <div class="postcard-header">
       <div class="stamp">
         <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -486,84 +419,245 @@
           <circle cx="19" cy="18" r="1.5" fill="#b79ad6"/>
         </svg>
       </div>
-      <h1 class="postcard-title">A Wish, A Hope</h1>
-      <p class="postcard-date">fragment · dec 2022</p>
+      <h1 class="postcard-title">Let Me Drown</h1>
+      <p class="postcard-date">fragment · aug 2023</p>
     </div>
 
-    <!-- THE MAIN POEM BLOCK: aged journal with coffee stains -->
     <div class="poem-journal">
-      <!-- coffee stains + foxing (mature aesthetic) -->
       <div class="coffee-stain-main"></div>
       <div class="coffee-stain-second"></div>
       <div class="coffee-drip"></div>
       <div class="age-speckles"></div>
       <div class="manuscript-lines"></div>
 
-      <!-- poem content — corrected text -->
       <div class="poem-text">
-        I don't know if I should wish for you or hope for us.<br/>
-        <br/>
-        They say hoping is better, because for hope to exist there needs to be a mere possibility of that thing happening, so the chances of your hopes being fulfilled are higher.
-        <br/>
-        <br/>
-        When you wish for something, the only requirement is the presence of the desire for that thing.<br/>
-        And when it comes to you, they call you my wish.<br/>
-        <br/>
-        But because you are my strongest wish, as if putting scales to one's wishes, I think you are heaved up to become a hope of mine.
-        <br/>
-        <br/>
-        And if the whole world was in my control, I hesitate not to create a world where the existence of you and me isn't just a mere possibility but an eternal verity.<br/>
-        <br/>
-        
-        Till then, I don't know if it's me hoping against hope or wishfully thinking — but you are mine.<br/><br/>
-        And if we don't happen, you will forever remain my strongest wish.
+        Learning hurts.<br/>
+        It pulls me under.<br/>
+        Sweet at first, like citrus on the tongue,<br/>
+        then the peel turns bitter<br/>
+        and I have to chew anyway.
       </div>
 
-      <!-- archival note / mature postscript -->
+      <div class="section-title">— the office —</div>
+      <div class="poem-text">
+        In his office,<br/>
+        the air is thin and holds its breath.<br/>
+        I sit across from him,<br/>
+        aware of the animal I am.<br/>
+        My hands shake against my knees.<br/>
+        My stomach growls, low and tectonic,<br/>
+        a sound that doesn't belong here.<br/>
+        <br/>
+        The other students are statues.<br/>
+        Effortless. Hollow.<br/>
+        I am plumbing and pressure and pain.<br/>
+        <br/>
+        He speaks in clean sentences.<br/>
+        No strain.<br/>
+        His words lift me,<br/>
+        light as a hand at the wrist,<br/>
+        and for a moment,<br/>
+        I think I belong.<br/>
+        <br/>
+        Then his look sharpens.<br/>
+        “Do you see it?” he asks.<br/>
+        <br/>
+        My eyes burn. My grip slips.<br/>
+        The expectation settles on me like stone,<br/>
+        the cord tightens,<br/>
+        and I am pulled back into air I do not want.
+      </div>
+
+      <div class="section-title">— the sea wants me too —</div>
+      <div class="poem-text">
+        I want depth.<br/>
+        The sea wants me too,<br/>
+        but the shore keeps throwing me back.<br/>
+        I wake on the sand, breath gone,<br/>
+        cold toes curled in on themselves.
+      </div>
+
+      <div class="section-title">— x becomes y —</div>
+      <div class="poem-text">
+        My mouth tastes like coffee that's been reheated twice.<br/>
+        My scalp itches where I scratched too long.<br/>
+        The room is quiet except for the clock<br/>
+        and the other me.<br/>
+        <br/>
+        If x becomes y, she says,<br/>
+        then this step works.<br/>
+        No, I answer,<br/>
+        you skipped something. You always skip something.<br/>
+        <br/>
+        She sighs.<br/>
+        We try again.<br/>
+        x becomes y.<br/>
+        y almost holds.<br/>
+        <br/>
+        Almost is where I live.
+      </div>
+
+      <div class="section-title">— outside, nothing moves —</div>
+      <div class="poem-text">
+        Outside, nothing moves.<br/>
+        Inside, I keep working,<br/>
+        half-drowned,<br/>
+        still reaching for the deep.<br/>
+        <br/>
+        Again, the ache of learning pulls me under.<br/>
+        I hold out my leaves, paper bent and soft with use,<br/>
+        ink crossed out, rewritten, bled through.<br/>
+        Ugly work. Honest work. My work.<br/>
+        Proofs that wander before they arrive.
+      </div>
+
+      <div class="section-title">— the blue glow of midnight —</div>
+      <div class="poem-text">
+        Then, the sun sets.<br/>
+        The world goes quiet.<br/>
+        The whiteboard becomes a blank country.<br/>
+        Elvis sings through cheap speakers,<br/>
+        that burning rhythm that makes me reckless.<br/>
+        <br/>
+        The marker squeaks,<br/>
+        a frantic, joyous war,<br/>
+        and suddenly x becomes y without a fight.<br/>
+        In the blue glow of midnight<br/>
+        I am a titan.<br/>
+        On the podium.<br/>
+        Gold in my hands.<br/>
+        The other me finally shuts up.<br/>
+        <br/>
+        My mouth is stale with coffee breath.<br/>
+        Xylitol gum snaps, pretending alertness.<br/>
+        Caffeine burns my tongue.<br/>
+        Half-melted chocolate on the desk,<br/>
+        eaten for comfort, not hunger.<br/>
+        My belly presses against the waistband<br/>
+        when I lean forward.<br/>
+        I notice.<br/>
+        I hate that I notice.
+      </div>
+
+      <div class="section-title">— the morning after —</div>
+      <div class="poem-text">
+        Then comes the morning.<br/>
+        The fluorescent glare.<br/>
+        The exam waits like a white shroud.<br/>
+        <br/>
+        I look at him,<br/>
+        and his scrutiny is a physical heat.<br/>
+        Then the internal rot:<br/>
+        the Crohn's, the sudden fire,<br/>
+        the frantic need to be anywhere but in this chair.<br/>
+        <br/>
+        I malfunction.<br/>
+        The logic leaks out of me.<br/>
+        I trade brilliance for a moment's relief,<br/>
+        <br/>
+        and the paper comes back,<br/>
+        marked with a "C."<br/>
+        <br/>
+        The mark of the average.<br/>
+        The brand of the "almost."<br/>
+        <br/>
+        I put on the mask,<br/>
+        the fake determination,<br/>
+        the lie that says<br/>
+        “I'll do better next time.”<br/>
+        I say it to his face,<br/>
+        but I know the truth:<br/>
+        I only belong on the podium<br/>
+        when the moon is the only judge.
+      </div>
+
+      <div class="section-title">— the weight of expectation —</div>
+      <div class="poem-text">
+        I love this.<br/>
+        I hate everything that slows me down.<br/>
+        <br/>
+        Expectation settles on me like stone.<br/>
+        You must.<br/>
+        You should.<br/>
+        You ought.<br/>
+        Not said cruelly.<br/>
+        Said as fact.<br/>
+        The cord tightens around my chest<br/>
+        and I am pulled back into air I do not want.
+      </div>
+
+      <div class="section-title">— night returns —</div>
+      <div class="poem-text">
+        Night returns.<br/>
+        Cold toes on the floor.<br/>
+        Old coffee. Paper. Stillness.<br/>
+        <br/>
+        She appears.<br/>
+        If x becomes y, she says,<br/>
+        then it works.<br/>
+        <br/>
+        You're rushing, I tell her.<br/>
+        Trying to be clever.<br/>
+        <br/>
+        We argue quietly.<br/>
+        x becomes y.<br/>
+        y almost holds.<br/>
+        <br/>
+        Almost is where I live.<br/>
+        <br/>
+        I love the depth.<br/>
+        I hate the clocks, the bodies, the money,<br/>
+        the small humiliations crowding the work.<br/>
+        I hate how being human interrupts thinking.<br/>
+        <br/>
+        Again, the ache pulls me down.<br/>
+        I sit in the bright shadow of what he is,<br/>
+        knowing the light is borrowed.<br/>
+        <br/>
+        And my own doubt bites hardest.<br/>
+        Not the work. Never the work.<br/>
+        But the voice that says I am<br/>
+        too slow, too heavy, too late.
+      </div>
+
+      <div class="section-title">— let me drown —</div>
+      <div class="poem-text">
+        If I sink again, let it be far.<br/>
+        Past grades and gazes and measured worth.<br/>
+        Past rescue.<br/>
+        <br/>
+        Let the knowledge take me whole.<br/>
+        Strip away the rest.<br/>
+        Leave only the wanting.
+      </div>
+
       <div class="archival-note">
         <div style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px;">
           <span style="font-size: 1.1rem;">☕</span>
           <div style="flex: 1;">
             <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #9b8d72;">marginalia</span>
             <div style="font-style: italic; color: #dac29c; margin-top: 6px; font-size: 1rem;">
-              “There is a difference between wanting something to exist and believing it could. This is the space between a wish and a hope.”
+              “The wanting is the part that never drowns. Everything else is just the tide.”
             </div>
           </div>
         </div>
         
         <p style="margin: 12px 0 16px 0; color: #cfc3a8;">
-          For the ones who live in the quiet space between wanting and believing.
+          For the ones who have sat in fluorescent offices with shaking hands. For the midnight victories that no one sees. For the bodies that interrupt the thinking. For the almost.
         </p>
         
         <div style="background: rgba(0, 0, 0, 0.2); border-radius: 12px; padding: 12px 16px; margin: 16px 0 12px 0;">
           <p style="font-size: 0.85rem; color: #bcab8a; margin: 0;">
-         a winter journal entry, written in the language of someone still learning how to hold both hope and uncertainty in the same hand. the heart that wrote this still exists, just quieter now.
+            this is the one that took the longest to share. not because the words were hard, but because admitting the weight of expectation, and still choosing the depth is the hardest thing I've done. I wrote this in sophomore year, on nights when the whiteboard was the only thing that made sense. It's still the most honest thing I've ever written.
           </p>
         </div>
         
         <div class="signature" style="margin-top: 16px;">Eman, peer-reviewed</div>
       </div>
-      
-      <!-- page count indicator -->
+<!--       
       <div class="page-count">
-        ⟡ 2 pages · december 2022 ⟡
-      </div>
-    </div>
-
-    <!-- PHOTO BLOCK: two-image gallery -->
-    <div class="specimen-card">
-      <div class="photo-label">⸻ visual ephemera · archive plates ⸻</div>
-      <div class="gallery-grid">
-        <a href="../assets/img/poem4-1.jpg" class="gallery-item" target="_blank" rel="noopener">
-          <img src="../assets/img/poem4-1.jpg" alt="Poem 4 Visual 1" class="gallery-img"
-            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\' viewBox=\'0 0 200 200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'14\' fill=\'#b79ad6\'%3Epage i%3C/text%3E%3C/svg%3E'">
-        </a>
-        <a href="../assets/img/poem4-2.jpg" class="gallery-item" target="_blank" rel="noopener">
-          <img src="../assets/img/poem4-2.jpg" alt="Poem 4 Visual 2" class="gallery-img"
-            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\' viewBox=\'0 0 200 200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'14\' fill=\'#b79ad6\'%3Epage ii%3C/text%3E%3C/svg%3E'">
-        </a>
-      </div>
-      <div class="photo-caption">⟡ original manuscript pages · click to enlarge ⟡</div>
+        ⟡ 9 sections · graduate school years ⟡ -->
+      <!-- </div> -->
     </div>
 
     <div>
