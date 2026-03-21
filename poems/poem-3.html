@@ -1,34 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>To The Kind Gardeners | Eman Ansar — Mature Archive</title>
-
-  <!-- refined fonts: more literary, less playful -->
+  <title>The Senior Friend | Eman Ansar — Vintage Archive</title>
+  
+  <!-- refined fonts: mature literary serif + subtle handwriting -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:opsz@12..72&family=Recursive:slnt,wght,CASL,CRSV,MONO@0,300..700,0,0,0&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:opsz@12..72&display=swap" rel="stylesheet">
   
   <style>
     /* -----------------------------
-       MATURE ARCHIVE — Deep, aged, scholarly warmth
-       Retains original dark theme (#1d1b26 / #b79ad6 / #dcc796)
-       Adds vintage paper, genuine coffee stains, tactile textures
-       No “childish” cursive — uses literary serif + sober upright handwriting
+       MATURE ARCHIVE VIBE — matching existing poem pages
+       Deep vintage paper, coffee stains, aged textures
     ------------------------------ */
     :root {
-      --bg-deep: #0e0c14;      /* deep archival background */
-      --paper-dark: #1f1c29;   /* aged paper base (matches original card) */
+      --bg-deep: #0e0c14;
+      --paper-dark: #1f1c29;
       --paper-warm: #24212e;
-      --text-ink: #e9e2d4;     /* warm off-white ink */
+      --text-ink: #e9e2d4;
       --text-faded: #c6bba5;
       --accent-lilac: #b79ad6;
       --accent-faded: #a484c2;
       --sepia-stain: #8b7355;
       --border-antique: #332e3f;
       --shadow-archival: 0 20px 35px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 245, 215, 0.05);
-      --radius-sm: 4px;
     }
 
     * {
@@ -166,23 +163,22 @@
       backdrop-filter: blur(2px);
     }
 
-    /* ---------- THE AGED JOURNAL / POEM CARD (MAIN ATTRACTION) ---------- */
+    /* ---------- THE AGED JOURNAL / POEM CARD ---------- */
     .poem-journal {
       position: relative;
-      background: #1b1824; /* deep base */
+      background: #1b1824;
       background-image: 
         linear-gradient(135deg, rgba(50, 40, 35, 0.25) 0%, rgba(25, 20, 28, 0.4) 100%),
         repeating-linear-gradient(45deg, rgba(150, 110, 70, 0.04) 0px, rgba(150, 110, 70, 0.04) 1px, transparent 1px, transparent 12px);
       border: 1px solid #3c334b;
       border-top: 1px solid #5d4c6e;
-      border-radius: 24px 6px 24px 6px;    /* asymmetric, antique */
+      border-radius: 24px 6px 24px 6px;
       padding: 48px 52px 52px 52px;
       margin: 16px 0 40px 0;
       box-shadow: var(--shadow-archival), inset 0 0 0 1px rgba(220, 200, 150, 0.08);
-      transition: all 0.2s ease;
     }
 
-    /* aged deckle edge effect (top only) */
+    /* aged deckle edge effect */
     .poem-journal::before {
       content: "";
       position: absolute;
@@ -198,7 +194,7 @@
       pointer-events: none;
     }
 
-    /* ---------- COFFEE STAINS: MATURE, SUBDUED, AUTHENTIC ---------- */
+    /* ---------- COFFEE STAINS: MATURE, SUBDUED ---------- */
     .coffee-stain-main {
       position: absolute;
       top: 30px;
@@ -271,7 +267,7 @@
       z-index: 0;
     }
 
-    /* POEM TEXT — MATURE, LITERARY, UPRIGHT HANDWRITING / SERIF BLEND */
+    /* POEM TEXT — MATURE, LITERARY, SERIF */
     .poem-text {
       position: relative;
       z-index: 2;
@@ -283,12 +279,6 @@
       font-weight: 400;
       text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
       margin-bottom: 32px;
-    }
-
-    /* gentle ink weight variation */
-    .poem-text strong {
-      font-weight: 500;
-      color: #e2cfaa;
     }
 
     /* stanza spacing */
@@ -326,16 +316,29 @@
       letter-spacing: 0.3px;
     }
 
-    /* ---------- PHOTO BLOCK: archival specimen card ---------- */
+    /* page count indicator */
+    .page-count {
+      position: relative;
+      z-index: 2;
+      text-align: right;
+      margin-top: 24px;
+      font-family: 'Inter', monospace;
+      font-size: 0.7rem;
+      color: #9b8d72;
+      letter-spacing: 1px;
+      border-top: 1px solid rgba(183, 154, 214, 0.2);
+      padding-top: 16px;
+    }
+
+    /* ---------- PHOTO BLOCK: archival specimen card (matching poem-2) ---------- */
     .specimen-card {
       background: #18151f;
       border: 1px solid #353040;
       border-radius: 18px;
-      padding: 20px 24px 24px 24px;
+      padding: 24px 28px 28px 28px;
       margin: 20px 0 42px;
       box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4);
       position: relative;
-      transition: all 0.2s;
     }
 
     .specimen-card::after {
@@ -361,24 +364,39 @@
       border-bottom: 1px solid rgba(183, 154, 214, 0.35);
       display: inline-block;
       padding-bottom: 6px;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
-    .postcard-photo {
-      width: 100%;
-      max-width: 540px;
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gallery-item {
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-img {
+      max-width: 160px;
+      height: auto;
       border-radius: 12px;
       border: 1px solid #4a3f57;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-      transition: transform 0.2s ease, border-color 0.2s;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+      transition: border-color 0.2s;
       cursor: zoom-in;
-      margin: 0 auto;
       display: block;
-      transform: rotate(90deg);
     }
 
-    .postcard-photo:hover {
-      transform: scale(1.01);
+    .gallery-img:hover {
       border-color: #b79ad6;
     }
 
@@ -386,13 +404,15 @@
       font-size: 0.7rem;
       font-family: 'Inter', monospace;
       color: #9b8d72;
-      margin-top: 14px;
+      margin-top: 20px;
       text-align: center;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+      position: relative;
+      z-index: 2;
     }
 
-    /* back link (refined) */
+    /* back link */
     .back-link {
       margin: 16px 0 64px;
       display: inline-block;
@@ -410,7 +430,7 @@
       border-bottom-color: #b79ad6;
     }
 
-    /* responsive adjustments */
+    /* responsive */
     @media (max-width: 720px) {
       .container {
         padding: 0 20px;
@@ -434,17 +454,9 @@
         width: 80px;
         height: 70px;
       }
-      .archival-note {
-        font-size: 0.85rem;
+      .gallery-img {
+        max-width: 130px;
       }
-    }
-
-    /* subtle sepia tone for entire container */
-    .poem-journal, .specimen-card {
-      transition: box-shadow 0.2s;
-    }
-    .poem-journal:hover {
-      box-shadow: 0 24px 44px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 240, 190, 0.06);
     }
   </style>
 </head>
@@ -452,31 +464,32 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="../index.html">Eman, peer-reviewed</a>
+    <a class="logo" href="../index.html">E. Ansar</a>
     <nav class="nav">
       <a href="../index.html">Journal</a>
+      <a href="../journal.html">Notebook</a>
       <a href="../poems.html">Folio</a>
-      <a href="../notebook.html">Marginalia</a>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <!-- header with stamp (vintage airmail style) -->
+    <!-- postcard header with vintage stamp (apple tree motif) -->
     <div class="postcard-header">
       <div class="stamp">
-        <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="6" width="34" height="26" rx="3" fill="#1a1624" stroke="#b79ad6" stroke-width="1.3"/>
-          <path d="M3 6 L20 22 L37 6" stroke="#cbad7a" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/>
-          <text x="20" y="23" text-anchor="middle" font-size="9" font-family="monospace" fill="#c6b085">✉ ARCHIVE</text>
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="6" width="32" height="24" rx="3" fill="#1f1b2b" stroke="#b79ad6" stroke-width="1.3"/>
+          <path d="M19 8 L19 28 M10 18 L28 18" stroke="#8b6f4c" stroke-width="1.2"/>
+          <circle cx="19" cy="18" r="6" fill="none" stroke="#dcc796" stroke-width="1.5"/>
+          <circle cx="19" cy="18" r="2" fill="#b79ad6"/>
         </svg>
       </div>
-      <h1 class="postcard-title">To The Kind Gardeners</h1>
-      <p class="postcard-date">fragment · march 2024</p>
+      <h1 class="postcard-title">The Senior Friend</h1>
+      <p class="postcard-date">fragment · june 2016 (est.)</p>
     </div>
 
-    <!-- THE MAIN POEM BLOCK: refined vintage / coffee stains / aged paper + mature tone -->
+    <!-- THE MAIN POEM BLOCK: aged journal with coffee stains -->
     <div class="poem-journal">
       <!-- coffee stains + foxing (mature aesthetic) -->
       <div class="coffee-stain-main"></div>
@@ -485,82 +498,109 @@
       <div class="age-speckles"></div>
       <div class="manuscript-lines"></div>
 
-      <!-- poem content — mature, literary serif, subtle gravity -->
-      <div class="poem-text">
-        A professor tends his garden green,<br/>
-        Knows every flower and every scene.<br/>
-        He nurtures them with a loving hand,<br/>
-        And anchors them when they need to stand.<br/>
+      <!-- poem content — mature, literary serif -->
+    <div class="poem-text">
+        The earthy scent of mud,<br/>
+        with the brown and red in harmony,<br/>
+        embellished her old apple orchard, which was part of her ancestry.<br/>
         <br/>
-        But some tend their garden wide,<br/>
-        With love for blooms on every side.<br/>
-        Not just those who are swift to reach the light,<br/>
-        But also, those that bloom in the darkness of the quiet night.<br/>
+        It was home to all the rose bushes she had planted,<br/>
+        and buried the sole-prints of her grandad's morning strolls.<br/>
+        It was the feed for animals that people had stranded,<br/>
+        and stamped the traces of car tires avoiding tolls.<br/>
         <br/>
-        For some roses like me, that are slow in pace,<br/>
-        The kind gardeners hold a special place.<br/>
-        Because with patience as deep as the earth's embrace,<br/>
-        The kind gardeners always wait for every rose's blooming grace.
-      </div>
-
-      <!-- marginal note / mature postscript -->
-     <!-- archival note / mature postscript -->
-      <div class="archival-note">
-        <div style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px;">
-          <span style="font-size: 1.1rem;">☕</span>
-          <div style="flex: 1;">
-            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #9b8d72;">marginalia</span>
-            <div style="font-style: italic; color: #dac29c; margin-top: 6px; font-size: 1rem;">
-              “Patience is a quiet form of faith. To those who tend without demanding early petals, this note is a slow bow.”
-            </div>
-          </div>
-        </div>
-        
-        <p style="margin: 12px 0 16px 0; color: #cfc3a8;">
-          Shout out to every mentor, professor, and curator of late-blooming gardens.
-        </p>
-        
-        <div style="background: rgba(0, 0, 0, 0.2); border-radius: 12px; padding: 12px 16px; margin: 16px 0 12px 0;">
-          <p style="font-size: 0.85rem; color: #bcab8a; margin: 0;">
-            this is why i'm so inspired to become a professor. one day, i want to be the gardener who waits for every rose to bloom in its own time.
-          </p>
-        </div>
-        
-        <div class="signature" style="margin-top: 16px;">Eman, peer-reviewed</div>
-      </div>
+        More importantly,<br/>
+        it inhabited her sturdy senior friend, a weather-worn apple tree,<br/>
+        who kept her secrets from the sleepless nights she'd spend,<br/>
+        every time she and her mother would disagree.<br/>
+        <br/>
+        It stood tall expecting her return, regardless of the season.<br/>
+        She'd be long gone — drowned in the worldly fuss —<br/>
+        but it awaited patiently, though it had no reason.<br/>
+        That senior friend always kept his unsaid promise.<br/>
+        <br/>
+        Though<br/>
+        it provided shelter to others, if they'd make a visit,<br/>
+        casting dancing shadows on anyone who'd cross its pit.<br/>
+        Regardless of what came its way, it always waited for her next revisit,<br/>
+        though there was no surety if she was going to make it.<br/>
+        <br/>
+        It taught her unconditional loyalty in this world of unsolicited cruelty.<br/>
+        <br/>
+        Hunting for the same steadiness,<br/>
+        she'd always come back running to her senior friend,<br/>
+        disappointed by the way the world depicted faithfulness,<br/>
+        where people replaced friends like a changing fashion trend.
     </div>
 
-    <!-- PHOTO BLOCK: scholarly specimen style -->
+<!-- archival note / mature postscript -->
+<!-- archival note / mature postscript -->
+<div class="archival-note">
+  <div style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px;">
+    <span style="font-size: 1.1rem;">☕</span>
+    <div style="flex: 1;">
+      <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #9b8d72;">marginalia</span>
+      <div style="font-style: italic; color: #dac29c; margin-top: 6px; font-size: 1rem;">
+        “Loyalty does not demand reason. It simply waits, roots deep, through season after season.”
+      </div>
+    </div>
+  </div>
+  
+  <p style="margin: 12px 0 16px 0; color: #cfc3a8;">
+    For the ones who stay: a tree, a friend, a memory.
+  </p>
+  
+  <div style="background: rgba(0, 0, 0, 0.2); border-radius: 12px; padding: 12px 16px; margin: 16px 0 12px 0;">
+    <p style="font-size: 0.85rem; color: #bcab8a; margin: 0;">
+      little Eman was navigating friendship breakups in middle school when this found its way onto the page. This piece is for her, for the heart that kept believing even when it ached.
+    </p>
+  </div>
+  
+  <div class="signature" style="margin-top: 16px;">— Eman, peer-reviewed</div>
+</div>
+    </div>
+
+    <!-- PHOTO BLOCK: gallery specimen style (matching poem-2) -->
     <div class="specimen-card">
-      <div class="photo-label">⸻ published in CMU student magazine · 2024 ⸻</div>
-      <a href="../assets/img/professor-poem-journal.png" target="_blank" rel="noopener">
-        <img src="../assets/img/professor-poem-journal.png" 
-             alt="Publication spread — Professor poem in literary magazine" 
-             class="postcard-photo"
-             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22540%22%20height%3D%22320%22%20viewBox%3D%220%200%20540%20320%22%3E%3Crect%20width%3D%22540%22%20height%3D%22320%22%20fill%3D%22%23221e2d%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22Cormorant%20Garamond%22%20font-size%3D%2218%22%20fill%3D%22%23b79ad6%22%3E📖%20folio%20excerpt%20·%20print%20archive%3C%2Ftext%3E%3C%2Fsvg%3E'">
-      </a>
-      <div class="photo-caption">⟡ specimen from the literary collection · click to enlarge ⟡</div>
+      <div class="photo-label">⸻ visual ephemera · archive plates ⸻</div>
+      <div class="gallery-grid">
+        <a href="../assets/img/poem3-1.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-1.jpg" alt="Poem 3 Visual 1" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate i%3C/text%3E%3C/svg%3E'">
+        </a>
+        <a href="../assets/img/poem3-2.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-2.jpg" alt="Poem 3 Visual 2" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate ii%3C/text%3E%3C/svg%3E'">
+        </a>
+        <a href="../assets/img/poem3-3.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-3.jpg" alt="Poem 3 Visual 3" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate iii%3C/text%3E%3C/svg%3E'">
+        </a>
+        <a href="../assets/img/poem3-4.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-4.jpg" alt="Poem 3 Visual 4" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate iv%3C/text%3E%3C/svg%3E'">
+        </a>
+        <a href="../assets/img/poem3-5.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-5.jpg" alt="Poem 3 Visual 5" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate v%3C/text%3E%3C/svg%3E'">
+        </a>
+        <a href="../assets/img/poem3-6.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-6.jpg" alt="Poem 3 Visual 6" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate vi%3C/text%3E%3C/svg%3E'">
+        </a>
+        <a href="../assets/img/poem3-7.jpg" class="gallery-item" target="_blank" rel="noopener">
+          <img src="../assets/img/poem3-7.jpg" alt="Poem 3 Visual 7" class="gallery-img"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Crect width=\'160\' height=\'160\' fill=\'#221e2d\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Cormorant Garamond\' font-size=\'12\' fill=\'#b79ad6\'%3Eplate vii%3C/text%3E%3C/svg%3E'">
+        </a>
+      </div>
+      <div class="photo-caption">⟡ archival plates · click to enlarge ⟡</div>
     </div>
 
     <div>
-      <a href="../poems.html" class="back-link">← return to poem index</a>
+      <a href="../poems.html" class="back-link">← return to folio</a>
     </div>
   </div>
 </main>
 
-<!-- subtle script to reinforce mature vibe (no interaction noise, just elegance) -->
-<script>
-  (function() {
-    // optional: ensures any external image error fallback still looks archival
-    const imgs = document.querySelectorAll('.postcard-photo');
-    imgs.forEach(img => {
-      img.addEventListener('error', function(e) {
-        if (!this.src.includes('fallback')) {
-          this.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='320' viewBox='0 0 540 320'%3E%3Crect width='100%25' height='100%25' fill='%23221e2d'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Cormorant Garamond' font-size='16' fill='%23b79ad6'%3Earchival plate — cmu magazine%3C/text%3E%3C/svg%3E";
-        }
-      });
-    });
-  })();
-</script>
 </body>
 </html>
