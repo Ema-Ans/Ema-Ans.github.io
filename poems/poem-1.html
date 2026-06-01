@@ -21,7 +21,14 @@
       --bg-deep: #0e0c14;      /* deep archival background */
       --paper-dark: #1f1c29;   /* aged paper base (matches original card) */
       --paper-warm: #24212e;
-      --text-ink: #e9e2d4;     /* warm off-white ink */
+      --paper-clean: #eadfca;
+      --paper-clean-deep: #d7c39d;
+      --paper-edge: #b99a62;
+      --ink-primary: #30283b;
+      --ink-secondary: #5b4f62;
+      --coffee-soft: rgba(112, 72, 38, 0.16);
+      --coffee-dark: rgba(78, 47, 24, 0.20);
+      --text-ink: #e7e1d6;     /* warm off-white ink */
       --text-faded: #c6bba5;
       --accent-lilac: #b79ad6;
       --accent-faded: #a484c2;
@@ -169,33 +176,53 @@
     /* ---------- THE AGED JOURNAL / POEM CARD (MAIN ATTRACTION) ---------- */
     .poem-journal {
       position: relative;
-      background: #1b1824; /* deep base */
+      background: var(--paper-clean);
       background-image: 
-        linear-gradient(135deg, rgba(50, 40, 35, 0.25) 0%, rgba(25, 20, 28, 0.4) 100%),
-        repeating-linear-gradient(45deg, rgba(150, 110, 70, 0.04) 0px, rgba(150, 110, 70, 0.04) 1px, transparent 1px, transparent 12px);
-      border: 1px solid #3c334b;
-      border-top: 1px solid #5d4c6e;
-      border-radius: 24px 6px 24px 6px;    /* asymmetric, antique */
-      padding: 48px 52px 52px 52px;
+        radial-gradient(ellipse at 83% 16%, rgba(102, 65, 32, 0.18) 0 5%, rgba(102, 65, 32, 0.08) 9%, transparent 20%),
+        radial-gradient(ellipse at 74% 23%, rgba(84, 50, 25, 0.12) 0 3%, transparent 11%),
+        radial-gradient(ellipse at 88% 31%, rgba(116, 74, 37, 0.10) 0 2.5%, transparent 9%),
+        radial-gradient(ellipse at 18% 88%, rgba(129, 86, 43, 0.18), transparent 34%),
+        radial-gradient(ellipse at 23% 78%, rgba(72, 44, 23, 0.10), transparent 18%),
+        radial-gradient(ellipse at 42% 6%, rgba(158, 116, 62, 0.10), transparent 22%),
+        linear-gradient(135deg, rgba(255, 250, 238, 0.55), rgba(206, 181, 132, 0.28)),
+        repeating-linear-gradient(35deg, rgba(92, 70, 45, 0.035) 0 1px, transparent 1px 13px);
+      border: 1px solid rgba(183, 154, 214, 0.42);
+      border-top: 2px solid rgba(185, 154, 98, 0.72);
+      border-radius: 18px 5px 18px 5px;    /* asymmetric, antique */
+      padding: 52px 56px 50px;
       margin: 16px 0 40px 0;
-      box-shadow: var(--shadow-archival), inset 0 0 0 1px rgba(220, 200, 150, 0.08);
+      box-shadow: 0 24px 42px -18px rgba(0, 0, 0, 0.58), inset 0 0 0 1px rgba(255, 250, 230, 0.55);
       transition: all 0.2s ease;
+      color: var(--ink-primary);
     }
 
     /* aged deckle edge effect (top only) */
     .poem-journal::before {
       content: "";
       position: absolute;
-      top: -4px;
-      left: 12px;
-      right: 12px;
-      height: 12px;
-      background: repeating-linear-gradient(105deg, 
-        transparent, transparent 8px, 
-        rgba(150, 110, 70, 0.2) 8px, 
-        rgba(150, 110, 70, 0.2) 18px);
-      border-radius: 40% 40% 0 0;
+      inset: -7px 10px auto 14px;
+      height: 16px;
+      background:
+        linear-gradient(to bottom, rgba(234, 223, 202, 0.96), rgba(215, 195, 157, 0.26)),
+        repeating-linear-gradient(104deg, transparent 0 7px, rgba(106, 79, 46, 0.20) 7px 12px, transparent 12px 21px);
+      clip-path: polygon(0 58%, 4% 28%, 9% 63%, 14% 34%, 20% 72%, 26% 38%, 33% 62%, 40% 30%, 47% 68%, 55% 36%, 63% 74%, 70% 32%, 78% 64%, 86% 26%, 94% 58%, 100% 36%, 100% 100%, 0 100%);
+      opacity: 0.95;
       pointer-events: none;
+      z-index: 3;
+    }
+
+    .poem-journal::after {
+      content: "";
+      position: absolute;
+      inset: auto 18px -8px 8px;
+      height: 18px;
+      background:
+        linear-gradient(to top, rgba(215, 195, 157, 0.46), rgba(234, 223, 202, 0.92)),
+        repeating-linear-gradient(96deg, transparent 0 9px, rgba(106, 79, 46, 0.18) 9px 14px, transparent 14px 25px);
+      clip-path: polygon(0 0, 100% 0, 100% 46%, 96% 70%, 90% 42%, 84% 78%, 78% 44%, 71% 68%, 64% 39%, 57% 75%, 50% 44%, 42% 66%, 35% 36%, 28% 72%, 21% 40%, 14% 68%, 7% 42%, 0 72%);
+      opacity: 0.88;
+      pointer-events: none;
+      z-index: 3;
     }
 
     /* ---------- COFFEE STAINS: MATURE, SUBDUED, AUTHENTIC ---------- */
@@ -205,12 +232,15 @@
       right: 25px;
       width: 160px;
       height: 130px;
-      background: radial-gradient(ellipse at 35% 40%, rgba(85, 58, 38, 0.45) 0%, rgba(65, 45, 28, 0.25) 45%, transparent 80%);
-      filter: blur(9px);
-      border-radius: 65% 35% 70% 30%;
-      transform: rotate(12deg);
+      background:
+        radial-gradient(ellipse at 31% 42%, var(--coffee-dark) 0 10%, rgba(78, 47, 24, 0.10) 24%, transparent 58%),
+        radial-gradient(circle at 62% 26%, rgba(87, 52, 25, 0.16) 0 8%, transparent 23%),
+        radial-gradient(circle at 73% 58%, rgba(126, 78, 35, 0.12) 0 7%, transparent 22%);
+      filter: blur(7px);
+      border-radius: 57% 43% 66% 34% / 44% 61% 39% 56%;
+      transform: rotate(10deg);
       pointer-events: none;
-      z-index: 0;
+      z-index: 1;
       mix-blend-mode: multiply;
     }
 
@@ -220,12 +250,14 @@
       left: 18px;
       width: 110px;
       height: 95px;
-      background: radial-gradient(ellipse, rgba(100, 68, 42, 0.45) 0%, rgba(70, 48, 28, 0.28) 50%, transparent 80%);
-      filter: blur(8px);
-      border-radius: 45% 55% 40% 60%;
-      transform: rotate(-6deg);
+      background:
+        radial-gradient(ellipse at 44% 46%, rgba(95, 58, 29, 0.18) 0 18%, rgba(95, 58, 29, 0.08) 38%, transparent 70%),
+        radial-gradient(circle at 22% 72%, rgba(74, 44, 22, 0.13) 0 8%, transparent 25%);
+      filter: blur(7px);
+      border-radius: 43% 57% 51% 49% / 60% 35% 65% 40%;
+      transform: rotate(-9deg);
       pointer-events: none;
-      z-index: 0;
+      z-index: 1;
       mix-blend-mode: multiply;
     }
 
@@ -235,12 +267,14 @@
       right: 60px;
       width: 65px;
       height: 70px;
-      background: radial-gradient(ellipse at 60% 20%, rgba(110, 75, 45, 0.4) 0%, rgba(75, 50, 30, 0.22) 55%, transparent 85%);
-      filter: blur(5px);
-      border-radius: 60% 40% 55% 45%;
-      transform: rotate(22deg);
+      background:
+        radial-gradient(ellipse at 54% 18%, rgba(80, 48, 24, 0.17) 0 12%, rgba(80, 48, 24, 0.07) 48%, transparent 83%),
+        radial-gradient(circle at 36% 68%, rgba(122, 76, 35, 0.12) 0 9%, transparent 24%);
+      filter: blur(4px);
+      border-radius: 48% 52% 46% 54% / 68% 34% 66% 32%;
+      transform: rotate(18deg);
       pointer-events: none;
-      z-index: 0;
+      z-index: 1;
       mix-blend-mode: multiply;
     }
 
@@ -248,12 +282,12 @@
     .age-speckles {
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(circle at 15% 70%, rgba(140, 100, 60, 0.14) 1.2px, transparent 1.2px),
-                        radial-gradient(circle at 85% 25%, rgba(110, 75, 45, 0.1) 1px, transparent 1px),
-                        radial-gradient(circle at 45% 45%, rgba(95, 68, 42, 0.08) 1.5px, transparent 1.5px);
+      background-image: radial-gradient(circle at 15% 70%, rgba(93, 63, 37, 0.09) 1.2px, transparent 1.2px),
+                        radial-gradient(circle at 85% 25%, rgba(83, 58, 35, 0.07) 1px, transparent 1px),
+                        radial-gradient(circle at 45% 45%, rgba(74, 51, 32, 0.06) 1.5px, transparent 1.5px);
       background-size: 48px 48px, 62px 62px, 90px 90px;
       pointer-events: none;
-      z-index: 0;
+      z-index: 1;
     }
 
     /* faint manuscript ruling (aged lined paper) */
@@ -264,11 +298,11 @@
         to bottom,
         transparent,
         transparent 32px,
-        rgba(183, 154, 214, 0.12) 32px,
-        rgba(183, 154, 214, 0.12) 33px
+        rgba(48, 40, 59, 0.075) 32px,
+        rgba(48, 40, 59, 0.075) 33px
       );
       pointer-events: none;
-      z-index: 0;
+      z-index: 1;
     }
 
     /* POEM TEXT — MATURE, LITERARY, UPRIGHT HANDWRITING / SERIF BLEND */
@@ -277,18 +311,19 @@
       z-index: 2;
       font-family: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
       font-size: 1.45rem;
-      line-height: 2.25rem;
-      color: #f0e6d8;
-      letter-spacing: 0.01em;
+      line-height: 2.38rem;
+      color: var(--ink-primary);
+      letter-spacing: 0;
       font-weight: 400;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-      margin-bottom: 32px;
+      text-shadow: none;
+      max-width: 38rem;
+      margin: 0 auto 34px;
     }
 
     /* gentle ink weight variation */
     .poem-text strong {
       font-weight: 500;
-      color: #e2cfaa;
+      color: #3c314f;
     }
 
     /* stanza spacing */
@@ -302,17 +337,19 @@
     .archival-note {
       position: relative;
       z-index: 2;
-      margin-top: 28px;
-      padding-top: 22px;
-      border-top: 1px dashed rgba(210, 180, 110, 0.5);
+      max-width: 40rem;
+      margin: 34px auto 0;
       font-family: 'Inter', system-ui, sans-serif;
       font-size: 0.95rem;
-      color: #cfc3a8;
+      color: var(--ink-secondary);
       letter-spacing: 0.2px;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(255, 250, 238, 0.54);
       backdrop-filter: blur(1px);
-      padding: 20px 18px 16px 18px;
-      border-radius: 16px;
+      padding: 18px 20px 16px;
+      border: 1px solid rgba(164, 132, 194, 0.28);
+      border-left: 3px solid rgba(164, 132, 194, 0.66);
+      border-radius: 12px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
     }
 
     .signature {
@@ -322,7 +359,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.25rem;
       font-style: italic;
-      color: #cbbd96;
+      color: #6f5a2e;
       letter-spacing: 0.3px;
     }
 
@@ -444,9 +481,10 @@
       transition: box-shadow 0.2s;
     }
     .poem-journal:hover {
-      box-shadow: 0 24px 44px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 240, 190, 0.06);
+      box-shadow: 0 28px 48px -18px rgba(0, 0, 0, 0.62), inset 0 0 0 1px rgba(255, 250, 230, 0.62);
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/poem-paper-theme.css" />
 </head>
 <body>
 
@@ -456,7 +494,7 @@
     <nav class="nav">
       <a href="../index.html">Journal</a>
       <a href="../poems.html">Folio</a>
-      <a href="../notebook.html">Marginalia</a>
+      <a href="../journal.html">Marginalia</a>
     </nav>
   </div>
 </header>
@@ -509,19 +547,19 @@
         <div style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px;">
           <span style="font-size: 1.1rem;">☕</span>
           <div style="flex: 1;">
-            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #9b8d72;">marginalia</span>
-            <div style="font-style: italic; color: #dac29c; margin-top: 6px; font-size: 1rem;">
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #7a6339;">marginalia</span>
+            <div style="font-style: italic; color: #46384f; margin-top: 6px; font-size: 1rem;">
               “Patience is a quiet form of faith. To those who tend without demanding early petals, this note is a slow bow.”
             </div>
           </div>
         </div>
         
-        <p style="margin: 12px 0 16px 0; color: #cfc3a8;">
+        <p style="margin: 12px 0 16px 0; color: #5b4f62;">
           Shout out to every mentor, professor, and curator of late-blooming gardens.
         </p>
         
-        <div style="background: rgba(0, 0, 0, 0.2); border-radius: 12px; padding: 12px 16px; margin: 16px 0 12px 0;">
-          <p style="font-size: 0.85rem; color: #bcab8a; margin: 0;">
+        <div style="background: rgba(48, 40, 59, 0.06); border: 1px solid rgba(111, 90, 46, 0.18); border-radius: 10px; padding: 12px 16px; margin: 16px 0 12px 0;">
+          <p style="font-size: 0.85rem; color: #6a5b68; margin: 0;">
             this is why i'm so inspired to become a professor. one day, i want to be the gardener who waits for every rose to bloom in its own time.
           </p>
         </div>

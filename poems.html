@@ -21,7 +21,7 @@
       --paper-dark: #1f1c29;
       --paper-warm: #24212e;
       --text-ink: #e9e2d4;
-      --text-faded: #c6bba5;
+      --text-faded: #f2edf7;
       --accent-lilac: #b79ad6;
       --accent-faded: #a484c2;
       --sepia-stain: #8b7355;
@@ -155,43 +155,637 @@
       line-height: 1.6;
     }
 
-    /* ---------- WRITING LIST (aged specimen cards) ---------- */
+    /* ---------- POEM BOX SCENE ---------- */
     .writing-list {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      margin-bottom: 56px;
+      position: relative;
+      min-height: 800px;
+      margin: 8px 0 72px;
+      isolation: isolate;
+    }
+
+    .writing-list::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 26px;
+      width: min(690px, 94%);
+      height: 90px;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse, rgba(0, 0, 0, 0.48), transparent 66%);
+      filter: blur(8px);
+      z-index: 0;
+    }
+
+    .writing-list::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 130px;
+      width: min(520px, 78%);
+      height: 168px;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at center, rgba(255, 205, 86, 0.18), transparent 66%);
+      opacity: 0;
+      filter: blur(18px);
+      transition: opacity 0.45s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .writing-list.is-open::after {
+      opacity: 1;
+    }
+
+    .treasure-case {
+      position: absolute;
+      left: 50%;
+      bottom: 72px;
+      width: min(610px, 90%);
+      height: 330px;
+      transform: translateX(-50%);
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      perspective: 1000px;
+      z-index: 5;
+    }
+
+    .treasure-case:focus-visible {
+      outline: 2px solid #dcc796;
+      outline-offset: 14px;
+      border-radius: 28px;
+    }
+
+    .case-hint {
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
+      transform: translateX(-50%);
+      font-family: 'Inter', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: #bcab8a;
+      opacity: 0.88;
+      transition: opacity 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .writing-list.is-open .case-hint {
+      opacity: 0;
+    }
+
+    .case-tag,
+    .found-note,
+    .old-key {
+      position: absolute;
+      pointer-events: none;
+      z-index: 7;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+    }
+
+    .writing-list.is-open .case-tag,
+    .writing-list.is-open .found-note,
+    .writing-list.is-open .old-key {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .writing-list.is-open .case-tag-one {
+      transform: rotate(-7deg) translateY(12px);
+    }
+
+    .writing-list.is-open .case-tag-two {
+      transform: rotate(6deg) translateY(12px);
+    }
+
+    .writing-list.is-open .found-note {
+      transform: rotate(-8deg) translateY(14px);
+    }
+
+    .writing-list.is-open .old-key {
+      transform: rotate(8deg) translateY(10px);
+    }
+
+    .dust {
+      position: absolute;
+      pointer-events: none;
+      z-index: 7;
+    }
+
+    .ghost,
+    .glint {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 8;
+    }
+
+    .case-tag {
+      bottom: 290px;
+      padding: 7px 12px;
+      background: #d9c59e;
+      background-image:
+        radial-gradient(circle at 10px 10px, rgba(72, 44, 22, 0.18) 0 2px, transparent 3px),
+        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(165, 124, 66, 0.18));
+      border: 1px solid rgba(85, 57, 33, 0.42);
+      border-radius: 7px 2px 7px 2px;
+      color: #4a3427;
+      font-family: 'Inter', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+      opacity: 0.88;
+    }
+
+    .case-tag::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -38px;
+      width: 42px;
+      height: 1px;
+      background: rgba(188, 171, 138, 0.45);
+      transform: rotate(-8deg);
+      transform-origin: right center;
+    }
+
+    .case-tag-one {
+      left: 18%;
+      transform: rotate(-7deg);
+    }
+
+    .case-tag-two {
+      right: 14%;
+      bottom: 258px;
+      transform: rotate(6deg);
+    }
+
+    .found-note {
+      left: 8%;
+      bottom: 86px;
+      width: 180px;
+      padding: 16px 17px 15px;
+      background: #eadfca;
+      background-image:
+        radial-gradient(ellipse at 82% 16%, rgba(82, 51, 28, 0.12), transparent 24%),
+        repeating-linear-gradient(35deg, rgba(92, 70, 45, 0.032) 0 1px, transparent 1px 12px);
+      clip-path: polygon(0 5%, 10% 0, 22% 3%, 36% 0, 52% 4%, 66% 1%, 82% 5%, 100% 2%, 98% 100%, 83% 96%, 68% 100%, 50% 97%, 35% 100%, 20% 96%, 0 100%);
+      color: #4a3d49;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.02rem;
+      line-height: 1.28;
+      transform: rotate(-8deg);
+      box-shadow: 0 18px 26px rgba(0,0,0,0.28);
+    }
+
+    .found-note span {
+      display: block;
+      margin-bottom: 7px;
+      color: #745d34;
+      font-family: 'Inter', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .old-key {
+      right: 10%;
+      bottom: 84px;
+      width: 128px;
+      height: 42px;
+      transform: rotate(13deg);
+      opacity: 0.86;
+    }
+
+    .old-key::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 32px;
+      height: 32px;
+      border: 5px solid #9c7745;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 2px rgba(30,18,12,0.18);
+    }
+
+    .old-key::after {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 19px;
+      width: 90px;
+      height: 6px;
+      background: linear-gradient(90deg, #b58a52, #75502f);
+      box-shadow:
+        46px 8px 0 -1px #75502f,
+        61px -8px 0 -1px #8f663b;
+      border-radius: 999px;
+    }
+
+    .wax-seal {
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      width: 58px;
+      height: 58px;
+      transform: translateX(-50%) rotate(-8deg);
+      border-radius: 45% 55% 48% 52%;
+      background:
+        radial-gradient(circle at 34% 28%, rgba(255,255,255,0.16), transparent 24%),
+        radial-gradient(circle, #7f4a86 0%, #5b3262 72%);
+      border: 1px solid rgba(220, 199, 150, 0.24);
+      box-shadow: inset 0 -8px 14px rgba(0,0,0,0.22), 0 10px 18px rgba(0,0,0,0.28);
+      color: #dcc796;
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .wax-seal::after {
+      content: "EA";
+    }
+
+    .dust {
+      width: 3px;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(220, 199, 150, 0.58);
+      opacity: 0;
+      filter: blur(0.3px);
+      animation: dust-drift 7s ease-in-out infinite;
+      animation-play-state: paused;
+    }
+
+    .writing-list.is-open .dust {
+      opacity: 0.55;
+      animation-play-state: running;
+    }
+
+    .dust-one { left: 27%; bottom: 260px; animation-delay: 0s; }
+    .dust-two { left: 44%; bottom: 318px; animation-delay: 1.3s; }
+    .dust-three { right: 30%; bottom: 286px; animation-delay: 2.1s; }
+    .dust-four { right: 18%; bottom: 234px; animation-delay: 3s; }
+    .dust-five { left: 57%; bottom: 224px; animation-delay: 4.2s; }
+    .dust-six { left: 36%; bottom: 232px; animation-delay: 2.7s; }
+    .dust-seven { right: 42%; bottom: 350px; animation-delay: 5.1s; }
+    .dust-eight { right: 22%; bottom: 328px; animation-delay: 0.8s; }
+
+    @keyframes dust-drift {
+      0%, 100% {
+        transform: translate3d(0, 12px, 0);
+        opacity: 0;
+      }
+      24% {
+        opacity: 0.5;
+      }
+      52% {
+        transform: translate3d(16px, -34px, 0);
+        opacity: 0.65;
+      }
+      78% {
+        opacity: 0.25;
+      }
+    }
+
+    .ghost {
+      right: 22%;
+      bottom: 298px;
+      width: 54px;
+      height: 70px;
+      border-radius: 50% 50% 38% 38%;
+      background:
+        radial-gradient(circle at 36% 35%, rgba(48, 40, 59, 0.42) 0 2px, transparent 3px),
+        radial-gradient(circle at 63% 35%, rgba(48, 40, 59, 0.42) 0 2px, transparent 3px),
+        linear-gradient(180deg, rgba(242, 237, 247, 0.58), rgba(220, 199, 150, 0.12));
+      filter: blur(0.1px);
+      transform: translateY(18px) rotate(5deg);
+    }
+
+    .ghost::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 18px;
+      background:
+        radial-gradient(circle at 12% 0, transparent 0 9px, rgba(242, 237, 247, 0.48) 10px),
+        radial-gradient(circle at 36% 0, transparent 0 9px, rgba(242, 237, 247, 0.48) 10px),
+        radial-gradient(circle at 62% 0, transparent 0 9px, rgba(242, 237, 247, 0.48) 10px),
+        radial-gradient(circle at 88% 0, transparent 0 9px, rgba(242, 237, 247, 0.48) 10px);
+    }
+
+    .writing-list.is-open .ghost {
+      animation: ghost-rise 7.2s ease-in-out infinite;
+    }
+
+    @keyframes ghost-rise {
+      0%, 100% {
+        opacity: 0;
+        transform: translateY(18px) rotate(5deg);
+      }
+      18% {
+        opacity: 0.55;
+      }
+      52% {
+        opacity: 0.34;
+        transform: translateY(-42px) translateX(-12px) rotate(-4deg);
+      }
+      80% {
+        opacity: 0;
+        transform: translateY(-68px) translateX(8px) rotate(4deg);
+      }
+    }
+
+    .glint {
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg) scale(0.6);
+      background:
+        linear-gradient(90deg, transparent 35%, currentColor 35% 65%, transparent 65%),
+        linear-gradient(0deg, transparent 35%, currentColor 35% 65%, transparent 65%);
+      color: rgba(220, 199, 150, 0.72);
+      animation: glint-twinkle 3.8s ease-in-out infinite;
+      animation-play-state: paused;
+    }
+
+    .writing-list.is-open .glint {
+      animation-play-state: running;
+    }
+
+    .glint-one { left: 32%; bottom: 318px; animation-delay: 0.1s; }
+    .glint-two { right: 34%; bottom: 250px; color: rgba(164, 132, 194, 0.62); animation-delay: 1.2s; }
+    .glint-three { right: 24%; bottom: 372px; animation-delay: 2.1s; }
+    .glint-four { left: 52%; bottom: 374px; color: rgba(164, 132, 194, 0.58); animation-delay: 2.8s; }
+
+    @keyframes glint-twinkle {
+      0%, 100% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0.45);
+      }
+      42% {
+        opacity: 0.75;
+        transform: rotate(45deg) scale(1);
+      }
+      58% {
+        opacity: 0.26;
+      }
+    }
+
+    .case-lid,
+    .case-base,
+    .case-glow {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .case-lid {
+      bottom: 176px;
+      width: 82%;
+      height: 132px;
+      transform-origin: 50% 100%;
+      transform: translateX(-50%) rotateX(0deg);
+      transition: transform 0.55s cubic-bezier(.2,.8,.2,1), bottom 0.55s cubic-bezier(.2,.8,.2,1);
+      background:
+        linear-gradient(90deg, transparent 0 9%, rgba(157, 119, 68, 0.82) 9% 17%, transparent 17% 83%, rgba(157, 119, 68, 0.82) 83% 91%, transparent 91%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 11px),
+        linear-gradient(180deg, #4f3328 0%, #3d261f 52%, #241916 100%);
+      border: 1px solid rgba(176, 141, 88, 0.58);
+      border-bottom: 7px solid #241612;
+      border-radius: 52px 52px 14px 14px;
+      box-shadow:
+        inset 0 10px 0 rgba(255, 235, 190, 0.07),
+        inset 0 -18px 22px rgba(0, 0, 0, 0.24),
+        0 24px 30px rgba(0, 0, 0, 0.30);
+      z-index: 4;
+    }
+
+    .writing-list.is-open .case-lid {
+      bottom: 246px;
+      transform: translateX(-50%) rotateX(-64deg);
+    }
+
+    .case-lid::before,
+    .case-lid::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      width: 15%;
+      height: 88px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.12), transparent 28%),
+        linear-gradient(180deg, #b68a52, #7d5734);
+      border: 1px solid rgba(74, 42, 28, 0.38);
+      border-radius: 12px 12px 8px 8px;
+      box-shadow: inset 0 3px 0 rgba(255, 245, 192, 0.12);
+    }
+
+    .case-lid::before {
+      left: 12%;
+    }
+
+    .case-lid::after {
+      right: 12%;
+    }
+
+    .case-base {
+      bottom: 16px;
+      width: 90%;
+      height: 196px;
+      background:
+        linear-gradient(90deg, #2e1e19 0 7%, transparent 7% 93%, #2e1e19 93%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.026) 0 1px, transparent 1px 13px),
+        linear-gradient(180deg, #5c3a2c 0%, #42281f 58%, #211613 100%);
+      border: 1px solid rgba(176, 141, 88, 0.52);
+      border-top: 10px solid #80613b;
+      border-radius: 18px 18px 13px 13px;
+      box-shadow:
+        inset 0 16px 0 rgba(255, 226, 155, 0.06),
+        inset 0 -20px 26px rgba(0, 0, 0, 0.32),
+        0 36px 48px rgba(0, 0, 0, 0.38);
+      z-index: 3;
+    }
+
+    .case-base::before {
+      content: "";
+      position: absolute;
+      inset: 36px 58px 58px;
+      border-top: 2px solid rgba(27, 17, 14, 0.72);
+      border-bottom: 2px solid rgba(27, 17, 14, 0.72);
+      box-shadow: 0 33px 0 rgba(27, 17, 14, 0.56);
+    }
+
+    .case-base::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -27px;
+      width: 48px;
+      height: 44px;
+      transform: translateX(-50%) rotate(45deg);
+      background: linear-gradient(135deg, #b58a52, #6d492d);
+      border: 1px solid rgba(38, 24, 18, 0.62);
+      border-radius: 7px;
+      box-shadow: inset 3px 3px 0 rgba(255, 245, 192, 0.10);
+    }
+
+    .case-glow {
+      bottom: 146px;
+      width: 72%;
+      height: 96px;
+      background:
+        radial-gradient(ellipse at 38% 52%, rgba(220, 199, 150, 0.24), transparent 26%),
+        radial-gradient(ellipse at 56% 48%, rgba(164, 132, 194, 0.16), transparent 30%),
+        radial-gradient(ellipse at 68% 55%, rgba(220, 199, 150, 0.18), transparent 24%);
+      opacity: 0;
+      filter: blur(4px);
+      transition: opacity 0.4s ease 0.1s;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .writing-list.is-open .case-glow {
+      opacity: 1;
+    }
+
+    .poem-papers {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(72px) scale(0.86);
+      pointer-events: none;
+      transition: opacity 0.32s ease 0.18s, transform 0.5s cubic-bezier(.2,.8,.2,1) 0.08s, visibility 0s linear 0.5s;
+      z-index: 6;
+    }
+
+    .writing-list.is-open .poem-papers {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+      transition-delay: 0.18s, 0.08s, 0s;
     }
 
     .writing-item {
-      position: relative;
-      background: #1b1824;
-      background-image: linear-gradient(135deg, rgba(50, 40, 35, 0.2) 0%, rgba(25, 20, 28, 0.3) 100%);
-      border: 1px solid #3c334b;
-      border-top: 1px solid #5d4c6e;
-      border-radius: 20px 6px 20px 6px;
-      padding: 28px 32px 32px 32px;
-      transition: all 0.2s ease;
-      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 245, 215, 0.03);
+      position: absolute;
+      --tilt: 0deg;
+      width: min(330px, 42vw);
+      min-height: 250px;
+      background: #eadfca;
+      background-image:
+        radial-gradient(ellipse at 18% 82%, rgba(112, 72, 38, 0.16), transparent 30%),
+        radial-gradient(ellipse at 84% 16%, rgba(82, 51, 28, 0.11), transparent 22%),
+        radial-gradient(ellipse at 44% 6%, rgba(158, 116, 62, 0.10), transparent 24%),
+        linear-gradient(135deg, rgba(255, 250, 238, 0.58), rgba(206, 181, 132, 0.30)),
+        repeating-linear-gradient(35deg, rgba(92, 70, 45, 0.034) 0 1px, transparent 1px 13px);
+      border: 1px solid rgba(183, 154, 214, 0.34);
+      border-top: 2px solid rgba(185, 154, 98, 0.62);
+      border-radius: 9px 3px 11px 4px;
+      clip-path: polygon(0 2%, 6% 0, 13% 2%, 23% 0, 34% 2%, 47% 0, 59% 2%, 72% 0, 84% 2%, 100% 0, 98% 12%, 100% 24%, 98% 39%, 100% 54%, 98% 71%, 100% 88%, 96% 100%, 84% 98%, 72% 100%, 60% 98%, 47% 100%, 34% 98%, 23% 100%, 12% 98%, 0 100%, 2% 86%, 0 70%, 2% 55%, 0 38%, 2% 22%);
+      padding: 28px 30px 30px;
+      color: #30283b;
+      cursor: pointer;
+      transform: rotate(var(--tilt));
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+      box-shadow:
+        0 20px 30px -16px rgba(0, 0, 0, 0.58),
+        0 2px 1px rgba(255, 255, 255, 0.22) inset;
+      z-index: 2;
     }
 
     .writing-item:hover {
-      transform: translateY(-2px);
-      border-color: #5a4a74;
-      box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 245, 215, 0.05);
+      transform: translateY(-16px) rotate(0deg) scale(1.035);
+      filter: saturate(1.05);
+      box-shadow:
+        0 30px 44px -18px rgba(0, 0, 0, 0.68),
+        0 2px 1px rgba(255, 255, 255, 0.28) inset;
+      z-index: 30;
     }
 
-    /* coffee stain accents on each card (subtle) */
+    .writing-item.is-raised {
+      transform: translateY(-22px) rotate(0deg) scale(1.045);
+      filter: saturate(1.07);
+      box-shadow:
+        0 34px 50px -18px rgba(0, 0, 0, 0.72),
+        0 2px 1px rgba(255, 255, 255, 0.30) inset;
+      z-index: 40;
+    }
+
+    .writing-item:focus-visible {
+      outline: 2px solid #a484c2;
+      outline-offset: 8px;
+      z-index: 40;
+    }
+
+    .writing-list.is-closed .writing-item {
+      transform: translateY(140px) rotate(var(--tilt)) scale(0.72);
+    }
+
+    .writing-item:nth-of-type(1) {
+      left: 20px;
+      top: 112px;
+      --tilt: -8deg;
+    }
+
+    .writing-item:nth-of-type(2) {
+      left: 268px;
+      top: 52px;
+      --tilt: 5deg;
+      z-index: 3;
+    }
+
+    .writing-item:nth-of-type(3) {
+      right: 8px;
+      top: 168px;
+      --tilt: 8deg;
+    }
+
+    .writing-item:nth-of-type(4) {
+      left: 70px;
+      top: 430px;
+      --tilt: 6deg;
+      z-index: 4;
+    }
+
+    .writing-item:nth-of-type(5) {
+      left: 330px;
+      top: 372px;
+      --tilt: -5deg;
+      z-index: 4;
+    }
+
+    .writing-item:nth-of-type(6) {
+      right: 10px;
+      top: 500px;
+      --tilt: 10deg;
+      z-index: 7;
+    }
+
+    /* irregular stains on each torn page */
     .writing-item::before {
       content: "";
       position: absolute;
-      bottom: 15px;
-      right: 20px;
-      width: 80px;
-      height: 65px;
-      background: radial-gradient(ellipse, rgba(85, 58, 38, 0.28) 0%, rgba(65, 45, 28, 0.15) 45%, transparent 80%);
-      filter: blur(7px);
-      border-radius: 50%;
+      bottom: 18px;
+      right: 16px;
+      width: 96px;
+      height: 76px;
+      background:
+        radial-gradient(ellipse at 40% 45%, rgba(78, 47, 24, 0.15) 0 16%, rgba(78, 47, 24, 0.07) 38%, transparent 72%),
+        radial-gradient(circle at 78% 26%, rgba(126, 78, 35, 0.11) 0 7%, transparent 22%);
+      filter: blur(6px);
+      border-radius: 57% 43% 66% 34% / 44% 61% 39% 56%;
       pointer-events: none;
       z-index: 0;
       mix-blend-mode: multiply;
@@ -200,15 +794,55 @@
     .writing-item::after {
       content: "";
       position: absolute;
-      top: 20px;
-      left: 25px;
-      width: 55px;
-      height: 50px;
-      background: radial-gradient(ellipse, rgba(100, 68, 42, 0.22) 0%, transparent 70%);
-      filter: blur(5px);
+      top: 16px;
+      left: 22px;
+      width: 66px;
+      height: 58px;
+      background:
+        radial-gradient(ellipse, rgba(100, 68, 42, 0.13) 0 24%, transparent 70%),
+        radial-gradient(circle at 76% 70%, rgba(74, 44, 22, 0.10) 0 8%, transparent 24%);
+      filter: blur(4px);
       pointer-events: none;
       z-index: 0;
       mix-blend-mode: multiply;
+    }
+
+    .artifact-mark {
+      position: absolute;
+      right: 22px;
+      top: 20px;
+      z-index: 2;
+      color: rgba(95, 71, 115, 0.55);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      line-height: 1;
+      transform: rotate(7deg);
+      pointer-events: none;
+    }
+
+    .writing-item:nth-of-type(2) .artifact-mark {
+      color: rgba(116, 93, 52, 0.60);
+      transform: rotate(-8deg);
+    }
+
+    .writing-item:nth-of-type(3) .artifact-mark {
+      right: 18px;
+      color: rgba(83, 102, 71, 0.58);
+    }
+
+    .writing-item:nth-of-type(4) .artifact-mark {
+      color: rgba(95, 71, 115, 0.62);
+      transform: rotate(11deg);
+    }
+
+    .writing-item:nth-of-type(5) .artifact-mark {
+      color: rgba(116, 93, 52, 0.60);
+      transform: rotate(-2deg);
+    }
+
+    .writing-item:nth-of-type(6) .artifact-mark {
+      color: rgba(83, 102, 71, 0.58);
+      transform: rotate(9deg);
     }
 
     /* header within card */
@@ -222,10 +856,10 @@
     }
 
     .stamp-icon {
-      width: 52px;
-      height: 52px;
-      background: #1f1b2b;
-      border: 1px solid #8b6f4c;
+      width: 46px;
+      height: 46px;
+      background: rgba(31, 27, 43, 0.92);
+      border: 1px solid rgba(139, 111, 76, 0.74);
       border-radius: 2px;
       display: flex;
       align-items: center;
@@ -241,10 +875,10 @@
 
     .item-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem;
+      font-size: 1.52rem;
       font-weight: 500;
       letter-spacing: -0.3px;
-      color: #ece2d0;
+      color: #30283b;
       margin: 0;
       line-height: 1.2;
     }
@@ -253,7 +887,7 @@
       font-family: 'Inter', monospace;
       font-size: 0.65rem;
       letter-spacing: 0.5px;
-      color: #9b8d72;
+      color: #745d34;
       margin-top: 6px;
       display: block;
     }
@@ -261,14 +895,18 @@
     .item-excerpt {
       font-family: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
       font-size: 1rem;
-      line-height: 1.65;
-      color: #d8ceb8;
+      line-height: 1.55;
+      color: #5d5263;
       margin: 14px 0 20px 0;
       position: relative;
       z-index: 2;
       padding-right: 20px;
-      border-left: 2px solid rgba(183, 154, 214, 0.35);
+      border-left: 2px solid rgba(164, 132, 194, 0.35);
       padding-left: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     /* read button — archival style */
@@ -280,10 +918,10 @@
       font-size: 0.8rem;
       font-weight: 500;
       text-decoration: none;
-      color: #bcab93;
+      color: #5f4773;
       text-transform: uppercase;
       letter-spacing: 1.2px;
-      border-bottom: 1px solid #5c4f3a;
+      border-bottom: 1px solid rgba(95, 71, 115, 0.35);
       padding-bottom: 4px;
       transition: all 0.2s ease;
       position: relative;
@@ -291,7 +929,7 @@
     }
 
     .read-link:hover {
-      color: #dac29c;
+      color: #30283b;
       border-bottom-color: #b79ad6;
       gap: 12px;
     }
@@ -304,8 +942,8 @@
         to bottom,
         transparent,
         transparent 28px,
-        rgba(183, 154, 214, 0.05) 28px,
-        rgba(183, 154, 214, 0.05) 29px
+        rgba(48, 40, 59, 0.055) 28px,
+        rgba(48, 40, 59, 0.055) 29px
       );
       pointer-events: none;
       z-index: 0;
@@ -334,11 +972,67 @@
       .container {
         padding: 0 20px;
       }
+      .writing-list {
+        min-height: 410px;
+        margin-bottom: 48px;
+      }
+      .case-tag,
+      .found-note,
+      .old-key,
+      .dust,
+      .ghost,
+      .glint {
+        display: none;
+      }
+      .treasure-case {
+        width: 100%;
+        height: 260px;
+        bottom: 20px;
+      }
+      .case-lid {
+        height: 96px;
+        bottom: 142px;
+      }
+      .writing-list.is-open .case-lid {
+        bottom: 190px;
+      }
+      .case-base {
+        height: 150px;
+      }
+      .case-base::before {
+        inset: 30px 38px 42px;
+      }
+      .case-glow {
+        bottom: 110px;
+      }
       .section-head h2 {
         font-size: 1.9rem;
       }
+      .poem-papers {
+        position: relative;
+        display: grid;
+        gap: 18px;
+        padding-top: 340px;
+        transform: translateY(16px);
+      }
+      .writing-list.is-open {
+        min-height: 0;
+      }
+      .writing-list.is-open .poem-papers {
+        transform: none;
+      }
       .writing-item {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        min-height: 0;
+        --tilt: 0deg;
         padding: 22px 24px 26px;
+      }
+      .writing-item:nth-of-type(n),
+      .writing-item:nth-of-type(n):hover,
+      .writing-item.is-raised {
+        transform: none;
       }
       .item-title {
         font-size: 1.4rem;
@@ -381,10 +1075,41 @@
       </p>
     </div>
 
-    <div class="writing-list">
+    <div class="writing-list is-closed">
+      <span class="case-tag case-tag-one">fragile drafts</span>
+      <span class="case-tag case-tag-two">opened at midnight</span>
+      <div class="found-note">
+        <span>contents</span>
+        six poems, several ghosts, one stubborn metaphor
+      </div>
+      <div class="old-key" aria-hidden="true"></div>
+      <span class="dust dust-one" aria-hidden="true"></span>
+      <span class="dust dust-two" aria-hidden="true"></span>
+      <span class="dust dust-three" aria-hidden="true"></span>
+      <span class="dust dust-four" aria-hidden="true"></span>
+      <span class="dust dust-five" aria-hidden="true"></span>
+      <span class="dust dust-six" aria-hidden="true"></span>
+      <span class="dust dust-seven" aria-hidden="true"></span>
+      <span class="dust dust-eight" aria-hidden="true"></span>
+      <span class="ghost" aria-hidden="true"></span>
+      <span class="glint glint-one" aria-hidden="true"></span>
+      <span class="glint glint-two" aria-hidden="true"></span>
+      <span class="glint glint-three" aria-hidden="true"></span>
+      <span class="glint glint-four" aria-hidden="true"></span>
+
+      <button class="treasure-case" type="button" aria-expanded="false" aria-controls="poemPapers">
+        <span class="case-hint">click the chest to open the folio</span>
+        <span class="case-glow" aria-hidden="true"></span>
+        <span class="case-lid" aria-hidden="true"></span>
+        <span class="case-base" aria-hidden="true"></span>
+        <span class="wax-seal" aria-hidden="true"></span>
+      </button>
+
+      <div class="poem-papers" id="poemPapers">
       <!-- Poem 1: Resin (placed first - March 2026) -->
       <article class="writing-item">
         <div class="manuscript-trace"></div>
+        <span class="artifact-mark">pressed</span>
         <div class="item-header">
           <div class="stamp-icon">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -412,6 +1137,7 @@
       <!-- Poem 2: Let Me Drown -->
       <article class="writing-item">
         <div class="manuscript-trace"></div>
+        <span class="artifact-mark">ink</span>
         <div class="item-header">
           <div class="stamp-icon">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -440,6 +1166,7 @@
       <!-- Poem 3: To The Kind Gardeners -->
       <article class="writing-item">
         <div class="manuscript-trace"></div>
+        <span class="artifact-mark">leaf</span>
         <div class="item-header">
           <div class="stamp-icon">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -467,6 +1194,7 @@
       <!-- Poem 4: A Wish, A Hope -->
       <article class="writing-item">
         <div class="manuscript-trace"></div>
+        <span class="artifact-mark">wish</span>
         <div class="item-header">
           <div class="stamp-icon">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -492,6 +1220,7 @@
       <!-- Poem 5: The Old Kind of Way -->
       <article class="writing-item">
         <div class="manuscript-trace"></div>
+        <span class="artifact-mark">ribbon</span>
         <div class="item-header">
           <div class="stamp-icon">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -519,6 +1248,7 @@
       <!-- Poem 6: The Senior Friend -->
       <article class="writing-item">
         <div class="manuscript-trace"></div>
+        <span class="artifact-mark">orchard</span>
         <div class="item-header">
           <div class="stamp-icon">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -543,6 +1273,7 @@
         </div>
         <a href="poems/poem-3.html" class="read-link">⟶ read full poem</a>
       </article>
+      </div>
     </div>
 
   </div>
@@ -557,6 +1288,48 @@
 <script>
   // dynamic year for footer
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const folioBox = document.querySelector('.writing-list');
+  const treasureCase = document.querySelector('.treasure-case');
+
+  if (folioBox && treasureCase) {
+    treasureCase.addEventListener('click', () => {
+      const isOpen = folioBox.classList.toggle('is-open');
+      folioBox.classList.toggle('is-closed', !isOpen);
+      treasureCase.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  document.querySelectorAll('.writing-item').forEach((paper) => {
+    const link = paper.querySelector('.read-link');
+    if (!link) return;
+
+    paper.tabIndex = 0;
+    paper.setAttribute('role', 'link');
+    paper.setAttribute('aria-label', `Read ${paper.querySelector('.item-title')?.textContent || 'poem'}`);
+
+    const raisePaper = () => {
+      document.querySelectorAll('.writing-item.is-raised').forEach((raised) => {
+        if (raised !== paper) raised.classList.remove('is-raised');
+      });
+      paper.classList.add('is-raised');
+    };
+
+    paper.addEventListener('pointerenter', raisePaper);
+    paper.addEventListener('focus', raisePaper);
+    paper.addEventListener('pointerdown', raisePaper);
+
+    paper.addEventListener('click', (event) => {
+      if (event.target.closest('a')) return;
+      window.location.href = link.href;
+    });
+
+    paper.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      window.location.href = link.href;
+    });
+  });
 </script>
 </body>
 </html>

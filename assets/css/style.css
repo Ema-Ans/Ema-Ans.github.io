@@ -7,14 +7,14 @@
    Design System
 ------------------------------ */
 :root{
-  --bg: #121116;
+  --bg:  #0e0c14;
   --bg-soft: #181720;
   --card: #1d1b26;
   --text: #f2edf7;
-  --muted: #b7afc2;
-  --accent: #b79ad6;
-  --accent-soft: #8ea68c;
-  --border: #2a2735;
+  --muted: #ccc5d5e3;
+  --accent: #a484c2;
+  --accent-soft: #b5e6b0;
+  --border: #353142;
   --radius: 12px;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 
@@ -22,6 +22,7 @@
   --note-bg: rgba(220, 199, 150, 0.06);
   --note-border: rgba(220, 199, 150, 0.28);
 }
+
 
 /* -----------------------------
    Base
@@ -397,6 +398,11 @@ h1, h2, h3, p{
   margin-bottom: 32px;
 }
 
+.notebook-page .section-head{
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
 /* -----------------------------
    Academic
 ------------------------------ */
@@ -713,16 +719,63 @@ h1, h2, h3, p{
 ------------------------------ */
 .writing-list{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 20px;
   margin-top: 24px;
 }
 
 .writing-item{
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
   padding: 20px;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+}
+
+.writing-thumb{
+  display: block;
+  width: calc(100% + 40px);
+  aspect-ratio: 16 / 9;
+  margin: -20px -20px 18px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+}
+
+.writing-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.writing-thumb:hover img{
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+
+.writing-item h3{
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.writing-item p{
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.writing-item .btn{
+  margin-top: auto;
+}
+
+.notebook-page .writing-list{
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 18px;
+  margin-top: 20px;
 }
 
 /* -----------------------------
@@ -908,5 +961,34 @@ h1, h2, h3, p{
 
   .nav{
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px){
+  .container{
+    width: min(100% - 28px, 1100px);
+  }
+
+  .section{
+    padding: 58px 0;
+  }
+
+  .section-head{
+    margin-bottom: 24px;
+  }
+
+  .writing-list,
+  .notebook-page .writing-list{
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .writing-item{
+    padding: 16px;
+  }
+
+  .writing-thumb{
+    width: calc(100% + 32px);
+    margin: -16px -16px 16px;
   }
 }
