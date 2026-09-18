@@ -115,8 +115,8 @@
             <h2 id="research-lede-title">No Single Tell</h2>
             <p class="featured-subtitle">Visible behavior during extended decision-making in elite chess.</p>
             <p>
-              I align pose, identity, timing, and Stockfish-derived difficulty across long-form match video
-              to study how movement changes as a decision becomes harder.
+              I align long-form chess video with human behavioral annotations, game information,
+              clocks, and engine-derived decision context to study visible behavior over time.
             </p>
             <a class="featured-project-link" href="projects/no-single-tell.html">open the project field file ↗</a>
           </div>
@@ -124,15 +124,15 @@
           <figure class="research-figure">
             <svg viewBox="0 0 720 300" role="img" aria-labelledby="trace-title trace-desc">
               <title id="trace-title">Illustrative chess decision trace</title>
-              <desc id="trace-desc">A schematic timeline comparing decision difficulty, movement, and gaze changes.</desc>
+              <desc id="trace-desc">A schematic timeline aligning behavioral annotations with decision and game context.</desc>
               <g class="figure-grid">
                 <path d="M84 42V252M190 42V252M296 42V252M402 42V252M508 42V252M614 42V252" />
                 <path d="M84 84H674M84 148H674M84 212H674" />
               </g>
               <g class="figure-labels">
-                <text x="18" y="88">choice context</text>
-                <text x="18" y="152">coded behavior</text>
-                <text x="18" y="216">clock pressure</text>
+                <text x="18" y="88">decision context</text>
+                <text x="18" y="152">behavioral code</text>
+                <text x="18" y="216">game timeline</text>
                 <text x="84" y="276">decision begins</text>
                 <text x="578" y="276">move</text>
               </g>
@@ -142,7 +142,7 @@
               <line class="decision-marker" x1="614" y1="38" x2="614" y2="252" />
               <circle class="trace-point" cx="614" cy="78" r="5" />
             </svg>
-            <figcaption>from my alignment workflow // human-coded behavior + Stockfish context + clocks + move timing</figcaption>
+            <figcaption>public-safe schematic // video + human annotation + game information + decision context</figcaption>
           </figure>
         </article>
       </div>
@@ -157,7 +157,7 @@
 
           <div class="section-intro">
             <p class="prose">
-              My research sits at the intersection of computer vision and HCI, with a focus on embodied cognition and decision-making in high-skill settings such as expert chess. I build multimodal vision pipelines for tracking pose, identity, gaze, and behavior over time, and pair these measurements with behavioral annotations and task context. I then use interactive visualizations and temporal analyses to study how movement, decision difficulty, and cognitive state unfold across extended decisions.
+              My research sits at the intersection of computer vision and HCI, with a focus on embodied cognition and decision-making in high-skill settings such as expert chess. I build multimodal workflows that align long-form video, human behavioral annotations, and task context over time. I then use interactive visualizations and temporal analyses to study how visible behavior and decision context unfold across extended decisions.
             </p>
 
             <p class="prose">
@@ -359,11 +359,12 @@
             <p class="card-note">CHI · in preparation</p>
             <h3>No Single Tell — CV-Based Chess Analytics</h3>
             <p>
-              I combine livestream video, Stockfish-derived difficulty, and timing signals to study expert decision-making in chess.
-              I built a behavior pipeline with 3D pose and mesh estimation, plus identity tracking. Then I model movement signatures over time.
+              We study visible behavior during extended expert decision-making by aligning long-form chess video with
+              behavioral annotations and decision context. I designed the measurement workflow and annotation tools,
+              and built the multimodal alignment and temporal-analysis infrastructure.
             </p>
             <div class="tags">
-              <span>CV</span><span>Pose/Mesh</span><span>Time-series</span><span>Multimodal</span>
+              <span>Behavioral Coding</span><span>Human Annotation</span><span>Temporal Alignment</span><span>HCI</span>
             </div>
             <div class="card-links">
               <a href="projects/no-single-tell.html">Project field file</a>
@@ -375,8 +376,8 @@
             <p class="card-note">ongoing study</p>
             <h3>Choice Complexity and Decision-Making in Chess</h3>
             <p>
-              I examine how engine-estimated choice complexity and decision time relate to visible shifts in posture,
-              gaze, and movement across extended decisions—not as a single tell, but as a changing temporal pattern.
+              I examine visible behavior during extended decisions by aligning human annotations with timing,
+              game information, and broad engine-derived decision context.
             </p>
             <div class="tags">
               <span>Decision Science</span><span>Chess</span><span>Temporal Analysis</span><span>HCI</span>
@@ -526,8 +527,9 @@
             <div>
               <h3>Postgraduate Research Assistant • DataVisards Lab, HKUST</h3>
               <p>
-                I work on embodied cognition in expert chess. I built a CV pipeline with 3D pose/mesh estimation and identity tracking.
-                I model behavioral dynamics over time and connect movement patterns to decision difficulty. A CHI manuscript is in progress.
+                I work on embodied cognition in expert chess. I designed the behavioral measurement and reviewer workflow,
+                built custom annotation interfaces, and developed multimodal video–game alignment and temporal-analysis tools.
+                An ACM CHI 2027 manuscript is under review.
               </p>
             </div>
           </div>

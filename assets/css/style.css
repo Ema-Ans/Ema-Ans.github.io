@@ -1951,16 +1951,6 @@ h1, h2, h3, p{
   line-height: 1.8;
 }
 
-.project-framing .project-short-version{
-  margin: 24px 0 0;
-  padding-left: 18px;
-  border-left: 2px solid var(--brand);
-  color: var(--text);
-  font-family: 'Newsreader', serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
 .project-section{
   padding: 64px 0;
   border-bottom: 1px solid var(--border);
@@ -1971,8 +1961,7 @@ h1, h2, h3, p{
 }
 
 .project-section-head > p,
-.paper-label,
-.talk-kicker{
+.paper-label{
   margin: 0 0 9px;
   color: var(--accent-soft);
   font-family: 'IBM Plex Mono', monospace;
@@ -2212,43 +2201,6 @@ h1, h2, h3, p{
   line-height: 1.55;
 }
 
-.talk-layout{
-  display: grid;
-  grid-template-columns: minmax(180px, 0.4fr) minmax(0, 1.6fr);
-  gap: clamp(36px, 8vw, 96px);
-  align-items: start;
-}
-
-.talk-number{
-  color: var(--brand);
-  font-family: 'Newsreader', serif;
-  font-size: clamp(5rem, 11vw, 9rem);
-  line-height: 0.8;
-}
-
-.talk-layout h2{
-  max-width: 28ch;
-  margin: 0 0 18px;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  font-weight: 500;
-  line-height: 1.05;
-}
-
-.talk-layout > div:last-child > p:not(.talk-kicker){
-  color: var(--muted);
-}
-
-.talk-placeholder{
-  display: inline-block;
-  padding-bottom: 3px;
-  border-bottom: 1px solid var(--border);
-  color: var(--note);
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 .paper-layout{
   display: grid;
   grid-template-columns: 150px minmax(0, 1fr) 150px;
@@ -2412,14 +2364,9 @@ h1, h2, h3, p{
     margin-left: 0;
   }
 
-  .talk-layout,
   .paper-layout{
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-
-  .talk-number{
-    font-size: 5.2rem;
   }
 
   .paper-layout > .text-link{

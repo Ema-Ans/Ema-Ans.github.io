@@ -43,12 +43,9 @@
           <h2>How much of thinking can we actually see?</h2>
           <div>
             <p>
-              I study how gaze, posture, self-touch, and other visible behaviors unfold while expert chess players
-              make difficult decisions. The project combines long-form broadcast video with temporally aligned game
-              state, clocks, and Stockfish-derived decision context.
-            </p>
-            <p class="project-short-version">
-              The short version: there is no magical “tell.” Behavior becomes interesting when you stop treating it as one.
+              We study how visible behavior unfolds while expert chess players make extended decisions. The project
+              aligns long-form chess video with human behavioral annotations, game information, clocks, and broad
+              engine-derived decision context.
             </p>
           </div>
         </div>
@@ -66,7 +63,7 @@
           <svg viewBox="0 0 980 410" role="img" aria-labelledby="project-trace-title project-trace-desc">
             <title id="project-trace-title">Schematic of an aligned chess decision episode</title>
             <desc id="project-trace-desc">
-              Human-coded behavior, engine-derived choice context, clock pressure, and move timing aligned on one timeline.
+              Human behavioral annotations, game information, timing, and broad decision context aligned on one timeline.
             </desc>
 
             <g class="project-trace-grid">
@@ -75,12 +72,12 @@
             </g>
 
             <g class="project-trace-labels">
-              <text class="trace-group-label" x="28" y="88">ENGINE CONTEXT</text>
-              <text x="28" y="110">choice complexity</text>
-              <text class="trace-group-label" x="28" y="170">HUMAN CODE</text>
-              <text x="28" y="192">posture · gaze · self-touch</text>
-              <text class="trace-group-label" x="28" y="252">CLOCK / MOVE</text>
-              <text x="28" y="274">pressure · timing · quality</text>
+              <text class="trace-group-label" x="28" y="88">DECISION CONTEXT</text>
+              <text x="28" y="110">broad engine-derived information</text>
+              <text class="trace-group-label" x="28" y="170">HUMAN ANNOTATION</text>
+              <text x="28" y="192">temporally coded visible behavior</text>
+              <text class="trace-group-label" x="28" y="252">GAME TIMELINE</text>
+              <text x="28" y="274">clocks · board state · move timing</text>
               <text x="190" y="368">decision episode begins</text>
               <text x="858" y="368">move played</text>
             </g>
@@ -92,18 +89,18 @@
             <g class="coded-events">
               <line x1="402" y1="174" x2="402" y2="224" />
               <circle cx="402" cy="213" r="6" />
-              <text x="410" y="178">gaze shift</text>
+              <text x="410" y="178">coded interval</text>
               <line x1="658" y1="174" x2="658" y2="224" />
               <circle cx="658" cy="205" r="6" />
-              <text x="666" y="178">self-touch</text>
+              <text x="666" y="178">coded interval</text>
             </g>
 
             <line class="decision-marker" x1="815" y1="48" x2="815" y2="328" />
             <circle class="trace-point" cx="815" cy="96" r="6" />
           </svg>
           <figcaption>
-            A schematic from my alignment workflow—not study data. Human-coded behavior is interpreted beside
-            Stockfish-derived decision context, clock state, and move timing rather than in isolation.
+            A public-safe schematic from my alignment workflow—not study data. It shows only the broad types of
+            information aligned by the research infrastructure.
           </figcaption>
         </figure>
       </div>
@@ -125,8 +122,8 @@
           <article>
             <span>02</span>
             <h3>Code</h3>
-            <p>Gaze · posture · self-touch · interaction.</p>
-            <small>custom human-annotation + reviewer interfaces</small>
+            <p>Temporally localized visible behavior.</p>
+            <small>custom human-annotation + reviewer workflow</small>
           </article>
           <article>
             <span>03</span>
@@ -136,14 +133,12 @@
           <article>
             <span>04</span>
             <h3>Contextualize</h3>
-            <p>Choice complexity · evaluation volatility · time pressure · move quality.</p>
-            <small>Stockfish-derived decision context</small>
+            <p>Game information, clocks, and broad engine-derived decision context.</p>
           </article>
           <article>
             <span>05</span>
             <h3>Analyze</h3>
-            <p>Within-player patterns · temporal recurrence · individual differences.</p>
-            <small>context-dependent signal, not universal tell</small>
+            <p>Temporal patterns across aligned multimodal information.</p>
           </article>
         </div>
       </div>
@@ -158,22 +153,20 @@
 
         <div class="build-copy">
           <p>
-            I designed the behavioral measurement workflow end-to-end: a temporal coding taxonomy for visible
-            behavior, custom interfaces for human annotation and multi-reviewer adjudication, synchronized
-            video–game alignment tools, and analysis pipelines linking behavioral events to decision context.
+            My work on the project includes behavioral measurement design, custom human-annotation and reviewer
+            interfaces, multimodal video–game alignment, and temporal-analysis infrastructure.
           </p>
           <p>
-            The annotation workflow lets reviewers scrub tightly around a decision episode and independently code
-            posture, gaze, self-touch, chess interaction, and visibility over time. I also built the process used to
-            compare and resolve annotations across coders.
+            I also developed the behavioral taxonomy and reviewer workflow used by the study. While the paper is under
+            review, the interface details, taxonomy, analyses, and results are intentionally staying off this page.
           </p>
 
           <ul class="build-ledger">
-            <li><span>01</span>behavioral coding taxonomy</li>
-            <li><span>02</span>temporal annotation interface</li>
-            <li><span>03</span>multi-reviewer adjudication</li>
-            <li><span>04</span>video–game synchronization</li>
-            <li><span>05</span>analysis + visualization pipeline</li>
+            <li><span>01</span>behavioral measurement design</li>
+            <li><span>02</span>human-annotation interfaces</li>
+            <li><span>03</span>reviewer workflow</li>
+            <li><span>04</span>multimodal alignment infrastructure</li>
+            <li><span>05</span>temporal-analysis tooling</li>
           </ul>
         </div>
       </div>
@@ -181,7 +174,7 @@
 
     <section class="review-curtain" aria-label="Peer review status">
       <div class="container">
-        <p>results // temporarily redacted</p>
+        <p>under review // more soon</p>
         <blockquote>Peer review has temporary custody of the good bits. More soon.</blockquote>
       </div>
     </section>
@@ -196,12 +189,11 @@
         <ul class="methods-strip">
           <li>temporal behavioral coding</li>
           <li>multimodal video analysis</li>
-          <li>human annotation + adjudication</li>
-          <li>inter-rater validation</li>
-          <li>computer vision</li>
-          <li>chess-engine analysis</li>
-          <li>within-player temporal analysis</li>
-          <li>interactive visualization</li>
+          <li>human annotation + review</li>
+          <li>multimodal alignment</li>
+          <li>engine-derived context</li>
+          <li>temporal analysis</li>
+          <li>research interfaces</li>
         </ul>
       </div>
     </section>
@@ -215,27 +207,13 @@
 
         <div class="hci-copy">
           <p>
-            Rather than asking whether a model can infer an internal state from a face or pose, this work asks a more
-            basic measurement question: when humans interpret visible behavior as evidence of thinking, what can those
-            observations actually support?
+            Rather than asking whether computation can directly infer an internal state from visible behavior, this
+            work asks a more basic measurement question: what can human observations of behavior actually support?
           </p>
           <p>
-            The project treats behavior as situated, temporally evolving, and person-dependent—and studies the
-            measurement process itself, including what is observable, how humans code it, and when those observations
-            become meaningful in context.
+            The project treats behavior as situated and temporally evolving. It also studies the measurement process
+            itself: what is observable, how humans code it, and how those observations can be aligned with context.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-section talk-section" aria-labelledby="talk-heading">
-      <div class="container talk-layout">
-        <div class="talk-number">3:00</div>
-        <div>
-          <p class="talk-kicker">three minutes, apparently</p>
-          <h2 id="talk-heading">Apparently I can explain this without mentioning Stockfish depth settings for three minutes.</h2>
-          <p>First Runner-Up · HKUST Three Minute Thesis</p>
-          <span class="talk-placeholder">talk link coming soon ↗</span>
         </div>
       </div>
     </section>
