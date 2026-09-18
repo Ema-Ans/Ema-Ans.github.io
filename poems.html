@@ -14,18 +14,18 @@
     /* -----------------------------
        MATURE ARCHIVE VIBE — matching poem pages
        Deep vintage paper, coffee stains, aged textures
-       Dark theme (#1d1b26 / #b79ad6) preserved
+       Wine, crimson, rose, and antique-gold palette
     ------------------------------ */
     :root {
-      --bg-deep: #0e0c14;
-      --paper-dark: #1f1c29;
-      --paper-warm: #24212e;
-      --text-ink: #e9e2d4;
-      --text-faded: #f2edf7;
-      --accent-lilac: #b79ad6;
-      --accent-faded: #a484c2;
-      --sepia-stain: #8b7355;
-      --border-antique: #332e3f;
+      --bg-deep: #0d090a;
+      --paper-dark: #181012;
+      --paper-warm: #211417;
+      --text-ink: #f5f0f1;
+      --text-faded: #bdaeb2;
+      --accent-lilac: #b7354a;
+      --accent-faded: #d88491;
+      --sepia-stain: #d2b56b;
+      --border-antique: #3b252b;
       --shadow-archival: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
     }
 
@@ -68,8 +68,8 @@
 
     /* ---------- HEADER: understated academic ---------- */
     .site-header {
-      border-bottom: 1px solid rgba(183, 154, 214, 0.22);
-      background: rgba(14, 12, 20, 0.75);
+      border-bottom: 1px solid rgba(216, 132, 145, 0.22);
+      background: rgba(13, 9, 10, 0.82);
       backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
@@ -107,7 +107,7 @@
       font-size: 0.85rem;
       font-weight: 450;
       text-decoration: none;
-      color: #cbc3db;
+      color: var(--text-faded);
       text-transform: uppercase;
       letter-spacing: 0.8px;
       transition: color 0.2s;
@@ -121,7 +121,7 @@
     .section-head {
       margin: 48px 0 40px 0;
       padding-bottom: 20px;
-      border-bottom: 1px solid rgba(183, 154, 214, 0.3);
+      border-bottom: 1px solid rgba(216, 132, 145, 0.3);
       position: relative;
     }
 
@@ -213,7 +213,7 @@
     }
 
     .treasure-case:focus-visible {
-      outline: 2px solid #dcc796;
+      outline: 2px solid #d2b56b;
       outline-offset: 14px;
       border-radius: 28px;
     }
@@ -401,7 +401,7 @@
         radial-gradient(circle, #7f4a86 0%, #5b3262 72%);
       border: 1px solid rgba(220, 199, 150, 0.24);
       box-shadow: inset 0 -8px 14px rgba(0,0,0,0.22), 0 10px 18px rgba(0,0,0,0.28);
-      color: #dcc796;
+      color: #d2b56b;
       display: grid;
       place-items: center;
       font-family: 'Cormorant Garamond', serif;
@@ -690,7 +690,7 @@
         radial-gradient(ellipse at 44% 6%, rgba(158, 116, 62, 0.10), transparent 24%),
         linear-gradient(135deg, rgba(255, 250, 238, 0.58), rgba(206, 181, 132, 0.30)),
         repeating-linear-gradient(35deg, rgba(92, 70, 45, 0.034) 0 1px, transparent 1px 13px);
-      border: 1px solid rgba(183, 154, 214, 0.34);
+      border: 1px solid rgba(134, 24, 42, 0.34);
       border-top: 2px solid rgba(185, 154, 98, 0.62);
       border-radius: 9px 3px 11px 4px;
       clip-path: polygon(0 2%, 6% 0, 13% 2%, 23% 0, 34% 2%, 47% 0, 59% 2%, 72% 0, 84% 2%, 100% 0, 98% 12%, 100% 24%, 98% 39%, 100% 54%, 98% 71%, 100% 88%, 96% 100%, 84% 98%, 72% 100%, 60% 98%, 47% 100%, 34% 98%, 23% 100%, 12% 98%, 0 100%, 2% 86%, 0 70%, 2% 55%, 0 38%, 2% 22%);
@@ -724,7 +724,7 @@
     }
 
     .writing-item:focus-visible {
-      outline: 2px solid #a484c2;
+      outline: 2px solid #d88491;
       outline-offset: 8px;
       z-index: 40;
     }
@@ -930,7 +930,7 @@
 
     .read-link:hover {
       color: #30283b;
-      border-bottom-color: #b79ad6;
+      border-bottom-color: #b7354a;
       gap: 12px;
     }
 
@@ -952,7 +952,7 @@
 
     /* footer */
     .site-footer {
-      border-top: 1px solid rgba(183, 154, 214, 0.2);
+      border-top: 1px solid rgba(216, 132, 145, 0.2);
       margin-top: 32px;
       padding: 28px 0 40px;
     }
@@ -1048,6 +1048,27 @@
       .item-date {
         font-size: 0.6rem;
       }
+    }
+
+    svg [stroke="#b79ad6"] {
+      stroke: #b7354a;
+    }
+
+    svg [fill="#b79ad6"] {
+      fill: #b7354a;
+    }
+
+    svg [stroke="#dcc796"] {
+      stroke: #d2b56b;
+    }
+
+    svg [fill="#dcc796"] {
+      fill: #d2b56b;
+    }
+
+    svg [fill="#0e0c14"],
+    svg [fill="#1f1b2b"] {
+      fill: #181012;
     }
   </style>
 </head>

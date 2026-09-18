@@ -7,20 +7,22 @@
    Design System
 ------------------------------ */
 :root{
-  --bg:  #0e0c14;
-  --bg-soft: #181720;
-  --card: #1d1b26;
-  --text: #f2edf7;
-  --muted: #ccc5d5e3;
-  --accent: #a484c2;
-  --accent-soft: #b5e6b0;
-  --border: #353142;
+  --bg: #0d090a;
+  --bg-soft: #181012;
+  --card: #181012;
+  --card-raised: #211417;
+  --brand: #86182a;
+  --accent: #b7354a;
+  --accent-soft: #d88491;
+  --text: #f5f0f1;
+  --muted: #bdaeb2;
+  --border: #3b252b;
   --radius: 12px;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 
-  --note: #dcc796;
-  --note-bg: rgba(220, 199, 150, 0.06);
-  --note-border: rgba(220, 199, 150, 0.28);
+  --note: #d2b56b;
+  --note-bg: rgba(210, 181, 107, 0.06);
+  --note-border: rgba(210, 181, 107, 0.28);
 }
 
 
@@ -134,7 +136,7 @@ h1, h2, h3, p{
   top: 0;
   z-index: 100;
   backdrop-filter: blur(8px);
-  background: rgba(18, 17, 22, 0.78);
+  background: rgba(13, 9, 10, 0.82);
   border-bottom: 1px solid var(--border);
 }
 
@@ -183,8 +185,8 @@ h1, h2, h3, p{
   inset: -80px -120px auto -120px;
   height: 360px;
   background:
-    radial-gradient(circle at 28% 22%, rgba(183, 154, 214, 0.10), transparent 55%),
-    radial-gradient(circle at 72% 30%, rgba(142, 166, 140, 0.08), transparent 60%);
+    radial-gradient(circle at 28% 22%, rgba(183, 53, 74, 0.12), transparent 55%),
+    radial-gradient(circle at 72% 30%, rgba(210, 181, 107, 0.08), transparent 60%);
   z-index: -1;
   pointer-events: none;
   filter: blur(10px);
@@ -209,7 +211,7 @@ h1, h2, h3, p{
   gap: 34px;
   align-items: start;
   padding: 42px 38px;
-  background: rgba(29, 27, 38, 0.60);
+  background: rgba(24, 16, 18, 0.72);
   border: 1px solid var(--border);
   border-radius: 24px;
   box-shadow: var(--shadow);
@@ -259,7 +261,7 @@ h1, h2, h3, p{
 .lead a{
   color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(183, 154, 214, 0.25);
+  border-bottom: 1px solid rgba(216, 132, 145, 0.25);
   transition: 0.2s ease;
 }
 
@@ -340,7 +342,7 @@ h1, h2, h3, p{
 .hero-facts a{
   color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(183, 154, 214, 0.25);
+  border-bottom: 1px solid rgba(216, 132, 145, 0.25);
 }
 
 .hero-facts a:hover{
@@ -356,8 +358,8 @@ h1, h2, h3, p{
   padding: 10px 18px;
   border: none;
   border-radius: 999px;
-  background: var(--accent);
-  color: #17141d;
+  background: var(--brand);
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
@@ -365,6 +367,7 @@ h1, h2, h3, p{
 }
 
 .btn:hover{
+  background: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
@@ -571,7 +574,7 @@ h1, h2, h3, p{
 .journal{
   max-width: 62ch;
   padding-left: 22px;
-  border-left: 1px solid rgba(183, 154, 214, 0.28);
+  border-left: 1px solid rgba(216, 132, 145, 0.28);
   font-size: 1.05rem;
   line-height: 1.95;
   position: relative;
@@ -586,7 +589,7 @@ h1, h2, h3, p{
   height: 8px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 5px rgba(183, 154, 214, 0.08);
+  box-shadow: 0 0 0 5px rgba(183, 53, 74, 0.10);
 }
 
 .entry-date{
@@ -633,6 +636,7 @@ h1, h2, h3, p{
 }
 
 .card:hover{
+  background: var(--card-raised);
   transform: translateY(-4px);
   border-color: var(--accent);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -686,7 +690,7 @@ h1, h2, h3, p{
 .outputs strong a{
   color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(183, 154, 214, 0.25);
+  border-bottom: 1px solid rgba(216, 132, 145, 0.25);
   transition: 0.2s ease;
 }
 
@@ -847,7 +851,7 @@ h1, h2, h3, p{
   font-size: 1.42rem;
   text-decoration: none;
   color: var(--text);
-  border-bottom: 1px solid rgba(183, 154, 214, 0.30);
+  border-bottom: 1px solid rgba(216, 132, 145, 0.30);
 }
 
 .email-link:hover{
