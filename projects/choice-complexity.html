@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choice Complexity | Eman Ansar</title>
+  <meta
+    name="description"
+    content="Choice Complexity studies how the structure of plausible options relates to human decision time and decision quality."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="project-page choice-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Eman Ansar</a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Investigations</a>
+        <a href="../index.html#academic">Academic</a>
+        <a href="../journal.html">Notebook</a>
+        <a href="../index.html#contact">Correspondence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero choice-hero">
+      <div class="container">
+        <div class="project-topline">
+          <p>ongoing study // 02</p>
+          <a href="../index.html#projects">research index ↙</a>
+        </div>
+
+        <p class="project-status">COGSCI 2027 · MANUSCRIPT IN PREPARATION</p>
+        <h1>Choice Complexity</h1>
+        <p class="project-subtitle">Decision-making in chess when several options are all plausible.</p>
+
+        <div class="project-framing">
+          <h2>What makes a decision difficult when several options are all plausible?</h2>
+          <div>
+            <p>
+              Rather than treating difficulty as a single engine score or only the gap between the best alternatives,
+              we study the structure of the available choice set. Using engine evaluations across candidate moves, we
+              develop computational measures of choice complexity and ask how they relate to decision time and the
+              quality of the decision ultimately made.
+            </p>
+            <p class="choice-aside">
+              Because “there are too many annoyingly reasonable moves here” is, unfortunately, not yet a scientific metric.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section idea-section" aria-labelledby="idea-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>the idea</p>
+          <h2 id="idea-heading">Difficulty can live in the shape of the choice set.</h2>
+        </div>
+
+        <div class="idea-copy">
+          <p>
+            A chess position does not need one obviously bad choice to be difficult. Sometimes the difficulty comes
+            from having several alternatives that remain similarly viable.
+          </p>
+          <p>
+            We use entropy-inspired measures over engine-evaluated candidate moves to represent how dispersed or
+            concentrated the choice landscape is. A position with one clearly dominant move has a different structure
+            from one in which many alternatives remain competitive.
+          </p>
+          <p>
+            The goal is not to claim that entropy measures subjective experience directly. It gives us a computational
+            language for describing the decision environment before a human choice is made.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section entropy-section" aria-labelledby="entropy-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>choice landscapes</p>
+          <h2 id="entropy-heading">One dominant move versus several competitive moves</h2>
+        </div>
+
+        <figure class="entropy-figure">
+          <div class="entropy-panels">
+            <section>
+              <header>
+                <span>01</span>
+                <div>
+                  <h3>Low choice complexity</h3>
+                  <p>one option dominates</p>
+                </div>
+              </header>
+              <div class="entropy-bar"><span>Move A</span><i style="--bar: 94%"></i></div>
+              <div class="entropy-bar"><span>Move B</span><i style="--bar: 25%"></i></div>
+              <div class="entropy-bar"><span>Move C</span><i style="--bar: 16%"></i></div>
+              <div class="entropy-bar"><span>Move D</span><i style="--bar: 9%"></i></div>
+              <footer>concentrated distribution · lower entropy</footer>
+            </section>
+
+            <section>
+              <header>
+                <span>02</span>
+                <div>
+                  <h3>High choice complexity</h3>
+                  <p>several plausible alternatives</p>
+                </div>
+              </header>
+              <div class="entropy-bar"><span>Move A</span><i style="--bar: 88%"></i></div>
+              <div class="entropy-bar"><span>Move B</span><i style="--bar: 81%"></i></div>
+              <div class="entropy-bar"><span>Move C</span><i style="--bar: 73%"></i></div>
+              <div class="entropy-bar"><span>Move D</span><i style="--bar: 66%"></i></div>
+              <footer>dispersed distribution · higher entropy</footer>
+            </section>
+          </div>
+          <figcaption>Illustrative distributions for intuition—not study data.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="choice-quote" aria-label="Core idea">
+      <div class="container">
+        <p>core idea</p>
+        <blockquote>Difficulty is not only a property of the person. It can be a property of the choice set.</blockquote>
+      </div>
+    </section>
+
+    <section class="project-section measure-section" aria-labelledby="measure-heading">
+      <div class="container">
+        <div class="project-section-head compact-head">
+          <p>how we measure it</p>
+          <h2 id="measure-heading">From alternatives to human decisions</h2>
+        </div>
+
+        <div class="measure-flow">
+          <div><span>01</span><strong>Engine candidates</strong></div>
+          <div><span>02</span><strong>Choice distribution</strong></div>
+          <div><span>03</span><strong>Entropy / complexity</strong></div>
+          <div><span>04</span><strong>Decision time + quality</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section hci-section" aria-labelledby="choice-hci-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>why this is hci</p>
+          <h2 id="choice-hci-heading">Representing the decision environment itself</h2>
+        </div>
+
+        <div class="hci-copy">
+          <p>
+            Interactive systems often infer that a user is struggling from outcomes such as response time, errors,
+            or confidence. But difficulty can also be a property of the choices the system presents.
+          </p>
+          <p>
+            This project asks how the structure of an option space can be represented computationally, and whether
+            those representations help explain how long a person deliberates and how well they decide. Chess provides
+            a rich setting because alternatives can be evaluated at scale while the human decision remains observable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section finding-section" aria-labelledby="finding-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>what we are finding</p>
+          <h2 id="finding-heading">A choice landscape carries information that one score cannot.</h2>
+        </div>
+
+        <div class="finding-copy">
+          <p>
+            Decision time is not explained by position difficulty in one simple way. Positions with several competitive
+            alternatives create a different decision environment from positions with one clearly dominant move.
+          </p>
+          <p>
+            Our analyses suggest that measures of broader choice structure can reveal patterns missed when difficulty
+            is reduced to a single evaluation score. Detailed models, comparisons, and effect sizes will remain with
+            the manuscript while it is being prepared.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section methods-section" aria-labelledby="choice-methods-heading">
+      <div class="container">
+        <div class="project-section-head compact-head">
+          <p>methods</p>
+          <h2 id="choice-methods-heading">At a glance</h2>
+        </div>
+
+        <ul class="methods-strip">
+          <li>large-scale engine analysis</li>
+          <li>candidate-move evaluation</li>
+          <li>choice-set modeling</li>
+          <li>entropy-based complexity</li>
+          <li>decision-time analysis</li>
+          <li>move-quality analysis</li>
+          <li>within-player comparison</li>
+          <li>statistical modeling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section status-section" aria-labelledby="status-heading">
+      <div class="container status-layout">
+        <div>
+          <p>current status</p>
+          <h2 id="status-heading">Manuscript in preparation for CogSci 2027.</h2>
+        </div>
+        <blockquote>Status: one manuscript, several million engine evaluations, and entropy being asked to explain itself.</blockquote>
+        <a class="text-link" href="../index.html#projects">full research index ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Eman Ansar</small>
+      <a class="text-link" href="../index.html">front page</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

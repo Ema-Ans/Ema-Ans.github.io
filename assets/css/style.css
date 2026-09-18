@@ -1315,6 +1315,85 @@ h1, h2, h3, p{
   stroke-width: 3;
 }
 
+.featured-investigation-alt{
+  grid-template-columns: minmax(420px, 1.25fr) minmax(260px, 0.75fr);
+  margin-top: 52px;
+  padding-top: 44px;
+  border-top: 1px solid var(--border);
+}
+
+.choice-figure{
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.choice-panels{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.choice-panels section + section{
+  padding-left: 26px;
+  border-left: 1px solid var(--border);
+}
+
+.choice-panels section > p{
+  margin: 0 0 16px;
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.choice-bar{
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.choice-bar span{
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+}
+
+.choice-bar i{
+  display: block;
+  width: var(--bar);
+  height: 7px;
+  background: var(--accent);
+}
+
+.choice-panels section:last-child .choice-bar i{
+  background: var(--note);
+}
+
+.choice-panels small{
+  display: block;
+  margin-top: 16px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.57rem;
+  line-height: 1.45;
+}
+
+.choice-figure figcaption{
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--note);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.59rem;
+  line-height: 1.5;
+}
+
 .home-page .section{
   padding: 60px 0;
 }
@@ -1662,6 +1741,10 @@ h1, h2, h3, p{
     grid-template-columns: 1fr;
   }
 
+  .featured-investigation-alt{
+    grid-template-columns: 1fr;
+  }
+
   .home-page .section-head{
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1800,6 +1883,16 @@ h1, h2, h3, p{
 
   .featured-investigation{
     gap: 26px;
+  }
+
+  .choice-panels{
+    grid-template-columns: 1fr;
+  }
+
+  .choice-panels section + section{
+    padding: 22px 0 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
   }
 
   .featured-copy h2{
@@ -2370,6 +2463,318 @@ h1, h2, h3, p{
   }
 
   .paper-layout > .text-link{
+    grid-column: 1;
+  }
+}
+
+/* -----------------------------
+   Choice Complexity project
+------------------------------ */
+.choice-page .project-hero h1{
+  max-width: 9ch;
+  font-size: clamp(4.6rem, 11vw, 8.8rem);
+  line-height: 0.83;
+}
+
+.choice-aside{
+  margin: 26px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--brand);
+  color: var(--text) !important;
+  font-family: 'Newsreader', serif;
+  font-size: 1.2rem;
+  line-height: 1.5 !important;
+}
+
+.idea-copy > p,
+.finding-copy > p{
+  max-width: 70ch;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.idea-copy p:first-child{
+  margin-top: 0;
+  color: var(--text);
+  font-family: 'Newsreader', serif;
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+.entropy-figure{
+  margin: 0;
+}
+
+.entropy-panels{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.entropy-panels > section{
+  padding: 30px 32px 32px;
+}
+
+.entropy-panels > section + section{
+  border-left: 1px solid var(--border);
+}
+
+.entropy-panels header{
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.entropy-panels header > span{
+  padding-top: 4px;
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+}
+
+.entropy-panels h3{
+  margin: 0 0 4px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 500;
+}
+
+.entropy-panels header p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.entropy-bar{
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.entropy-bar span{
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+}
+
+.entropy-bar i{
+  display: block;
+  width: var(--bar);
+  height: 13px;
+  background: var(--accent);
+}
+
+.entropy-panels > section:last-child .entropy-bar i{
+  background: var(--note);
+}
+
+.entropy-panels footer{
+  margin-top: 28px;
+  color: var(--note);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+}
+
+.entropy-figure figcaption{
+  margin-top: 9px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+}
+
+.choice-quote{
+  padding: 64px 0 70px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+}
+
+.choice-quote p{
+  margin: 0 0 14px;
+  color: var(--note);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.choice-quote blockquote{
+  max-width: 25ch;
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.measure-flow{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.measure-flow div{
+  position: relative;
+  min-height: 116px;
+  padding: 22px 20px;
+  border-left: 1px solid var(--border);
+}
+
+.measure-flow div:first-child{
+  border-left: 0;
+}
+
+.measure-flow div:not(:last-child)::after{
+  content: "→";
+  position: absolute;
+  right: -9px;
+  top: 47px;
+  z-index: 1;
+  padding: 0 3px;
+  background: var(--bg);
+  color: var(--accent);
+}
+
+.measure-flow span{
+  display: block;
+  margin-bottom: 20px;
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+}
+
+.measure-flow strong{
+  display: block;
+  max-width: 16ch;
+  font-family: 'Newsreader', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.finding-section{
+  background: var(--bg-soft);
+}
+
+.finding-copy{
+  padding-left: 22px;
+  border-left: 2px solid var(--note);
+}
+
+.finding-copy p:first-child{
+  margin-top: 0;
+  color: var(--text);
+  font-family: 'Newsreader', serif;
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+.status-layout{
+  display: grid;
+  grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(36px, 7vw, 86px);
+  align-items: start;
+}
+
+.status-layout > div > p{
+  margin: 0 0 10px;
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.status-layout h2{
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.status-layout blockquote{
+  margin: 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--brand);
+  font-family: 'Newsreader', serif;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  line-height: 1.2;
+}
+
+.status-layout > .text-link{
+  grid-column: 2;
+  justify-self: start;
+}
+
+@media (max-width: 900px){
+  .entropy-panels{
+    grid-template-columns: 1fr;
+  }
+
+  .entropy-panels > section + section{
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .measure-flow{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .measure-flow div:nth-child(odd){
+    border-left: 0;
+  }
+
+  .measure-flow div:nth-child(n + 3){
+    border-top: 1px solid var(--border);
+  }
+
+  .measure-flow div::after{
+    display: none;
+  }
+}
+
+@media (max-width: 640px){
+  .choice-page .project-hero h1{
+    font-size: clamp(3.7rem, 20vw, 5.8rem);
+  }
+
+  .entropy-panels > section{
+    padding: 24px 0 28px;
+  }
+
+  .measure-flow{
+    grid-template-columns: 1fr;
+  }
+
+  .measure-flow div,
+  .measure-flow div:nth-child(odd){
+    min-height: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .measure-flow div:first-child{
+    border-top: 0;
+  }
+
+  .choice-quote{
+    padding: 48px 0 52px;
+  }
+
+  .choice-quote blockquote{
+    font-size: 2.7rem;
+  }
+
+  .status-layout{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .status-layout > .text-link{
     grid-column: 1;
   }
 }
