@@ -105,7 +105,7 @@
     <section class="research-lede" aria-label="Current investigations">
       <div class="container">
         <div class="research-lede-head">
-          <p class="section-label">current investigations // 01—04</p>
+          <p class="section-label">current investigations // 01—05</p>
           <a class="text-link" href="#projects">full research index ↓</a>
         </div>
 
@@ -239,6 +239,36 @@
             <a class="featured-project-link" href="projects/arabic-writing-assessment.html">open the project field file ↗</a>
           </div>
         </article>
+
+        <article class="featured-investigation featured-investigation-fifth">
+          <div class="featured-copy">
+            <p class="investigation-status">05 · FIRST RESEARCH PROJECT · IEEE VCIP 2024</p>
+            <h2>Thermal Vision for Solar Panels</h2>
+            <p class="featured-subtitle">The project where I learned that “just run OpenCV” is not a research method.</p>
+            <p>
+              My first computer-vision research project: evaluating how feature detectors and descriptors behave on
+              close-range thermal solar-panel imagery under messy real-world variation.
+            </p>
+            <a class="featured-project-link" href="projects/thermal-solar-vision.html">open the project field file ↗</a>
+          </div>
+
+          <figure class="thermal-home-figure">
+            <div class="thermal-scene" aria-label="Illustrated thermal solar panel">
+              <span class="thermal-sun">☀</span>
+              <div class="thermal-panel">
+                <i class="heat-1"></i><i class="heat-2"></i><i class="heat-3"></i><i class="heat-2"></i>
+                <i class="heat-2"></i><i class="heat-4"></i><i class="heat-4"></i><i class="heat-1"></i>
+                <i class="heat-3"></i><i class="heat-4"></i><i class="heat-2"></i><i class="heat-3"></i>
+              </div>
+              <div class="thermal-notes"><span>rotation</span><span>motion blur</span><span>time of day</span><span>colormaps</span></div>
+            </div>
+            <div class="thermal-pipeline">
+              <span>thermal image</span><i>→</i><span>preprocess</span><i>→</i><span>benchmark</span><i>→</i><span>compare</span>
+            </div>
+            <div class="thermal-winners"><span>detector · AKAZE</span><span>descriptor · SURF</span><span>color · JET / RAINBOW</span></div>
+            <figcaption>close-range thermal imagery // classical CV under real-world variation</figcaption>
+          </figure>
+        </article>
       </div>
     </section>
 
@@ -318,7 +348,7 @@
 
     <li>
       <strong>
-        <a href="#" target="_blank" rel="noreferrer">
+        <a href="projects/thermal-solar-vision.html">
           IEEE VCIP 2024
         </a>
       </strong>
@@ -327,8 +357,7 @@
         First author, presented solo.
       </p>
       <div class="output-links">
-        <a href="#" target="_blank">paper</a>
-        <a href="#" target="_blank">slides</a>
+        <a href="projects/thermal-solar-vision.html">project page</a>
       </div>
     </li>
 
@@ -511,18 +540,17 @@
           </article>
 
           <article class="card">
-            <p class="card-note">[published]</p>
-            <h3>Thermal Feature Descriptors for Image Stitching (VCIP 2024)</h3>
+            <p class="card-note">published · IEEE VCIP 2024 · research origin</p>
+            <h3>Thermal Vision for Solar Panels</h3>
             <p>
-              Thermal images are noisy and unfriendly. I tested classic keypoint detectors and descriptors for thermal registration under domain shift,
-              including SIFT, SURF, ORB, BRISK, and AKAZE. The result is a practical benchmark with clear winners, published at IEEE VCIP 2024.
+              My first computer-vision research project. I evaluated classical feature methods on close-range thermal
+              solar-panel imagery and learned early lessons about data collection, preprocessing, and empirical evaluation.
             </p>
             <div class="tags">
-              <span>Thermal CV</span><span>Image Registration</span><span>Benchmarking</span>
+              <span>Computer Vision</span><span>Thermal Imaging</span><span>Feature Detection</span><span>Empirical Evaluation</span><span>Research Origins</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">DOI</a>
-              <a href="#" target="_blank" rel="noreferrer">Slides</a>
+              <a href="projects/thermal-solar-vision.html">Project field file</a>
             </div>
           </article>
 

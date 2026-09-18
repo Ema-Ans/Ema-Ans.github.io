@@ -1601,6 +1601,114 @@ h1, h2, h3, p{
   font-size: 0.58rem;
 }
 
+.featured-investigation-fifth{
+  margin-top: 52px;
+  padding-top: 44px;
+  border-top: 1px solid var(--border);
+}
+
+.thermal-home-figure{
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.thermal-scene{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 22px;
+  align-items: center;
+  min-height: 150px;
+}
+
+.thermal-sun{
+  position: absolute;
+  right: 2px;
+  top: -8px;
+  color: var(--note);
+  font-size: 1.6rem;
+}
+
+.thermal-panel{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  transform: skewY(-3deg);
+}
+
+.thermal-panel i{
+  display: block;
+  aspect-ratio: 1.4;
+}
+
+.thermal-panel .heat-1{ background: #4a1823; }
+.thermal-panel .heat-2{ background: #86182a; }
+.thermal-panel .heat-3{ background: #b7354a; }
+.thermal-panel .heat-4{ background: #c9ad6a; }
+
+.thermal-notes{
+  display: grid;
+  gap: 7px;
+}
+
+.thermal-notes span{
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.57rem;
+}
+
+.thermal-pipeline{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.thermal-pipeline span,
+.thermal-winners span{
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem;
+}
+
+.thermal-pipeline i{
+  color: var(--accent);
+  font-style: normal;
+}
+
+.thermal-winners{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.thermal-winners span{
+  padding: 10px 8px;
+  border-left: 1px solid var(--border);
+  color: var(--note);
+  text-align: center;
+}
+
+.thermal-winners span:first-child{
+  border-left: 0;
+}
+
+.thermal-home-figure figcaption{
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+}
+
 .home-page .section{
   padding: 60px 0;
 }
@@ -2140,6 +2248,29 @@ h1, h2, h3, p{
 
   .prompt-transfer div{
     grid-template-columns: 38px 20px;
+  }
+
+  .thermal-scene{
+    grid-template-columns: 1fr;
+  }
+
+  .thermal-pipeline{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .thermal-pipeline i{
+    transform: rotate(90deg);
+  }
+
+  .thermal-winners{
+    grid-template-columns: 1fr;
+  }
+
+  .thermal-winners span,
+  .thermal-winners span:first-child{
+    border-top: 1px solid var(--border);
+    border-left: 0;
   }
 
   .featured-copy h2{
@@ -3643,6 +3774,307 @@ h1, h2, h3, p{
   }
 
   .feature-constellation article:first-child{
+    border-top: 0;
+  }
+}
+
+/* -----------------------------
+   Thermal Vision research origin
+------------------------------ */
+.thermal-page .project-hero h1{
+  max-width: 10ch;
+  font-size: clamp(4.2rem, 10vw, 8.2rem);
+  line-height: 0.84;
+}
+
+.thermal-aside{
+  margin: 26px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--brand);
+  color: var(--text) !important;
+  font-family: 'Newsreader', serif;
+  font-size: 1.2rem;
+  line-height: 1.5 !important;
+}
+
+.origin-doodles{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.origin-doodles figure{
+  margin: 0;
+}
+
+.origin-doodles svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.doodle-surface{
+  fill: var(--bg-soft);
+  stroke: var(--border);
+}
+
+.doodle-line,
+.doodle-gold-line,
+.doodle-accent-line,
+.doodle-heat{
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.doodle-accent{
+  fill: rgba(134, 24, 42, 0.22);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.doodle-accent-line,
+.doodle-heat{
+  stroke: var(--accent);
+}
+
+.doodle-gold{
+  fill: rgba(201, 173, 106, 0.18);
+  stroke: var(--note);
+  stroke-width: 2;
+}
+
+.doodle-gold-line{
+  stroke: var(--note);
+}
+
+.doodle-label{
+  fill: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.doodle-note{
+  fill: var(--note);
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+}
+
+.origin-doodles figcaption{
+  margin-top: 8px;
+  color: var(--note);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.63rem;
+}
+
+.mentor-thanks{
+  max-width: 76ch;
+  margin: 36px 0 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--brand);
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.thermal-study-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.thermal-study-grid article{
+  min-height: 190px;
+  padding: 24px 20px;
+  border-left: 1px solid var(--border);
+}
+
+.thermal-study-grid article:first-child{
+  border-left: 0;
+}
+
+.thermal-study-grid span{
+  display: block;
+  margin-bottom: 34px;
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.67rem;
+}
+
+.thermal-study-grid h3{
+  margin: 0 0 7px;
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.thermal-study-grid p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+.thermal-method-matrix{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.thermal-method-matrix div{
+  padding: 17px 16px;
+  border-left: 1px solid var(--border);
+}
+
+.thermal-method-matrix div:first-child{
+  border-left: 0;
+}
+
+.thermal-method-matrix strong,
+.thermal-method-matrix span{
+  display: block;
+}
+
+.thermal-method-matrix strong{
+  margin-bottom: 7px;
+  color: var(--note);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.thermal-method-matrix span{
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.thermal-findings{
+  background: var(--bg-soft);
+}
+
+.winner-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.winner-grid article{
+  padding: 28px 24px;
+  border-left: 1px solid var(--border);
+}
+
+.winner-grid article:first-child{
+  border-left: 0;
+}
+
+.winner-grid span,
+.winner-grid strong,
+.winner-grid small{
+  display: block;
+}
+
+.winner-grid span{
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.winner-grid strong{
+  margin: 20px 0 8px;
+  color: var(--text);
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+}
+
+.winner-grid small{
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.finding-summary{
+  max-width: 72ch;
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.thermal-note{
+  margin: 18px 0 0;
+  color: var(--note);
+  font-family: 'Caveat', cursive;
+  font-size: 1.45rem;
+  transform: rotate(-1deg);
+}
+
+.publication-section{
+  background: var(--bg-soft);
+}
+
+@media (max-width: 900px){
+  .origin-doodles{
+    grid-template-columns: 1fr;
+  }
+
+  .thermal-study-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .thermal-study-grid article:nth-child(odd){
+    border-left: 0;
+  }
+
+  .thermal-study-grid article:nth-child(n + 3){
+    border-top: 1px solid var(--border);
+  }
+
+  .thermal-method-matrix{
+    grid-template-columns: 1fr;
+  }
+
+  .thermal-method-matrix div,
+  .thermal-method-matrix div:first-child{
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .thermal-method-matrix div:first-child{
+    border-top: 0;
+  }
+}
+
+@media (max-width: 640px){
+  .thermal-page .project-hero h1{
+    font-size: clamp(3.5rem, 18vw, 5.5rem);
+  }
+
+  .thermal-study-grid,
+  .winner-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .thermal-study-grid article,
+  .thermal-study-grid article:nth-child(odd),
+  .winner-grid article,
+  .winner-grid article:first-child{
+    min-height: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .thermal-study-grid article:first-child,
+  .winner-grid article:first-child{
     border-top: 0;
   }
 }

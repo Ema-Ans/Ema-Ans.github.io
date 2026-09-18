@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thermal Vision for Solar Panels | Eman Ansar</title>
+  <meta
+    name="description"
+    content="A first computer-vision research project evaluating feature methods on close-range thermal solar-panel imagery."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="project-page thermal-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Eman Ansar</a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Investigations</a>
+        <a href="../index.html#academic">Academic</a>
+        <a href="../journal.html">Notebook</a>
+        <a href="../index.html#contact">Correspondence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero thermal-hero">
+      <div class="container">
+        <div class="project-topline">
+          <p>origin story // 05</p>
+          <a href="../index.html#projects">research index ↙</a>
+        </div>
+
+        <p class="project-status">FIRST RESEARCH PROJECT · COMPUTER VISION · IEEE VCIP 2024</p>
+        <h1>Thermal Vision for Solar Panels</h1>
+        <p class="project-subtitle">Sophomore me, a lot of Jupyter notebooks, and one surprisingly difficult vision problem.</p>
+
+        <div class="project-framing">
+          <h2>How do you make computer vision behave on close-range thermal images?</h2>
+          <div>
+            <p>
+              This was one of my earliest research projects, and the one that taught me how research feels in practice:
+              collecting imperfect data, debugging notebook pipelines, comparing methods carefully, and discovering
+              that preprocessing decisions can change everything.
+            </p>
+            <p>
+              Working with Eduardo Feo-Flushing’s group, I studied classical feature detectors and descriptors on
+              close-range thermal images of solar panels captured under real-world variation.
+            </p>
+            <p class="thermal-aside">The project where I learned that “just run OpenCV” is not, in fact, a research method.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section lore-section" aria-labelledby="lore-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>baby researcher lore</p>
+          <h2 id="lore-heading">Armed with curiosity and too many notebook cells</h2>
+        </div>
+
+        <div class="origin-doodles">
+          <figure>
+            <svg viewBox="0 0 440 280" role="img" aria-labelledby="lab-doodle-title lab-doodle-desc">
+              <title id="lab-doodle-title">Sophomore Eman entering a research lab</title>
+              <desc id="lab-doodle-desc">A simple line drawing of Eman with a laptop and Eduardo opening a laboratory door.</desc>
+              <rect class="doodle-surface" x="18" y="18" width="404" height="244" />
+              <path class="doodle-line" d="M292 64H397V235H292Z M315 90H374V187H315Z" />
+              <text class="doodle-label" x="320" y="52">RESEARCH LAB</text>
+              <circle class="doodle-line" cx="117" cy="105" r="24" />
+              <path class="doodle-line" d="M117 129V202M117 153L75 176M117 153L157 169M117 202L88 238M117 202L148 238" />
+              <rect class="doodle-accent" x="62" y="164" width="76" height="46" rx="2" />
+              <path class="doodle-line" d="M73 198H127" />
+              <circle class="doodle-line" cx="263" cy="112" r="22" />
+              <path class="doodle-line" d="M263 134V201M263 154L226 177M263 154L300 142M263 201L240 237M263 201L286 237" />
+              <path class="doodle-accent-line" d="M300 142L320 131" />
+              <text class="doodle-note" x="42" y="57">sophomore me</text>
+              <text class="doodle-note" x="36" y="78">knows ~3 things about CV</text>
+              <text class="doodle-note" x="225" y="73">Eduardo: “sure, come in”</text>
+            </svg>
+            <figcaption>research mentor energy: “yes, the child may stay”</figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 440 280" role="img" aria-labelledby="field-doodle-title field-doodle-desc">
+              <title id="field-doodle-title">Collecting thermal solar-panel images</title>
+              <desc id="field-doodle-desc">Two researchers with a thermal camera beside solar panels under the sun.</desc>
+              <rect class="doodle-surface" x="18" y="18" width="404" height="244" />
+              <circle class="doodle-gold" cx="365" cy="65" r="22" />
+              <path class="doodle-gold-line" d="M365 29V17M365 113V101M329 65H317M413 65H401M340 40L331 31M399 99L390 90M390 40L399 31M331 99L340 90" />
+              <path class="doodle-line" d="M206 137L377 118L397 205L226 222Z M239 139L259 218M276 131L296 214M314 127L333 210M352 122L371 207M217 166L386 148M222 194L392 177" />
+              <circle class="doodle-line" cx="91" cy="111" r="21" />
+              <path class="doodle-line" d="M91 132V198M91 153L130 164M91 153L59 177M91 198L69 235M91 198L119 235" />
+              <rect class="doodle-accent" x="123" y="146" width="42" height="30" rx="2" />
+              <circle class="doodle-line" cx="148" cy="161" r="7" />
+              <circle class="doodle-line" cx="178" cy="128" r="18" />
+              <path class="doodle-line" d="M178 146V196M178 162L151 179M178 162L207 172M178 196L160 231M178 196L197 231" />
+              <path class="doodle-heat" d="M205 101C196 89 216 83 207 70M229 100C220 87 241 80 231 67" />
+              <text class="doodle-note" x="40" y="55">computer vision, but very sunny</text>
+              <text class="doodle-note" x="39" y="76">and the camera sees heat</text>
+            </svg>
+            <figcaption>collecting close-range thermal images in the wild</figcaption>
+          </figure>
+        </div>
+
+        <p class="mentor-thanks">
+          Huge thank you to Eduardo Feo-Flushing for taking me in early, teaching me how to think through computer-
+          vision experiments properly, and tolerating an enthusiastic tiny researcher who wanted to poke every step
+          of the pipeline to see what happened.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section thermal-question-section" aria-labelledby="thermal-question-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>what we were trying to figure out</p>
+          <h2 id="thermal-question-heading">Which classical methods survive messy thermal imagery?</h2>
+        </div>
+
+        <div class="build-copy">
+          <p>
+            Most feature-method evaluations focus on visible-light images or cleaner benchmark settings. We studied a
+            more specific case: close-range thermal imagery of solar panels, where temperature gradients, shadows,
+            camera conditions, and color mapping affect what algorithms can detect and match.
+          </p>
+          <p>
+            We built a dataset using a FLIR Duo Pro R camera and evaluated classical detectors and descriptors under
+            changes in time of day, camera angle, rotation, motion blur, and colormap choice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section thermal-pipeline-section" aria-labelledby="thermal-pipeline-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>study pipeline</p>
+          <h2 id="thermal-pipeline-heading">From field capture to empirical comparison</h2>
+        </div>
+
+        <div class="thermal-study-grid">
+          <article>
+            <span>01</span><h3>Capture</h3><p>Close-range thermal solar-panel imagery using a FLIR Duo Pro R.</p>
+          </article>
+          <article>
+            <span>02</span><h3>Preprocess</h3><p>Normalization, shadow exclusion, and thermal colormaps.</p>
+          </article>
+          <article>
+            <span>03</span><h3>Stress</h3><p>Rotation, motion blur, time of day, and camera angle.</p>
+          </article>
+          <article>
+            <span>04</span><h3>Benchmark</h3><p>Feature detection and description across experimental conditions.</p>
+          </article>
+        </div>
+
+        <div class="thermal-method-matrix">
+          <div><strong>Detectors</strong><span>SIFT · FAST · AKAZE · BRISK · ORB</span></div>
+          <div><strong>Descriptors</strong><span>SIFT · FREAK · ORB · SURF · BRISK</span></div>
+          <div><strong>Conditions</strong><span>rotation · blur · angle · time · colormap</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section thermal-findings" aria-labelledby="thermal-findings-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>what we found</p>
+          <h2 id="thermal-findings-heading">The algorithm was only part of the story</h2>
+        </div>
+
+        <div class="winner-grid">
+          <article><span>best detector</span><strong>AKAZE</strong><small>most reliable across the study</small></article>
+          <article><span>best descriptor</span><strong>SURF</strong><small>strongest overall robustness</small></article>
+          <article><span>best colormaps</span><strong>JET / RAINBOW</strong><small>high-contrast mappings performed best</small></article>
+        </div>
+
+        <p class="finding-summary">
+          The broader lesson was simple but important: in thermal imaging, performance is not only about the method.
+          Normalization, preprocessing, and even how temperature is mapped to color can change what the system “sees.”
+        </p>
+        <p class="thermal-note">Preprocessing can absolutely bully your results.</p>
+      </div>
+    </section>
+
+    <section class="project-section thermal-lesson-section" aria-labelledby="thermal-lesson-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>why this still matters to me</p>
+          <h2 id="thermal-lesson-heading">My introduction to careful empirical vision research</h2>
+        </div>
+
+        <div class="hci-copy">
+          <p>
+            This project taught me to treat datasets as constructed objects rather than neutral inputs, to compare
+            methods systematically, and to notice how seemingly small preprocessing choices alter downstream behavior.
+          </p>
+          <p>
+            A lot of my later work—in multimodal behavior analysis, visualization, and human-centered AI—still carries
+            that lesson forward: before interpreting a system’s output, look closely at how the data was captured,
+            transformed, and made legible in the first place.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section publication-section" aria-labelledby="publication-heading">
+      <div class="container status-layout">
+        <div>
+          <p>publication</p>
+          <h2 id="publication-heading">IEEE Visual Communications and Image Processing 2024</h2>
+        </div>
+        <p class="status-note">First author · presented solo · the project that somehow turned sophomore curiosity into an IEEE paper.</p>
+        <a class="text-link" href="../index.html#projects">full research index ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Eman Ansar</small>
+      <a class="text-link" href="../index.html">front page</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
