@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt-Agnostic Arabic Writing Assessment | Eman Ansar</title>
+  <meta
+    name="description"
+    content="QNRF-funded Educational AI research on cross-prompt generalization for Arabic writing assessment."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="project-page arabic-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Eman Ansar</a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Investigations</a>
+        <a href="../index.html#academic">Academic</a>
+        <a href="../journal.html">Notebook</a>
+        <a href="../index.html#contact">Correspondence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero arabic-hero">
+      <div class="container">
+        <div class="project-topline">
+          <p>earlier investigation // 04</p>
+          <a href="../index.html#projects">research index ↙</a>
+        </div>
+
+        <p class="project-status">QNRF-FUNDED RESEARCH · EDUCATIONAL AI · ARABIC NLP</p>
+        <h1>Prompt-Agnostic Arabic Writing Assessment</h1>
+        <p class="project-subtitle">Generalizing writing-quality judgments beyond familiar prompts.</p>
+
+        <div class="project-framing">
+          <h2>Can a model learn something about writing quality without memorizing the prompt?</h2>
+          <div>
+            <p>
+              As part of a Qatar National Research Fund–supported collaboration between Carnegie Mellon University
+              Qatar and Qatar University, I worked on automated Arabic writing assessment in low-resource settings.
+            </p>
+            <p>
+              My focus was cross-prompt generalization: learning from essays written for several prompts, then scoring
+              writing for a prompt the model had never seen during training.
+            </p>
+            <p class="arabic-aside">The annoying part: essays change. Prompts change. Rubrics change. The model still has to behave.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section cross-prompt-section" aria-labelledby="cross-prompt-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>the problem</p>
+          <h2 id="cross-prompt-heading">Train on familiar prompts. Evaluate on a completely unseen one.</h2>
+        </div>
+
+        <figure class="heldout-figure">
+          <div class="heldout-seen">
+            <p>prompts seen during training</p>
+            <div><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span></div>
+          </div>
+          <div class="heldout-model">
+            <i>↓</i>
+            <strong>one scoring model</strong>
+            <small>learn across prompts</small>
+            <i>↓</i>
+          </div>
+          <div class="heldout-unseen">
+            <p>unseen prompt</p>
+            <span>08</span>
+            <b>?</b>
+          </div>
+          <figcaption>train on seven // test on the eighth // rotate the held-out prompt</figcaption>
+        </figure>
+
+        <blockquote class="project-pullquote">Can we teach the model writing quality, rather than one writing prompt at a time?</blockquote>
+      </div>
+    </section>
+
+    <section class="project-section approaches-section" aria-labelledby="approaches-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>two ways of asking the same question</p>
+          <h2 id="approaches-heading">Neural comparison and linguistic evidence</h2>
+        </div>
+
+        <div class="approach-split">
+          <article class="pair-approach">
+            <header><span>01</span><h3>PAIR-Net</h3><p>neural representation</p></header>
+            <div class="approach-flow">
+              <span>essay + prompt</span><i>↓</i><span>cross-attention</span><i>↓</i><span>relative essay comparison</span><i>↓</i><strong>score</strong>
+            </div>
+            <footer>learn the comparison</footer>
+          </article>
+
+          <article class="alif-approach">
+            <header><span>02</span><h3>ALiF-Net</h3><p>linguistic representation</p></header>
+            <div class="approach-flow">
+              <span>Arabic linguistic signals</span><i>↓</i><span>feature selection</span><i>↓</i><span>prompt relationship</span><i>↓</i><strong>score</strong>
+            </div>
+            <footer>make the language visible</footer>
+          </article>
+        </div>
+
+        <p class="approach-caption">same goal // different assumptions about what evidence of writing quality should look like</p>
+      </div>
+    </section>
+
+    <section class="project-section arabic-work-section" aria-labelledby="arabic-work-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>what I worked on</p>
+          <h2 id="arabic-work-heading">Models, language features, and reproducible evaluation</h2>
+        </div>
+
+        <div class="build-copy">
+          <p>
+            I built and evaluated two complementary approaches to prompt-agnostic Arabic writing assessment. PAIR-Net
+            asks whether essays can be compared relative to one another across prompts; ALiF-Net asks how much can be
+            recovered from interpretable Arabic-specific linguistic evidence.
+          </p>
+          <p>
+            I also developed the cross-prompt evaluation pipeline, reproducible training setup, representation cache,
+            and augmentation experiments used to test both approaches.
+          </p>
+
+          <ul class="build-ledger">
+            <li><span>01</span>prompt-agnostic model design</li>
+            <li><span>02</span>Arabic linguistic feature engineering</li>
+            <li><span>03</span>cross-prompt evaluation</li>
+            <li><span>04</span>reproducible experimentation + caching</li>
+            <li><span>05</span>cross-lingual augmentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section feature-section" aria-labelledby="feature-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>Arabic is not just English with different tokens</p>
+          <h2 id="feature-heading">What can writing quality look like linguistically?</h2>
+        </div>
+
+        <div class="feature-constellation">
+          <article><span>01</span><h3>Textual</h3><p>sentence and paragraph structure</p></article>
+          <article><span>02</span><h3>Lexical</h3><p>density, function words, vocabulary</p></article>
+          <article><span>03</span><h3>Morphological</h3><p>gender, number, clitics, POS structure</p></article>
+          <article><span>04</span><h3>Syntactic</h3><p>clauses and dependency depth</p></article>
+          <article><span>05</span><h3>Readability</h3><p>Arabic-specific readability measures</p></article>
+          <article><span>06</span><h3>Prompt adherence</h3><p>semantic relation to the assigned question</p></article>
+        </div>
+
+        <p class="arabic-note">Turns out “just use the English features” was not a particularly satisfying research plan.</p>
+      </div>
+    </section>
+
+    <section class="project-section augmentation-section" aria-labelledby="augmentation-heading">
+      <div class="container">
+        <div class="project-section-head compact-head">
+          <p>a side experiment</p>
+          <h2 id="augmentation-heading">Cross-lingual augmentation</h2>
+        </div>
+
+        <div class="augmentation-flow">
+          <div><span>01</span><strong>Low-resource data</strong></div>
+          <div><span>02</span><strong>English learner essays</strong></div>
+          <div><span>03</span><strong>Error-preserving translation</strong></div>
+          <div><span>04</span><strong>Arabic synthetic training data</strong></div>
+          <div><span>05</span><strong>Cross-prompt evaluation</strong></div>
+        </div>
+        <p class="augmentation-caption">We tested augmentation without letting synthetic data overwhelm the human-scored Arabic essays.</p>
+        <p class="arabic-note">Translation models have an unfortunate habit of fixing the mistakes you specifically asked them to preserve.</p>
+      </div>
+    </section>
+
+    <section class="project-section care-section" aria-labelledby="care-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>why I still care about this project</p>
+          <h2 id="care-heading">A model is standing in for human judgment</h2>
+        </div>
+
+        <div class="hci-copy">
+          <p>
+            Automated assessment is ultimately a model standing in for a human judgment. That made generalization more
+            interesting to me than maximizing a score on one familiar prompt.
+          </p>
+          <p>
+            A useful assessment system has to survive new questions, different rubrics, sparse training data, and the
+            linguistic structure of the people whose writing it evaluates. This was one of the first places I became
+            interested in the gap between benchmark performance and reliable behavior when context changes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section methods-section" aria-labelledby="arabic-methods-heading">
+      <div class="container">
+        <div class="project-section-head compact-head">
+          <p>methods</p>
+          <h2 id="arabic-methods-heading">At a glance</h2>
+        </div>
+
+        <ul class="methods-strip">
+          <li>cross-prompt evaluation</li>
+          <li>pairwise regression</li>
+          <li>cross-attention</li>
+          <li>Arabic feature engineering</li>
+          <li>cross-lingual augmentation</li>
+          <li>representation caching</li>
+          <li>multi-seed evaluation</li>
+          <li>QWK · Pearson · Spearman</li>
+          <li>PyTorch</li>
+          <li>AraBERT</li>
+          <li>CAMeL Tools</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section context-section" aria-labelledby="context-heading">
+      <div class="container status-layout">
+        <div>
+          <p>project context</p>
+          <h2 id="context-heading">QNRF-supported Arabic Writing Assessment Project</h2>
+        </div>
+        <p class="status-note">Carnegie Mellon University Qatar × Qatar University</p>
+        <a class="text-link" href="../index.html#projects">full research index ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Eman Ansar</small>
+      <a class="text-link" href="../index.html">front page</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

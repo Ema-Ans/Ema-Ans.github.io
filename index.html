@@ -105,7 +105,7 @@
     <section class="research-lede" aria-label="Current investigations">
       <div class="container">
         <div class="research-lede-head">
-          <p class="section-label">current investigations // 01—03</p>
+          <p class="section-label">current investigations // 01—04</p>
           <a class="text-link" href="#projects">full research index ↓</a>
         </div>
 
@@ -206,6 +206,39 @@
             <figcaption>participant study // interpretation → explanation → recreation</figcaption>
           </figure>
         </article>
+
+        <article class="featured-investigation featured-investigation-alt featured-investigation-fourth">
+          <figure class="prompt-figure">
+            <p>cross-prompt evaluation</p>
+            <div class="prompt-seen" aria-label="Seven prompts used for training">
+              <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span>
+            </div>
+            <div class="prompt-transfer">
+              <small>prompts seen during training</small>
+              <i>↓</i>
+              <strong>one scoring model</strong>
+              <i>↓</i>
+              <div><span>08</span><b>?</b></div>
+              <small>completely unseen prompt</small>
+            </div>
+            <div class="model-paths">
+              <span><b>PAIR-Net</b> neural comparison</span>
+              <span><b>ALiF-Net</b> linguistic evidence</span>
+            </div>
+            <figcaption>train on seven // test on the eighth // rotate across all prompts</figcaption>
+          </figure>
+
+          <div class="featured-copy">
+            <p class="investigation-status">04 · QNRF-FUNDED RESEARCH · EDUCATIONAL AI</p>
+            <h2>Arabic Writing Assessment</h2>
+            <p class="featured-subtitle">Can a model learn writing quality without memorizing the prompt?</p>
+            <p>
+              I worked on cross-prompt generalization for low-resource Arabic writing assessment, building models and
+              evaluation pipelines that score writing for prompts never seen during training.
+            </p>
+            <a class="featured-project-link" href="projects/arabic-writing-assessment.html">open the project field file ↗</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -301,16 +334,15 @@
 
     <li>
       <strong>
-        <a href="#" target="_blank" rel="noreferrer">
-          Arabic Automated Essay Scoring (under revision)
+        <a href="projects/arabic-writing-assessment.html">
+          Prompt-Agnostic Arabic Writing Assessment
         </a>
       </strong>
       <p>
-        Cross-lingual AES robust across prompts, domains, and linguistic variation.
+        QNRF-funded Educational AI research on generalization to prompts unseen during training.
       </p>
       <div class="output-links">
-        <a href="#" target="_blank">preprint</a>
-        <a href="#" target="_blank">code</a>
+        <a href="projects/arabic-writing-assessment.html">project page</a>
       </div>
     </li>
 
@@ -464,18 +496,17 @@
           </article>
 
           <article class="card">
-            <p class="card-note">[under revision]</p>
-            <h3>Prompt-Agnostic Arabic Automated Essay Scoring</h3>
+            <p class="card-note">QNRF-funded · Educational AI · Arabic NLP</p>
+            <h3>Prompt-Agnostic Arabic Writing Assessment</h3>
             <p>
-              I built a cross-prompt evaluation setup over QAES and CAST. I implemented PAIR-Net with prompt-conditioned cross-attention and caching,
-              and ALiF-Net for Arabic linguistic features. Then I ran augmentation experiments to push agreement closer to human scoring.
+              I built and evaluated complementary neural and linguistic approaches to Arabic writing assessment,
+              focusing on generalization to prompts the models had never seen during training.
             </p>
             <div class="tags">
-              <span>NLP</span><span>Arabic</span><span>Evaluation</span><span>Deep Learning</span>
+              <span>Educational AI</span><span>Arabic NLP</span><span>Low-Resource ML</span><span>Cross-Prompt Generalization</span><span>Human-Centered AI</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Preprint</a>
-              <a href="#" target="_blank" rel="noreferrer">Code</a>
+              <a href="projects/arabic-writing-assessment.html">Project field file</a>
             </div>
           </article>
 
