@@ -65,3 +65,30 @@ async function loadPoems() {
 }
 
 loadPoems();
+
+// HOMEPAGE SECTION NAVIGATION
+const homeNavLinks = Array.from(
+  document.querySelectorAll('.home-page .nav a[href^="#"]')
+);
+
+if (homeNavLinks.length && 'IntersectionObserver' in window) {
+  const homeSections = homeNavLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  const sectionObserver = new IntersectionObserver(entries => {
+    const current = entries.find(entry => entry.isIntersecting);
+    if (!current) return;
+
+    homeNavLinks.forEach(link => {
+      const isCurrent = link.getAttribute('href') === `#${current.target.id}`;
+      if (isCurrent) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }, {
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
+  });
+
+  homeSections.forEach(section => sectionObserver.observe(section));
+}
