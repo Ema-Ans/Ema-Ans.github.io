@@ -4,779 +4,429 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eman Ansar | Research Portfolio</title>
-  <meta
-    name="description"
-    content="Research notes on computer vision, HCI, NLP, and ML systems."
-  />
-
+  <meta name="description" content="Research notes on human-centered AI, embodied cognition, computer vision, and visualization." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="home-page">
+<body class="home-page home-editorial">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#">Eman Ansar</a>
-
-      <nav class="nav">
-    <a href="#academic">Academic</a>
-    <a href="#projects">Investigations</a>
-    <a href="#experience">Research Rooms</a>
-    <a href="journal.html">Notebook</a>
-    <a href="poems.html">Poems</a>
-    <a href="#contact">Correspondence</a>
-  </nav>
+      <a class="logo" href="#top">Eman Ansar</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects">Investigations</a>
+        <a href="#rooms">Research Rooms</a>
+        <a href="#academic">Training</a>
+        <a href="#printed">Printed Matter</a>
+        <a href="#writing">Margins</a>
+        <a href="#contact">Correspondence</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Editorial masthead -->
-    <section class="hero">
+  <main id="top">
+    <section class="hero editorial-cover">
       <div class="container hero-shell">
-        <p class="hero-topline">
-          <span>entry // front page</span>
-          <span>Hong Kong · September 2026</span>
-        </p>
-
+        <p class="hero-topline"><span>entry // front page</span><span>Hong Kong · September 2026</span></p>
         <div class="hero-inner hero-editorial">
           <div class="hero-photo-wrap">
-            <img
-              src="assets/img/profile.png"
-              alt="Photo of Eman Ansar"
-              class="profile-pic hero-portrait"
-            />
-            <p class="photo-caption">
-              researcher, note-taker, occasional poem-hoarder
-            </p>
+            <img src="assets/img/profile.png" alt="Photo of Eman Ansar" class="profile-pic hero-portrait" />
+            <p class="photo-caption">researcher, note-taker, occasional poem-hoarder</p>
           </div>
-
           <div class="hero-main">
             <p class="section-label">[research notes on vision, language, and cognition]</p>
             <h1>Eman Ansar</h1>
-
-            <p class="hero-deck">
-              Human-centered AI, embodied cognition, and decision-making.
-            </p>
-
+            <p class="hero-deck">Human-centered AI, embodied cognition, and decision-making.</p>
             <p class="lead">
               I’m an M.Phil. (Research) student in Computer Science &amp; Engineering at
               <a href="https://www.hkust.edu.hk/" target="_blank" rel="noreferrer">HKUST</a>,
-              studying what visible behavior can reveal about thinking in expert chess.
-              My work moves across computer vision, HCI, visualization, Arabic NLP, and
-              resource-efficient speech models. Previously, I studied Computer Science at
+              where I study what visible behavior can reveal about thinking in expert chess.
+              My work sits at the intersection of computer vision, HCI, and visualization,
+              with earlier detours through Arabic NLP and resource-efficient speech models.
+              Before this, I studied Computer Science at
               <a href="https://www.cmu.edu/" target="_blank" rel="noreferrer">Carnegie Mellon University</a>,
-              where I also taught and conducted research in CV and NLP.
+              where I also taught and did research in vision and language.
             </p>
-
             <div class="hero-links">
               <a class="text-link" href="#projects">see investigations</a>
               <a class="text-link" href="journal.html">open notebook</a>
               <a class="text-link" href="#contact">send a note</a>
             </div>
           </div>
-
           <aside class="hero-margin">
             <div class="hero-facts hero-facts-single">
-              <p>
-                <span>current desk</span>
-                <a href="https://narechania.com/" target="_blank" rel="noreferrer">
-                  DataVisards Lab, HKUST
-                </a>
-              </p>
-              <p>
-                <span>writing from</span>
-                Hong Kong
-              </p>
-              <p>
-                <span>current question</span>
-                What does thinking look like from the outside?
-              </p>
-              <p>
-                <span>working across</span>
-                vision · language · interaction
-              </p>
+              <p><span>current desk</span><a href="https://narechania.com/" target="_blank" rel="noreferrer">DataVisards Lab, HKUST</a></p>
+              <p><span>writing from</span>Hong Kong</p>
+              <p><span>current question</span>What does thinking look like from the outside?</p>
+              <p><span>working across</span>vision · language · interaction</p>
+            </div>
+            <p class="cover-rumor rumor-one"><strong>scandal:</strong> heard she actually likes teaching</p>
+            <p class="cover-rumor rumor-two">rumor has it she collects research questions like loose beads</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="front-investigations" aria-labelledby="investigations-title">
+      <div class="container">
+        <header class="issue-heading">
+          <div>
+            <p class="section-label">the cover story + two dispatches</p>
+            <h2 id="investigations-title">Featured Investigations</h2>
+          </div>
+          <p>Current questions about visible behavior, structured choice, and the meanings carried by visual form.</p>
+        </header>
+
+        <div class="magazine-research-grid">
+          <article class="cover-feature">
+            <div class="cover-feature-copy">
+              <p class="investigation-status">COVER STORY · ACM CHI 2027 · UNDER REVIEW</p>
+              <h3>No Single Tell</h3>
+              <p class="featured-subtitle">Visible behavior during extended decision-making in elite chess.</p>
+              <p>I align long-form chess video with human behavioral annotations, game information, clocks, and engine-derived decision context to study visible behavior over time.</p>
+              <a class="featured-project-link" href="projects/no-single-tell.html">open the project field file ↗</a>
+            </div>
+            <figure class="research-figure cover-research-figure">
+              <svg viewBox="0 0 720 300" role="img" aria-labelledby="trace-title trace-desc">
+                <title id="trace-title">Illustrative chess decision trace</title>
+                <desc id="trace-desc">A schematic timeline aligning behavioral annotations with decision and game context.</desc>
+                <g class="figure-grid"><path d="M84 42V252M190 42V252M296 42V252M402 42V252M508 42V252M614 42V252" /><path d="M84 84H674M84 148H674M84 212H674" /></g>
+                <g class="figure-labels"><text x="18" y="88">decision context</text><text x="18" y="152">behavioral code</text><text x="18" y="216">game timeline</text><text x="84" y="276">decision begins</text><text x="578" y="276">move</text></g>
+                <path class="trace trace-primary" d="M84 73 C132 70 146 90 190 82 S252 54 296 63 S354 97 402 72 S466 48 508 58 S570 108 614 78 S650 66 674 52" />
+                <path class="trace trace-secondary" d="M84 164 C126 150 154 171 190 156 S252 137 296 160 S360 178 402 149 S472 128 508 150 S574 184 614 146 S652 136 674 142" />
+                <path class="trace trace-gold" d="M84 220 C138 218 150 196 190 207 S250 229 296 214 S356 190 402 205 S466 225 508 198 S570 190 614 204 S650 217 674 196" />
+                <line class="decision-marker" x1="614" y1="38" x2="614" y2="252" /><circle class="trace-point" cx="614" cy="78" r="5" />
+              </svg>
+              <figcaption>video + human annotation + game information + decision context</figcaption>
+            </figure>
+          </article>
+
+          <aside class="supporting-stories" aria-label="Supporting investigations">
+            <article>
+              <p class="investigation-status">DISPATCH 02 · COGSCI 2027</p>
+              <h3>Choice Complexity</h3>
+              <div class="story-visual choice-mini" role="img" aria-label="Comparison of one dominant chess move with several plausible moves">
+                <div><small>one clear move</small><i style="--mini-bar: 92%"></i><i style="--mini-bar: 28%"></i><i style="--mini-bar: 14%"></i></div>
+                <div><small>many plausible</small><i style="--mini-bar: 88%"></i><i style="--mini-bar: 78%"></i><i style="--mini-bar: 69%"></i></div>
+              </div>
+              <p class="supporting-dek">What makes a decision difficult when several options are all plausible?</p>
+              <p>We model the full choice set and ask how its structure relates to decision time and quality.</p>
+              <a class="text-link" href="projects/choice-complexity.html">read the field file</a>
+            </article>
+            <article>
+              <p class="investigation-status">DISPATCH 03 · IEEE TVCG</p>
+              <h3>Multilingual Visualization</h3>
+              <div class="story-visual locale-mini" role="img" aria-label="Three study stages: interpret, explain, and recreate">
+                <span><b>01</b>Interpret</span><i>→</i><span><b>02</b>Explain</span><i>→</i><span><b>03</b>Recreate</span>
+                <small>language · notation · visual convention</small>
+              </div>
+              <p class="supporting-dek">When a chart crosses a language boundary, what has to travel with it?</p>
+              <p>I study how people interpret, explain, and recreate visualizations across linguistic and cultural contexts.</p>
+              <a class="text-link" href="projects/multilingual-visualization.html">read the field file</a>
+            </article>
+            <p class="rail-note">known to overthink visible behavior and difficult choices</p>
+          </aside>
+        </div>
+
+        <div class="earlier-investigations">
+          <header><p class="section-label">the back pages // formative work</p><h3>Earlier Investigations</h3></header>
+          <div class="earlier-grid">
+            <article>
+              <p class="story-number">04 · EDUCATIONAL AI</p><h4>Arabic Writing Assessment</h4>
+              <div class="story-visual arabic-mini" role="img" aria-label="Seven familiar prompts train one scoring model that is evaluated on an unseen eighth prompt">
+                <div class="arabic-seen"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span></div>
+                <div class="arabic-transfer"><small>seen prompts</small><i>→</i><strong>scoring model</strong><i>→</i><b>08 ?</b></div>
+                <p>PAIR-Net // ALiF-Net</p>
+              </div>
+              <p>Cross-prompt generalization for low-resource Arabic writing assessment.</p>
+              <a href="projects/arabic-writing-assessment.html">open field file ↗</a>
+            </article>
+            <article>
+              <p class="story-number">05 · RESEARCH ORIGIN</p><h4>Thermal Vision for Solar Panels</h4>
+              <div class="story-visual thermal-mini" role="img" aria-label="Thermal solar-panel grid flowing through preprocessing and benchmarking">
+                <div class="thermal-mini-scene">
+                  <span class="mini-sun">☀</span>
+                  <div class="mini-panel"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <small>rotation<br />blur<br />colormaps</small>
+                </div>
+                <p>thermal image → preprocess → benchmark</p>
+              </div>
+              <p>Classical computer vision on close-range thermal imagery under messy real-world variation.</p>
+              <a href="projects/thermal-solar-vision.html">open field file ↗</a>
+            </article>
+            <article>
+              <p class="story-number">06 · SENIOR HONORS THESIS</p><h4>Speech / Audio LLM Pretraining</h4>
+              <div class="story-visual speech-mini" role="img" aria-label="Two paths toward efficient speech pretraining: compressed representations and synthetic supervision">
+                <div><span>speech signal</span><i>↓</i><strong>compressed representation</strong></div>
+                <b>+</b>
+                <div><span>speech errors</span><i>↓</i><strong>synthetic supervision</strong></div>
+                <p>resource-efficient pretraining</p>
+              </div>
+              <p>Resource-efficient representation learning, synthetic supervision, and an apprenticeship in research.</p>
+              <a href="projects/speech-audio-pretraining.html">open field file ↗</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rooms" class="rooms-section" aria-labelledby="rooms-title">
+      <div class="container">
+        <header class="issue-heading rooms-heading">
+          <div>
+            <p class="section-label">a research biography // 2022—present</p>
+            <h2 id="rooms-title">Research &amp; Professional Rooms</h2>
+          </div>
+          <p>The labs, offices, classrooms, and occasional questionable Zoom call where the work happened.</p>
+        </header>
+
+        <div class="rooms-spread">
+          <div class="rooms-timeline">
+            <div class="timeline-year" aria-label="2022"><span>2022</span></div>
+            <article class="timeline-milestone">
+              <div class="award-clipping">
+                <strong>✦ Most Promising Research Proposal</strong>
+                <span>2022</span>
+                <p>this one may have accidentally encouraged the entire situation.</p>
+              </div>
+            </article>
+
+            <div class="timeline-year" aria-label="2023"><span>2023</span></div>
+            <article class="room-entry room-featured">
+              <p class="room-date">May 2023—Jul 2025</p>
+              <h3>IMPAQTLab · Carnegie Mellon University Qatar</h3>
+              <p class="room-role">Undergraduate Researcher · Eduardo Feo-Flushing</p>
+              <p>Thermal computer vision, solar-panel imagery, and the first long route from messy data to a published paper.</p>
+              <div class="room-links"><a href="projects/thermal-solar-vision.html">open the origin story ↗</a></div>
+              <div class="room-awards">
+                <span>✦ Best Undergraduate Research · 2023</span>
+                <span>✦ IEEE VCIP 2024 · first-author publication</span>
+              </div>
+            </article>
+
+            <article class="room-entry room-compact">
+              <p class="room-date">May—Jul 2023</p>
+              <h3>Qatar Computing Research Institute</h3>
+              <p class="room-role">AI Cybersecurity Research Intern</p>
+              <p>STIX, threat-intelligence knowledge graphs, and curated CTI datasets.</p>
+            </article>
+
+            <article class="room-entry room-branch">
+              <p class="room-date">May—Jun 2023</p>
+              <h3>Microsoft · AI Intern</h3>
+              <p>Led a team building a multilingual real-time captioning prototype with Azure and Power Apps.</p>
+              <div class="room-awards"><span>✦ 2nd Place · Internship Innovation Competition</span></div>
+            </article>
+
+            <div class="timeline-year" aria-label="2024"><span>2024</span></div>
+            <div class="award-cluster" aria-label="Spring 2024 recognitions">
+              <p class="room-date">Spring 2024 · academic side quests</p>
+              <span>✦ Dean’s List Scholar</span>
+              <span>✦ Student Research Ambassador</span>
+              <span>✦ Top-Scoring Deep Learning Project</span>
+              <span>✦ Best Generative AI Research Project</span>
+              <p class="cluster-note">an alarmingly productive semester, in retrospect.</p>
+            </div>
+
+            <article class="room-entry">
+              <p class="room-date">May 2024—Jan 2025</p>
+              <h3>QSIURP · Carnegie Mellon University Qatar</h3>
+              <p class="room-role">Undergraduate Research Fellow · Gianni Di Caro</p>
+              <p>Deep learning for crisis-information extraction and resource planning.</p>
+              <div class="room-awards">
+                <span>✦ $4,600 Competitive Summer Research Grant · May 2024</span>
+                <span>✦ Early Research Award · May 2025</span>
+              </div>
+            </article>
+
+            <article class="room-entry room-featured">
+              <p class="room-date">May 2024—May 2025</p>
+              <h3>ML &amp; Signal Processing Lab · CMU Pittsburgh</h3>
+              <p class="room-role">Honors Thesis Researcher · Bhiksha Raj</p>
+              <p>Speech and audio LLM pretraining through compressed representations and synthetic supervision.</p>
+              <div class="room-links"><a href="projects/speech-audio-pretraining.html">open the thesis field file ↗</a></div>
+              <div class="room-awards">
+                <span>✦ Dean’s List Scholar · Fall 2024</span>
+                <span>✦ Judith A. Resnik Award Nominee · Fall 2024</span>
+                <span>✦ College Honors · Spring 2025</span>
+              </div>
+              <p class="room-handwritten">somewhere around here, being taught with unreasonable patience made the professor dream look suspiciously appealing.</p>
+            </article>
+
+            <div class="side-branches" aria-label="Summer 2024 professional branches">
+              <article class="room-entry room-branch">
+                <p class="room-date">Jun—Aug 2024</p>
+                <h3>HMC Surgical Research Lab</h3>
+                <p class="room-role">Deep Learning Research Intern</p>
+                <p>SAM, SegFormer, YOLOv8, and surgical imagery.</p>
+              </article>
+              <article class="room-entry room-branch">
+                <p class="room-date">May—Aug 2024</p>
+                <h3>Snoonu · Backend SWE Intern</h3>
+                <p>.NET, MongoDB, Docker, and shopper-operations services.</p>
+                <div class="room-awards"><span>✦ Most Promising Project · Aug 2024</span></div>
+                <p class="room-handwritten">brief evidence that I can leave PyTorch alone and behave like a software engineer.</p>
+              </article>
+            </div>
+
+            <div class="timeline-year" aria-label="2025"><span>2025</span></div>
+            <article class="room-entry">
+              <p class="room-date">Apr—Aug 2025</p>
+              <h3>QNRF Arabic Writing Assessment · CMU-Q × Qatar University</h3>
+              <p class="room-role">Research Assistant · Houda Bouamor</p>
+              <p>PAIR-Net, ALiF-Net, prompt-agnostic Arabic assessment, and cross-lingual augmentation.</p>
+              <div class="room-links"><a href="projects/arabic-writing-assessment.html">open the field file ↗</a></div>
+            </article>
+
+            <div class="timeline-transition">
+              <strong>Doha / Pittsburgh → Hong Kong</strong>
+              <span>✦ Fully Funded Postgraduate Research Studentship · HKUST · Aug 2025</span>
+              <p>packed several years of research lore into approximately too many suitcases.</p>
+            </div>
+
+            <article class="room-entry room-current">
+              <p class="room-date">Oct 2025—Present</p>
+              <h3>DataVisards Lab · HKUST</h3>
+              <p class="room-role">Postgraduate Research Assistant · Arpit Narechania</p>
+              <p>Current work across embodied cognition, human-centered AI, and multilingual visualization.</p>
+              <div class="room-files" aria-label="Projects from the DataVisards Lab">
+                <a href="projects/no-single-tell.html"><span>01</span>No Single Tell</a>
+                <a href="projects/choice-complexity.html"><span>02</span>Choice Complexity</a>
+                <a href="projects/multilingual-visualization.html"><span>03</span>Multilingual Visualization</a>
+              </div>
+              <div class="room-awards">
+                <span>✦ First Runner-Up · HKUST Three Minute Thesis · 2026</span>
+                <span>✦ Selected Scholar · KAUST MenaML School · 2026</span>
+                <small>one of 300 selected; fully funded participation and travel offered; unable to attend</small>
+              </div>
+              <p class="room-handwritten">current room. several papers live here. so do most of my open tabs.</p>
+            </article>
+          </div>
+
+          <aside class="teaching-thread" aria-labelledby="teaching-thread-title">
+            <p class="teaching-thread-label" id="teaching-thread-title">meanwhile, in classrooms →</p>
+            <article>
+              <p>2024—2025</p>
+              <h3>11-785 Introduction to Deep Learning · CMU</h3>
+              <span>Three semesters · Pittsburgh → CMU-Q · recitations and assignment design with Bhiksha Raj</span>
+            </article>
+            <article>
+              <p>Spring 2025</p>
+              <h3>15-288 Machine Learning in a Nutshell · CMU</h3>
+              <span>Head TA · recitations and guest lectures</span>
+            </article>
+            <article>
+              <p>Spring 2026</p>
+              <h3>COMP 4211 Machine Learning · HKUST</h3>
+              <span>Labs, notebooks, and teaching across both sections</span>
+              <strong>✦ voted best TA across both sections</strong>
+            </article>
+            <p class="teaching-scandal"><strong>scandal:</strong> sources allege she actually enjoys teaching</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="academic" class="training-section" aria-labelledby="training-title">
+      <div class="container">
+        <header class="issue-heading training-heading">
+          <div><p class="section-label">how I was trained to think</p><h2 id="training-title">Methods, Training, and Recurring Questions</h2></div>
+          <div class="training-intro">
+            <p>I build multimodal workflows that align long-form video, human annotation, and task context over time, then use visualization and temporal analysis to ask how thinking becomes visible.</p>
+            <p>Across domains, I keep returning to the same question: what structure matters, and how do we measure it carefully?</p>
+          </div>
+        </header>
+        <div class="training-grid">
+          <div class="education-column">
+            <h3 class="minihead">Education</h3>
+            <article class="education-note">
+              <p class="degree">M.Phil. (Research), Computer Science &amp; Engineering</p>
+              <p class="school-line">HKUST · 2025—2027 · DataVisards Lab</p>
+              <p>Computer Vision Based Chess Analytics · Advisor: Dr. Arpit Narechania</p>
+            </article>
+            <article class="education-note">
+              <p class="degree">BSc, Computer Science · Machine Learning concentration</p>
+              <p class="school-line">Carnegie Mellon University · 2021—2025 · College Honors</p>
+              <p>Senior honors thesis on speech language models · Advisor: Dr. Bhiksha Raj</p>
+            </article>
+          </div>
+          <aside class="methods-column">
+            <div>
+              <h3 class="minihead">Methods I return to</h3>
+              <div class="chips compact-chips"><span class="chip">Human Annotation</span><span class="chip">Computer Vision</span><span class="chip">Visualization</span><span class="chip">Temporal Analysis</span><span class="chip">Participant Studies</span><span class="chip">Representation Learning</span></div>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section class="research-lede" aria-label="Current investigations">
-      <div class="container">
-        <div class="research-lede-head">
-          <p class="section-label">current investigations // 01—05</p>
-          <a class="text-link" href="#projects">full research index ↓</a>
-        </div>
-
-        <article class="featured-investigation">
-          <div class="featured-copy">
-            <p class="investigation-status">ACM CHI 2027 · UNDER REVIEW</p>
-            <h2 id="research-lede-title">No Single Tell</h2>
-            <p class="featured-subtitle">Visible behavior during extended decision-making in elite chess.</p>
-            <p>
-              I align long-form chess video with human behavioral annotations, game information,
-              clocks, and engine-derived decision context to study visible behavior over time.
-            </p>
-            <a class="featured-project-link" href="projects/no-single-tell.html">open the project field file ↗</a>
-          </div>
-
-          <figure class="research-figure">
-            <svg viewBox="0 0 720 300" role="img" aria-labelledby="trace-title trace-desc">
-              <title id="trace-title">Illustrative chess decision trace</title>
-              <desc id="trace-desc">A schematic timeline aligning behavioral annotations with decision and game context.</desc>
-              <g class="figure-grid">
-                <path d="M84 42V252M190 42V252M296 42V252M402 42V252M508 42V252M614 42V252" />
-                <path d="M84 84H674M84 148H674M84 212H674" />
-              </g>
-              <g class="figure-labels">
-                <text x="18" y="88">decision context</text>
-                <text x="18" y="152">behavioral code</text>
-                <text x="18" y="216">game timeline</text>
-                <text x="84" y="276">decision begins</text>
-                <text x="578" y="276">move</text>
-              </g>
-              <path class="trace trace-primary" d="M84 73 C132 70 146 90 190 82 S252 54 296 63 S354 97 402 72 S466 48 508 58 S570 108 614 78 S650 66 674 52" />
-              <path class="trace trace-secondary" d="M84 164 C126 150 154 171 190 156 S252 137 296 160 S360 178 402 149 S472 128 508 150 S574 184 614 146 S652 136 674 142" />
-              <path class="trace trace-gold" d="M84 220 C138 218 150 196 190 207 S250 229 296 214 S356 190 402 205 S466 225 508 198 S570 190 614 204 S650 217 674 196" />
-              <line class="decision-marker" x1="614" y1="38" x2="614" y2="252" />
-              <circle class="trace-point" cx="614" cy="78" r="5" />
-            </svg>
-            <figcaption>public-safe schematic // video + human annotation + game information + decision context</figcaption>
-          </figure>
-        </article>
-
-        <article class="featured-investigation featured-investigation-alt">
-          <figure class="choice-figure">
-            <div class="choice-panels">
-              <section>
-                <p>low choice complexity</p>
-                <div class="choice-bar"><span>Move A</span><i style="--bar: 92%"></i></div>
-                <div class="choice-bar"><span>Move B</span><i style="--bar: 24%"></i></div>
-                <div class="choice-bar"><span>Move C</span><i style="--bar: 15%"></i></div>
-                <div class="choice-bar"><span>Move D</span><i style="--bar: 8%"></i></div>
-                <small>one option dominates · lower entropy</small>
-              </section>
-
-              <section>
-                <p>high choice complexity</p>
-                <div class="choice-bar"><span>Move A</span><i style="--bar: 88%"></i></div>
-                <div class="choice-bar"><span>Move B</span><i style="--bar: 80%"></i></div>
-                <div class="choice-bar"><span>Move C</span><i style="--bar: 72%"></i></div>
-                <div class="choice-bar"><span>Move D</span><i style="--bar: 64%"></i></div>
-                <small>several plausible alternatives · higher entropy</small>
-              </section>
-            </div>
-            <figcaption>candidate moves → choice distribution → entropy / complexity → decision time + quality</figcaption>
-          </figure>
-
-          <div class="featured-copy">
-            <p class="investigation-status">02 · COGSCI 2027 · MANUSCRIPT IN PREPARATION</p>
-            <h2 id="choice-feature-title">Choice Complexity</h2>
-            <p class="featured-subtitle">What makes a decision difficult when several options are all plausible?</p>
-            <p>
-              We model the structure of the full choice set using engine-evaluated candidate moves, then study how
-              that structure relates to decision time and decision quality.
-            </p>
-            <a class="featured-project-link" href="projects/choice-complexity.html">open the project field file ↗</a>
-          </div>
-        </article>
-
-        <article class="featured-investigation featured-investigation-third">
-          <div class="featured-copy">
-            <p class="investigation-status">03 · IEEE TVCG · MANUSCRIPT IN PREPARATION</p>
-            <h2>Multilingual Visualization</h2>
-            <p class="featured-subtitle">When a chart crosses a language boundary, what exactly has to travel with it?</p>
-            <p>
-              I design participant studies that examine how people interpret, explain, and recreate visualizations
-              across linguistic and cultural contexts.
-            </p>
-            <a class="featured-project-link" href="projects/multilingual-visualization.html">open the project field file ↗</a>
-          </div>
-
-          <figure class="locale-figure">
-            <div class="locale-stages">
-              <section><span>01</span><strong>Interpret</strong><small>what does this chart say?</small></section>
-              <section><span>02</span><strong>Explain</strong><small>how would you communicate it?</small></section>
-              <section><span>03</span><strong>Recreate</strong><small>what travels, changes, or stays?</small></section>
-            </div>
-            <div class="locale-layers">
-              <span>language</span><span>notation</span><span>visual convention</span><span>tool use</span>
-            </div>
-            <figcaption>participant study // interpretation → explanation → recreation</figcaption>
-          </figure>
-        </article>
-
-        <article class="featured-investigation featured-investigation-alt featured-investigation-fourth">
-          <figure class="prompt-figure">
-            <p>cross-prompt evaluation</p>
-            <div class="prompt-seen" aria-label="Seven prompts used for training">
-              <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span>
-            </div>
-            <div class="prompt-transfer">
-              <small>prompts seen during training</small>
-              <i>↓</i>
-              <strong>one scoring model</strong>
-              <i>↓</i>
-              <div><span>08</span><b>?</b></div>
-              <small>completely unseen prompt</small>
-            </div>
-            <div class="model-paths">
-              <span><b>PAIR-Net</b> neural comparison</span>
-              <span><b>ALiF-Net</b> linguistic evidence</span>
-            </div>
-            <figcaption>train on seven // test on the eighth // rotate across all prompts</figcaption>
-          </figure>
-
-          <div class="featured-copy">
-            <p class="investigation-status">04 · QNRF-FUNDED RESEARCH · EDUCATIONAL AI</p>
-            <h2>Arabic Writing Assessment</h2>
-            <p class="featured-subtitle">Can a model learn writing quality without memorizing the prompt?</p>
-            <p>
-              I worked on cross-prompt generalization for low-resource Arabic writing assessment, building models and
-              evaluation pipelines that score writing for prompts never seen during training.
-            </p>
-            <a class="featured-project-link" href="projects/arabic-writing-assessment.html">open the project field file ↗</a>
-          </div>
-        </article>
-
-        <article class="featured-investigation featured-investigation-fifth">
-          <div class="featured-copy">
-            <p class="investigation-status">05 · FIRST RESEARCH PROJECT · IEEE VCIP 2024</p>
-            <h2>Thermal Vision for Solar Panels</h2>
-            <p class="featured-subtitle">The project where I learned that “just run OpenCV” is not a research method.</p>
-            <p>
-              My first computer-vision research project: evaluating how feature detectors and descriptors behave on
-              close-range thermal solar-panel imagery under messy real-world variation.
-            </p>
-            <a class="featured-project-link" href="projects/thermal-solar-vision.html">open the project field file ↗</a>
-          </div>
-
-          <figure class="thermal-home-figure">
-            <div class="thermal-scene" aria-label="Illustrated thermal solar panel">
-              <span class="thermal-sun">☀</span>
-              <div class="thermal-panel">
-                <i class="heat-1"></i><i class="heat-2"></i><i class="heat-3"></i><i class="heat-2"></i>
-                <i class="heat-2"></i><i class="heat-4"></i><i class="heat-4"></i><i class="heat-1"></i>
-                <i class="heat-3"></i><i class="heat-4"></i><i class="heat-2"></i><i class="heat-3"></i>
-              </div>
-              <div class="thermal-notes"><span>rotation</span><span>motion blur</span><span>time of day</span><span>colormaps</span></div>
-            </div>
-            <div class="thermal-pipeline">
-              <span>thermal image</span><i>→</i><span>preprocess</span><i>→</i><span>benchmark</span><i>→</i><span>compare</span>
-            </div>
-            <div class="thermal-winners"><span>detector · AKAZE</span><span>descriptor · SURF</span><span>color · JET / RAINBOW</span></div>
-            <figcaption>close-range thermal imagery // classical CV under real-world variation</figcaption>
-          </figure>
-        </article>
+    <section id="printed" class="printed-section" aria-labelledby="printed-title">
+      <div class="container printed-layout">
+        <header>
+          <p class="section-label">papers, manuscripts, ongoing work</p>
+          <h2 id="printed-title">Printed, Pending, and Still Brewing</h2>
+          <p class="printed-note">editor’s note: several of these are still becoming</p>
+        </header>
+        <ol class="printed-list">
+          <li><span>01</span><div><a href="projects/no-single-tell.html">No Single Tell</a><p>ACM CHI 2027 · under review</p></div></li>
+          <li><span>02</span><div><a href="projects/choice-complexity.html">Choice Complexity and Decision-Making</a><p>CogSci 2027 · manuscript in preparation</p></div></li>
+          <li><span>03</span><div><a href="projects/multilingual-visualization.html">Multilingual Visualization Interpretation</a><p>IEEE TVCG · manuscript in preparation</p></div></li>
+          <li><span>04</span><div><a href="projects/arabic-writing-assessment.html">Prompt-Agnostic Arabic Writing Assessment</a><p>QNRF-funded educational AI research</p></div></li>
+          <li><span>05</span><div><a href="projects/thermal-solar-vision.html">Thermal Vision for Solar Panels</a><p>IEEE VCIP 2024 · first author</p></div></li>
+          <li><span>06</span><div><a href="projects/speech-audio-pretraining.html">Speech / Audio LLM Pretraining</a><p>Senior honors thesis · Carnegie Mellon University</p></div></li>
+        </ol>
       </div>
     </section>
 
-    <!-- Academic -->
-    <section id="academic" class="section alt">
-      <div class="container">
-        <div class="section-head with-margin-note">
-          <p class="section-label">[training, methods, and recurring obsessions]</p>
-          <h2>Training &amp; Questions</h2>
-
-          <div class="section-intro">
-            <p class="prose">
-              My research sits at the intersection of computer vision and HCI, with a focus on embodied cognition and decision-making in high-skill settings such as expert chess. I build multimodal workflows that align long-form video, human behavioral annotations, and task context over time. I then use interactive visualizations and temporal analyses to study how visible behavior and decision context unfold across extended decisions.
-            </p>
-
-            <p class="prose">
-              I also work in visualization research, particularly on chart literacy, multilingual and cross-cultural visualization, and how visual encodings are interpreted across linguistic contexts. My earlier work spans compute-efficient representation learning for speech models and low-resource Arabic NLP, including cross-prompt writing assessment and multilingual evaluation.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="academic-layout">
-          <div>
-            <h3 class="minihead">Education</h3>
-
-            <ul class="academics">
-              <li class="entry entry-featured">
-                <div class="entry-top">
-                  <strong>M.Phil. (Research), Computer Science &amp; Engineering</strong>
-                  <span class="entry-meta">HKUST • Sep 2025 to May 2027 • CGPA 4.15/4.30</span>
-                </div>
-
-                <div class="entry-body">
-                  <span class="pill">fully funded pgs</span>
-
-                  <div class="thesis-block">
-                    <span class="thesis-label">thesis</span>
-                    <p class="paper-tagline">Computer Vision Based Chess Analytics</p>
-                    <p class="thesis-rest">
-                      I use vision and visualization to study embodied cognition and decision-making in expert play.
-                    </p>
-                  </div>
-
-                  <p class="muted">DataVisards Lab • Advisor: Dr. Arpit Narechania</p>
-                </div>
-              </li>
-
-              <li class="entry entry-featured">
-                <div class="entry-top">
-                  <strong>BSc, Computer Science (Machine Learning concentration)</strong>
-                  <span class="entry-meta">Carnegie Mellon University • Sep 2021 to May 2025 • College Honors</span>
-                </div>
-
-                <div class="entry-body">
-                  <div class="thesis-block">
-                    <span class="thesis-label">senior honors thesis</span>
-                    <p class="paper-tagline">Optimizing Speech Language Models</p>
-                    <p class="thesis-rest">
-                      Focused on compute-aware pretraining and efficient representation learning.
-                    </p>
-                  </div>
-
-                  <p class="muted">ML &amp; Signal Processing Lab • Advisor: Dr. Bhiksha Raj</p>
-                </div>
-              </li>
-
-              
-              
-            </ul>
-          </div>
-
-<aside>
-  <h3 class="minihead">Published &amp; In Progress</h3>
-
-  <ul class="outputs">
-
-    <li>
-      <strong>
-        <a href="projects/thermal-solar-vision.html">
-          IEEE VCIP 2024
-        </a>
-      </strong>
-      <p>
-        Thermal feature descriptors for solar panel image stitching.
-        First author, presented solo.
-      </p>
-      <div class="output-links">
-        <a href="projects/thermal-solar-vision.html">project page</a>
-      </div>
-    </li>
-
-    <li>
-      <strong>
-        <a href="projects/arabic-writing-assessment.html">
-          Prompt-Agnostic Arabic Writing Assessment
-        </a>
-      </strong>
-      <p>
-        QNRF-funded Educational AI research on generalization to prompts unseen during training.
-      </p>
-      <div class="output-links">
-        <a href="projects/arabic-writing-assessment.html">project page</a>
-      </div>
-    </li>
-
-    <li>
-      <strong>
-        <a href="#" target="_blank" rel="noreferrer">
-          Chess Cognition (CHI, in preparation)
-        </a>
-      </strong>
-      <p>
-        Social and embodied signatures of thinking in expert chess using multimodal temporal data.
-      </p>
-      <div class="output-links">
-        <a href="#" target="_blank">draft</a>
-      </div>
-    </li>
-
-    <li>
-      <strong>
-        <a href="#" target="_blank" rel="noreferrer">
-          VerLM (arXiv)
-        </a>
-      </strong>
-      <p>
-        Explaining face verification decisions using natural language.
-      </p>
-      <div class="output-links">
-        <a href="#" target="_blank">paper</a>
-      </div>
-    </li>
-
-    <!-- NEW: UNDERGRAD THESIS -->
-    <li class="output-thesis">
-      <strong>
-        <a href="#" target="_blank" rel="noreferrer">
-          Senior Honors Thesis: Speech / Audio Language Models
-        </a>
-      </strong>
-      <p>
-        Compute-efficient pretraining and representation learning for speech models,
-        including compression-based representations and synthetic supervision.
-      </p>
-      <div class="output-links">
-        <a href="#" target="_blank">thesis pdf</a>
-        <!-- <a href="#" target="_blank">code</a> -->
-      </div>
-    </li>
-
-  </ul>
-</aside>
-
-          <div>
-            <div class="journal">
-<p class="entry-date">entry // ongoing</p>
-
-
-<p>
-  I lift lids. I want to know what machinery hums underneath. In systems, in people, in myself.
-</p>
-
-<p>
-  I don’t fit a label. I like structure but resist boxes. Some days I chase multimodal models. Other days, prehistoric periods or plants I can name by sight. I move between them.
-</p>
-
-<p>
-  I write to make sense of things: research notes, sometimes poems. Not everything that sounds right means something. I’ve made peace with that.
-</p>
-
-<p>
-  I love teaching. That quiet moment when something clicks for someone else. I could chase that for the rest of my life.
-</p>
-
-<p>
-  Part of me wants a hut and solitude. The other wants to build, study, and stay in conversation. This website is the compromise.
-</p>
-            </div>
-
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">PyTorch</span>
-              <span class="chip">Computer Vision</span>
-              <span class="chip">HCI</span>
-              <span class="chip">Visualization</span>
-              <span class="chip">NLP</span>
-              <span class="chip">ML Systems</span>
-              <span class="chip">OpenCV</span>
-              <span class="chip">Docker</span>
-              <span class="chip">SLURM</span>
-              <span class="chip">Azure</span>
-            </div>
-          </div>
+    <section id="writing" class="home-margins" aria-labelledby="margins-title">
+      <div class="container margins-layout">
+        <header>
+          <p class="section-label">drafts, fragments, side doors</p>
+          <h2 id="margins-title">Margins</h2>
+          <p>I write research notes when I’m trying to understand something. I write poems when I’m trying to say it cleanly.</p>
+          <span class="margins-note">for thoughts that were not done being thoughts</span>
+        </header>
+        <div class="margin-links">
+          <a href="journal.html"><span>Notebook</span><small>essays, notes, and little arguments I’m still turning over</small></a>
+          <a href="poems.html"><span>Poems &amp; Fragments</span><small>published pieces, open-mic lines, and things gathered along the way</small></a>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section alt">
-      <div class="container">
-        <div class="section-head with-margin-note">
-          <p class="section-label">[ongoing curiosities, published detours, working theories]</p>
-          <h2>Current Investigations</h2>
-          <p class="section-aside">field files, working theories, and completed studies</p>
-        </div>
+    <section id="contact" class="home-contact" aria-labelledby="contact-title">
+      <div class="container contact-editorial">
+        <div><p class="section-label">open line</p><h2 id="contact-title">Correspondence</h2><p>Letters, research questions, collaborations, and curious detours are welcome.</p></div>
+        <div class="contact-letter"><span>dear</span><a href="mailto:emaans5056@gmail.com">emaans5056@gmail.com</a><p>with curiosity,</p></div>
+        <figure class="pigeon-post-doodle">
+          <svg viewBox="0 0 720 260" role="img" aria-labelledby="pigeon-title pigeon-desc">
+            <title id="pigeon-title">Eman gives a letter to a tiny carrier pigeon</title>
+            <desc id="pigeon-desc">A playful line drawing of stick-figure Eman holding out an envelope to a pigeon wearing a small mail satchel.</desc>
+            <rect class="pigeon-surface" x="12" y="12" width="696" height="236" />
 
-        <div class="grid">
-          <article class="card">
-            <p class="card-note">CHI · in preparation</p>
-            <h3>No Single Tell — CV-Based Chess Analytics</h3>
-            <p>
-              We study visible behavior during extended expert decision-making by aligning long-form chess video with
-              behavioral annotations and decision context. I designed the measurement workflow and annotation tools,
-              and built the multimodal alignment and temporal-analysis infrastructure.
-            </p>
-            <div class="tags">
-              <span>Behavioral Coding</span><span>Human Annotation</span><span>Temporal Alignment</span><span>HCI</span>
-            </div>
-            <div class="card-links">
-              <a href="projects/no-single-tell.html">Project field file</a>
-              <a href="#" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
+            <circle class="pigeon-line" cx="170" cy="85" r="22" />
+            <path class="pigeon-line" d="M151 78Q170 55 189 78M170 107V184M170 129L221 145M170 130L137 158M170 184L143 226M170 184L202 226" />
+            <path class="pigeon-accent-line" d="M152 73Q162 63 170 62Q181 64 189 75" />
+            <rect class="pigeon-envelope" x="211" y="132" width="58" height="39" rx="2" />
+            <path class="pigeon-line" d="M212 134L240 154L268 134" />
+            <text class="pigeon-note" x="104" y="45">eman, drafting correspondence</text>
 
-          <article class="card">
-            <p class="card-note">CogSci 2027 · manuscript in preparation</p>
-            <h3>Choice Complexity and Decision-Making in Chess</h3>
-            <p>
-              Rather than reducing difficulty to a single engine score, we model the structure of the available
-              choice set and ask how it relates to decision time and the quality of the eventual choice.
-            </p>
-            <div class="tags">
-              <span>Human Decision-Making</span><span>Choice Complexity</span><span>Computational HCI</span><span>Chess</span><span>Behavioral Modeling</span>
-            </div>
-            <div class="card-links">
-              <a href="projects/choice-complexity.html">Project field file</a>
-            </div>
-          </article>
+            <ellipse class="pigeon-line pigeon-body" cx="495" cy="155" rx="54" ry="39" />
+            <circle class="pigeon-line pigeon-head" cx="533" cy="111" r="29" />
+            <circle class="pigeon-eye" cx="541" cy="105" r="3" />
+            <path class="pigeon-beak" d="M560 111L584 120L559 125Z" />
+            <path class="pigeon-line" d="M467 148Q493 126 520 154Q494 181 467 148Z" />
+            <path class="pigeon-line" d="M469 190V216M509 190V216M461 217H477M501 217H517" />
+            <path class="pigeon-accent-line" d="M515 133Q537 143 545 167" />
+            <rect class="pigeon-satchel" x="526" y="151" width="38" height="31" rx="4" />
+            <path class="pigeon-line" d="M527 154L545 167L563 154" />
+            <text class="pigeon-note" x="466" y="64">tiny mail colleague</text>
 
-          <article class="card">
-            <p class="card-note">IEEE TVCG · manuscript in preparation</p>
-            <h3>Multilingual Visualization Interpretation</h3>
-            <p>
-              I design multi-stage participant studies to examine how people interpret, explain, and recreate charts
-              across locales, including the conventions and tool choices that text translation alone cannot capture.
-            </p>
-            <div class="tags">
-              <span>Cross-Cultural HCI</span><span>Visualization</span><span>Human Studies</span><span>Chart Literacy</span><span>Localization</span>
-            </div>
-            <div class="card-links">
-              <a href="projects/multilingual-visualization.html">Project field file</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="card-note">QNRF-funded · Educational AI · Arabic NLP</p>
-            <h3>Prompt-Agnostic Arabic Writing Assessment</h3>
-            <p>
-              I built and evaluated complementary neural and linguistic approaches to Arabic writing assessment,
-              focusing on generalization to prompts the models had never seen during training.
-            </p>
-            <div class="tags">
-              <span>Educational AI</span><span>Arabic NLP</span><span>Low-Resource ML</span><span>Cross-Prompt Generalization</span><span>Human-Centered AI</span>
-            </div>
-            <div class="card-links">
-              <a href="projects/arabic-writing-assessment.html">Project field file</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="card-note">published · IEEE VCIP 2024 · research origin</p>
-            <h3>Thermal Vision for Solar Panels</h3>
-            <p>
-              My first computer-vision research project. I evaluated classical feature methods on close-range thermal
-              solar-panel imagery and learned early lessons about data collection, preprocessing, and empirical evaluation.
-            </p>
-            <div class="tags">
-              <span>Computer Vision</span><span>Thermal Imaging</span><span>Feature Detection</span><span>Empirical Evaluation</span><span>Research Origins</span>
-            </div>
-            <div class="card-links">
-              <a href="projects/thermal-solar-vision.html">Project field file</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="card-note">[thesis work]</p>
-            <h3>Speech/Audio LLM Pretraining (Senior Honors Thesis)</h3>
-            <p>
-              I explored resource-efficient pretraining strategies for speech language models. I prototyped compression-based representations using deep
-              compression autoencoders. I also built synthetic supervision to model speech errors at scale.
-            </p>
-            <div class="tags">
-              <span>Speech</span><span>Representation Learning</span><span>Efficiency</span>
-            </div>
-            <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Thesis</a>
-              <a href="#" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="card-note">[prototype]</p>
-            <h3>Real-time Captioning App Prototype (Microsoft)</h3>
-            <p>
-              I led a team building a multilingual, real-time captioning prototype using Azure and PowerApps. We added accessibility features like
-              text-to-speech and translation. It earned 2nd place in a hackathon, which was a fun week.
-            </p>
-            <div class="tags">
-              <span>Azure</span><span>Accessibility</span><span>Product</span>
-            </div>
-            <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Demo</a>
-              <a href="#" target="_blank" rel="noreferrer">Write-up</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="card-note">[engineering detour]</p>
-            <h3>Shopper App Backend (Snoonu)</h3>
-            <p>
-              I built a scalable backend using .NET 8 and MongoDB. The design uses modular services and DTOs, plus unit tests to keep it sane.
-              I also Dockerized deployment and tuned it for high-concurrency order and inventory workflows.
-            </p>
-            <div class="tags">
-              <span>.NET 8</span><span>MongoDB</span><span>Docker</span><span>Backend</span>
-            </div>
-            <div class="card-links">
-              <a href="#" target="_blank" rel="noreferrer">Code</a>
-              <a href="#" target="_blank" rel="noreferrer">Architecture</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Writing -->
-    <section id="writing" class="section">
-      <div class="container">
-        <div class="section-head with-margin-note">
-          <span class="scribble-note">for thoughts that were not done being thoughts</span>
-          <p class="section-label">[margins, drafts, fragments]</p>
-          <h2>Margins</h2>
-          <p class="prose">
-            I write research notes when I’m trying to understand something. I write poems when I’m trying to say it cleanly.
-          </p>
-        </div>
-
-        <div class="writing-list">
-        <article class="writing-item">
-          <h3>Notebook</h3>
-          <p>Essays, notes, and little arguments I’m still turning over.</p>
-          <a href="journal.html" class="btn btn-ghost">Read</a>
-        </article>
-
-        <article class="writing-item">
-          <h3>Poems &amp; Fragments</h3>
-          <p>Published in CMU student journals. Performed at open-mics. I’m always collecting new lines.</p>
-          <a href="poems.html" class="btn btn-ghost">Read</a>
-        </article>
-      </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-head with-margin-note">
-          <p class="section-label">[where the work happened]</p>
-          <h2>Research Rooms</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-meta">Oct 2025 to Present</div>
-            <div>
-              <h3>Postgraduate Research Assistant • DataVisards Lab, HKUST</h3>
-              <p>
-                I work on embodied cognition in expert chess. I designed the behavioral measurement and reviewer workflow,
-                built custom annotation interfaces, and developed multimodal video–game alignment and temporal-analysis tools.
-                An ACM CHI 2027 manuscript is under review.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">Apr 2025 to Present</div>
-            <div>
-              <h3>Research Assistant • NLP Lab, Carnegie Mellon University</h3>
-              <p>
-                I work on cross-lingual Arabic automated essay scoring. This includes benchmark construction, model implementation
-                (PAIR-Net and ALiF-Net), and experiments aimed at improving agreement with human raters.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">Aug 2024 to May 2025</div>
-            <div>
-              <h3>Undergraduate Student Researcher • ML &amp; Signal Processing Lab, CMU</h3>
-              <p>
-                I wrote my senior honors thesis on compute-aware pretraining for speech language models. I explored compression-based representations
-                and built scalable synthetic supervision for speech error modeling.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">May 2023 to Jul 2025</div>
-            <div>
-              <h3>Computer Vision Research Assistant • IMPAQTLab, CMU</h3>
-              <p>
-                I studied descriptor robustness in thermal imagery for solar panel stitching. I implemented and benchmarked classic methods,
-                then wrote and presented the work as first author at IEEE VCIP 2024.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">Apr 2024 to May 2025</div>
-            <div>
-              <h3>Teaching Assistant • Deep Learning (11-785), CMU</h3>
-              <p>
-                I led recitations and supported implementation-heavy assignments for 250+ students. I taught core ideas behind Transformers and LLMs,
-                CNNs, and autoencoders. I also answered a lot of “why is my loss NaN” questions.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">May 2024 to Aug 2024</div>
-            <div>
-              <h3>Backend Software Engineer Intern • Snoonu</h3>
-              <p>
-                I built backend services with .NET 8 and MongoDB, using a modular architecture and unit tests. I shipped Dockerized deployments
-                and was recognized for “Most Promising Project.”
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">May 2023 to Jun 2023</div>
-            <div>
-              <h3>Artificial Intelligence Intern • Microsoft (Qatar)</h3>
-              <p>
-                I led a team building a multilingual real-time captioning prototype using Azure and PowerApps. We placed 2nd in a hackathon.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">May 2023 to Jul 2023</div>
-            <div>
-              <h3>AI Cybersecurity Research Intern • Qatar Computing Research Institute</h3>
-              <p>
-                I used STIX and knowledge-graph methods to structure cyber threat intelligence. I also curated and benchmarked CTI datasets.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-meta">Jun 2024 to Aug 2024</div>
-            <div>
-              <h3>Computer Vision Research Intern (Part-time) • HMC Surgical Lab</h3>
-              <p>
-                I built segmentation and detection pipelines for surgical instrument detection using SAM, SegFormer, and YOLOv8.
-                I tuned preprocessing and improved performance in real operating room data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section alt">
-      <div class="container">
-        <div class="section-head with-margin-note contact-note">
-          <span class="scribble-note">pigeon-post regrettably unsupported, yet</span>
-          <p class="section-label">[open line]</p>
-          <h2>Correspondence</h2>
-          <p class="section-aside">letters, questions, and curious detours are welcome</p>
-        </div>
-
-        <div class="correspondence-card">
-          <p class="letter-kicker">if you’d like to send a note, you can begin with:</p>
-
-          <div class="letter-line">
-            <span class="letter-label">dear</span>
-            <a class="email-link" href="mailto:emaans5056@gmail.com">emaans5056@gmail.com</a>
-          </div>
-
-          <p class="letter-copy">
-            I’m usually happy to hear about research, writing, collaboration, odd little questions,
-            or anything that feels like it belongs in the margins.
-          </p>
-
-          <div class="signoff-block">
-            <p class="signoff-label">suggested sign-off, entirely optional:</p>
-            <p class="signoff-note">with curiosity,</p>
-          </div>
-
-          <div class="contact-links contact-links-text">
-            <a class="text-link" href="mailto:eansar@connect.ust.hk">write to me</a>
-            <a class="text-link" href="https://github.com/yourusername" target="_blank" rel="noreferrer">github</a>
-            <a class="text-link" href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noreferrer">linkedin</a>
-          </div>
-        </div>
+            <path class="pigeon-flight" d="M283 121C330 88 371 89 420 119" />
+            <path class="pigeon-accent-line" d="M408 110L420 119L407 126" />
+            <text class="pigeon-tiny" x="307" y="93">special delivery?</text>
+          </svg>
+          <figcaption class="contact-rumor">pigeon-post regrettably unsupported, yet</figcaption>
+        </figure>
       </div>
     </section>
   </main>
@@ -787,7 +437,6 @@
       <button class="linklike" id="themeToggle" type="button">Toggle theme</button>
     </div>
   </footer>
-
   <script src="assets/js/main.js"></script>
 </body>
 </html>

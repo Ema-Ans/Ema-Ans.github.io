@@ -1,0 +1,311 @@
+/* Poems & Fragments — editorial publication index */
+.poems-index-page{
+  background: var(--bg);
+  color: var(--text);
+}
+
+.poems-index-page .site-header{
+  background: rgba(13, 9, 10, 0.96);
+  backdrop-filter: none;
+}
+
+.poems-index-page .nav a{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.poems-index-page .nav a[aria-current="page"]{
+  color: var(--note);
+}
+
+.poems-hero{
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(3.25rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.poems-topline{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 38px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.poems-hero-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(38px, 8vw, 104px);
+  align-items: end;
+}
+
+.poems-hero h1{
+  max-width: 10ch;
+  margin: 0;
+  font-size: clamp(3.1rem, 6vw, 5.2rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.poems-intro > p{
+  max-width: 28ch;
+  margin: 0 0 24px;
+  color: var(--text);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.poems-index-page .text-link,
+.read-poem{
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.poem-archive{
+  padding: 58px 0 70px;
+}
+
+.archive-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.archive-heading h2{
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.poem-feed,
+.paper-archive article{
+  border-bottom: 1px solid var(--border);
+}
+
+.poem-feed > article,
+.paper-archive article{
+  border-top: 1px solid var(--border);
+}
+
+.poem-entry{
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) minmax(170px, 24%);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+  min-height: 190px;
+  padding: 25px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.poem-entry time{
+  align-self: start;
+  padding-top: 5px;
+  color: var(--accent-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.poem-entry-copy h3{
+  max-width: 23ch;
+  margin: 0 0 9px;
+  font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.poem-entry-copy h3 span{
+  color: var(--muted);
+  font-size: 0.58em;
+  white-space: nowrap;
+}
+
+.poem-entry-copy > p{
+  max-width: 50ch;
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.poem-entry img{
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  filter: saturate(0.84) contrast(0.96);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.poem-entry:hover h3,
+.poem-entry:focus-visible h3{
+  color: var(--note);
+}
+
+.poem-entry:hover img,
+.poem-entry:focus-visible img{
+  filter: saturate(1) contrast(1);
+  transform: translateY(-2px);
+}
+
+.poem-entry:focus-visible{
+  outline: 1px solid var(--note);
+  outline-offset: 8px;
+}
+
+.archive-note{
+  width: fit-content;
+  max-width: 34ch;
+  margin: 18px 4% 18px auto;
+  color: var(--note);
+  font-size: 1.08rem;
+}
+
+.paper-archive{
+  padding: 58px 0 62px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.local-entry img{
+  object-position: center 30%;
+}
+
+.paper-note{
+  max-width: 30ch;
+  margin: 22px 0 0 auto;
+  color: var(--note);
+  font-size: 1.08rem;
+}
+
+.compendium-outro{
+  padding: 62px 0 70px;
+}
+
+.compendium-outro-grid{
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(40px, 8vw, 100px);
+  align-items: end;
+}
+
+.compendium-outro h2{
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.compendium-outro-grid > div:last-child > p{
+  max-width: 46ch;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px){
+  .poems-hero-grid,
+  .compendium-outro-grid{
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .poems-intro > p{
+    max-width: 34ch;
+  }
+
+  .poem-entry{
+    grid-template-columns: 90px minmax(0, 1fr) 150px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 620px){
+  .poems-index-page .site-header{
+    position: relative;
+  }
+
+  .poems-index-page .header-inner{
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .poems-index-page .nav{
+    gap: 7px 13px;
+  }
+
+  .poems-index-page .nav a{
+    font-size: 0.59rem;
+  }
+
+  .poems-topline{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .poems-hero h1{
+    font-size: clamp(2.9rem, 15vw, 4.1rem);
+  }
+
+  .archive-heading{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .poem-entry{
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 27px 0 31px;
+  }
+
+  .poem-entry time{
+    padding-top: 0;
+  }
+
+  .poem-entry img{
+    grid-row: 2;
+    height: 210px;
+  }
+
+  .poem-entry-copy{
+    grid-row: 3;
+  }
+
+  .poem-entry-copy h3{
+    max-width: none;
+    font-size: 1.55rem;
+  }
+
+  .archive-note{
+    margin-right: 0;
+  }
+}

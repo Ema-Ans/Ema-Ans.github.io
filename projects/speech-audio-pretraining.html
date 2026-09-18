@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speech / Audio LLM Pretraining | Eman Ansar</title>
+  <meta
+    name="description"
+    content="A senior honors thesis on resource-efficient pretraining for speech and audio language models, and the mentorship that shaped it."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="project-page speech-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Eman Ansar</a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Investigations</a>
+        <a href="../index.html#academic">Academic</a>
+        <a href="../journal.html">Notebook</a>
+        <a href="../index.html#contact">Correspondence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero speech-hero">
+      <div class="container">
+        <div class="project-topline">
+          <p>thesis work // 06</p>
+          <a href="../index.html#projects">research index ↙</a>
+        </div>
+
+        <p class="project-status">SENIOR HONORS THESIS · SPEECH AI · REPRESENTATION LEARNING</p>
+        <h1>Speech / Audio LLM Pretraining</h1>
+        <p class="project-subtitle">Learning how research is actually done, one objective and ablation at a time.</p>
+
+        <div class="project-framing">
+          <h2>How do we make speech pretraining more efficient without stripping away the structure that makes speech meaningful?</h2>
+          <div>
+            <p>
+              I joined Bhiksha Raj’s lab as an undergraduate, which at the time felt a bit like being quietly dropped
+              into a room where everyone was thinking five papers ahead of me and casually speaking in objectives,
+              ablations, and loss functions.
+            </p>
+            <p>
+              Under his guidance, I explored resource-efficient pretraining strategies for speech and audio language
+              models through compression-based representations and synthetic supervision for speech error modeling.
+            </p>
+            <p class="speech-aside">Also the lab where, as an undergrad, I became convinced some people naturally speak in loss functions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section speech-directions-section" aria-labelledby="directions-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>two related directions</p>
+          <h2 id="directions-heading">Preserve useful structure. Reduce the cost of learning it.</h2>
+        </div>
+
+        <div class="speech-paths">
+          <article>
+            <header><span>01</span><h3>Compression-based representations</h3></header>
+            <ol aria-label="Compression-based representation pipeline">
+              <li>speech signal</li>
+              <li>deep compression autoencoder</li>
+              <li>efficient latent signal</li>
+              <li>pretraining representation</li>
+            </ol>
+            <p>Could a compressed representation retain the speech and audio structure that downstream learning needs?</p>
+          </article>
+
+          <article>
+            <header><span>02</span><h3>Synthetic supervision</h3></header>
+            <ol aria-label="Synthetic supervision pipeline">
+              <li>speech data</li>
+              <li>simulated error patterns</li>
+              <li>scalable training labels</li>
+              <li>speech error modeling</li>
+            </ol>
+            <p>Could synthetic signals broaden supervision without depending entirely on costly manual annotation?</p>
+          </article>
+
+          <p class="speech-synthesis">resource-efficient pretraining for speech + audio language models</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section speech-work-section" aria-labelledby="speech-work-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>what I worked on</p>
+          <h2 id="speech-work-heading">From experimental idea to senior honors thesis</h2>
+        </div>
+
+        <div class="build-copy">
+          <p>
+            I prototyped compression-based representations using deep compression autoencoders as a possible route
+            toward lighter-weight pretraining signals for speech and audio models.
+          </p>
+          <p>
+            I also built synthetic supervision pipelines to model speech errors at scale, with the aim of creating
+            richer training signals without relying entirely on large quantities of manually labeled data.
+          </p>
+          <p>
+            Across the thesis, I worked on model prototyping, experimental design, analysis, and research writing.
+          </p>
+
+          <ul class="build-ledger">
+            <li><span>01</span>Deep compression autoencoders</li>
+            <li><span>02</span>Speech and audio representation learning</li>
+            <li><span>03</span>Synthetic supervision pipelines</li>
+            <li><span>04</span>Speech error modeling at scale</li>
+            <li><span>05</span>Experimental analysis and thesis writing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section apprenticeship-section" aria-labelledby="apprenticeship-heading">
+      <div class="container">
+        <div class="project-section-head">
+          <p>apprenticeship, really</p>
+          <h2 id="apprenticeship-heading">The teaching that happened in the margins</h2>
+        </div>
+
+        <div class="apprenticeship-copy">
+          <p>
+            A huge part of this project was mentorship. Bhiksha Raj took me into the lab as an undergraduate and
+            taught me what it looks like to think rigorously, argue carefully, and read research with patience.
+          </p>
+          <p>
+            Some of my clearest memories from this period are of him walking me through papers paragraph by paragraph,
+            explaining not just what a method did, but why the authors had framed the problem that way in the first place.
+            Later, that mentorship continued through Zoom calls and long conversations that remained just as precise,
+            generous, and formative.
+          </p>
+        </div>
+
+        <div class="mentor-panels">
+          <figure>
+            <svg class="mentor-doodle" viewBox="0 0 520 300" role="img" aria-labelledby="office-doodle-title office-doodle-desc">
+              <title id="office-doodle-title">Bhiksha walks Eman through a research paper paragraph by paragraph</title>
+              <desc id="office-doodle-desc">A warm stick-figure drawing of Bhiksha pointing through four paragraphs on a large paper while undergraduate Eman follows with a notebook.</desc>
+              <rect class="mentor-doodle-surface" x="12" y="12" width="496" height="276" />
+
+              <rect class="mentor-doodle-paper" x="235" y="42" width="238" height="206" rx="3" />
+              <text class="mentor-doodle-label" x="255" y="65">PAPER // READ SLOWLY</text>
+              <rect class="mentor-doodle-paragraph" x="255" y="81" width="194" height="27" rx="2" />
+              <path class="mentor-doodle-textline" d="M267 91H427M267 99H398" />
+              <rect class="mentor-doodle-paragraph active" x="255" y="117" width="194" height="33" rx="2" />
+              <path class="mentor-doodle-textline" d="M267 128H429M267 138H411" />
+              <rect class="mentor-doodle-paragraph" x="255" y="159" width="194" height="27" rx="2" />
+              <path class="mentor-doodle-textline" d="M267 169H430M267 177H388" />
+              <rect class="mentor-doodle-paragraph" x="255" y="195" width="194" height="33" rx="2" />
+              <path class="mentor-doodle-textline" d="M267 206H421M267 216H401" />
+
+              <circle class="mentor-doodle-line" cx="174" cy="99" r="18" />
+              <circle class="mentor-doodle-glasses" cx="168" cy="97" r="5" />
+              <circle class="mentor-doodle-glasses" cx="181" cy="97" r="5" />
+              <path class="mentor-doodle-line" d="M173 117V191M173 136L226 130M173 138L145 166M173 191L149 230M173 191L203 229" />
+              <path class="mentor-doodle-accent-line" d="M226 130L254 133M245 126L254 133L245 140" />
+              <text class="mentor-doodle-note" x="127" y="254">Bhiksha: “now, why did they frame it this way?”</text>
+
+              <circle class="mentor-doodle-line" cx="72" cy="142" r="16" />
+              <path class="mentor-doodle-line" d="M59 135Q72 119 85 135M72 158V211M72 174L103 188M72 174L48 193M72 211L52 244M72 211L94 244" />
+              <rect class="mentor-doodle-accent" x="91" y="177" width="35" height="27" rx="2" />
+              <path class="mentor-doodle-line" d="M98 185H118M98 192H113" />
+              <text class="mentor-doodle-note" x="29" y="105">undergrad me</text>
+              <text class="mentor-doodle-tiny" x="30" y="267">trying very hard to absorb every margin note</text>
+
+              <path class="mentor-doodle-step" d="M105 231q10 -8 20 0M123 243q10 -8 20 0M207 239q10 -8 20 0" />
+            </svg>
+            <figcaption>how to read a paper properly, according to Bhiksha Raj</figcaption>
+            <p class="mentor-note">the kind of teaching that happens in the margins</p>
+          </figure>
+
+          <figure>
+            <svg class="mentor-doodle" viewBox="0 0 520 300" role="img" aria-labelledby="zoom-doodle-title zoom-doodle-desc">
+              <title id="zoom-doodle-title">The paragraph-by-paragraph mentorship continues over Zoom</title>
+              <desc id="zoom-doodle-desc">A stick-figure Eman sits with a notebook beside a laptop where Bhiksha points to a highlighted paragraph.</desc>
+              <rect class="mentor-doodle-surface" x="12" y="12" width="496" height="276" />
+
+              <path class="mentor-doodle-line" d="M34 242H486" />
+              <rect class="mentor-doodle-screen" x="207" y="42" width="267" height="174" rx="4" />
+              <path class="mentor-doodle-line" d="M188 231H491L474 216H207Z" />
+              <rect class="mentor-doodle-paper" x="335" y="65" width="116" height="104" rx="2" />
+              <path class="mentor-doodle-textline" d="M348 82H438M348 90H426M348 108H438M348 116H416M348 134H438M348 142H424" />
+              <rect class="mentor-doodle-paragraph active" x="342" y="99" width="101" height="23" rx="2" />
+
+              <circle class="mentor-doodle-line" cx="267" cy="91" r="17" />
+              <circle class="mentor-doodle-glasses" cx="261" cy="89" r="5" />
+              <circle class="mentor-doodle-glasses" cx="274" cy="89" r="5" />
+              <path class="mentor-doodle-line" d="M267 108V175M267 126L318 111M267 127L241 148M267 175L248 202M267 175L286 202" />
+              <path class="mentor-doodle-accent-line" d="M318 111L341 111" />
+              <text class="mentor-doodle-note" x="225" y="194">“go back one paragraph”</text>
+
+              <circle class="mentor-doodle-line" cx="93" cy="135" r="16" />
+              <path class="mentor-doodle-line" d="M80 128Q93 112 106 128M93 151V207M93 167L127 187M93 168L67 189M93 207L74 240M93 207L115 240" />
+              <rect class="mentor-doodle-accent" x="119" y="176" width="42" height="31" rx="2" />
+              <path class="mentor-doodle-line" d="M127 185H153M127 193H147" />
+              <text class="mentor-doodle-note" x="34" y="93">wait—okay, I see it now</text>
+
+              <path class="mentor-doodle-accent-line signal" d="M145 76Q165 56 185 76M153 85Q165 73 177 85" />
+              <circle class="mentor-doodle-accent-dot" cx="165" cy="91" r="3" />
+              <text class="mentor-doodle-tiny" x="222" y="266">same mentorship · different medium · same patience</text>
+            </svg>
+            <figcaption>the office became a laptop screen; the patience stayed</figcaption>
+            <p class="mentor-note">apparently good mentorship can survive geographical distance and questionable Wi-Fi</p>
+          </figure>
+        </div>
+
+        <p class="professor-note">maybe this is where the professor dream really started: being taught with patience, in all the places no one else sees.</p>
+      </div>
+    </section>
+
+    <section class="project-section speech-meaning-section" aria-labelledby="speech-meaning-heading">
+      <div class="container project-two-column">
+        <div class="project-section-head">
+          <p>why this still matters to me</p>
+          <h2 id="speech-meaning-heading">More compute and more data are not the only path forward</h2>
+        </div>
+
+        <div class="hci-copy">
+          <p>
+            This project shaped the way I think about machine learning systems more broadly: not just in terms of
+            accuracy, but in terms of efficiency, scalability, and what kinds of signal are actually worth preserving.
+          </p>
+          <p>
+            It also pushed me toward a recurring question in my later work: what happens when we stop treating scale
+            as the entire answer and instead ask what structure really matters?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section methods-section" aria-labelledby="speech-methods-heading">
+      <div class="container">
+        <div class="project-section-head compact-head">
+          <p>methods</p>
+          <h2 id="speech-methods-heading">At a glance</h2>
+        </div>
+        <ul class="methods-strip">
+          <li>speech representation learning</li>
+          <li>compression</li>
+          <li>autoencoders</li>
+          <li>synthetic supervision</li>
+          <li>pretraining efficiency</li>
+          <li>experimental ML</li>
+          <li>thesis research</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section thesis-section" aria-labelledby="thesis-heading">
+      <div class="container status-layout">
+        <div>
+          <p>thesis</p>
+          <h2 id="thesis-heading">Senior Honors Thesis</h2>
+        </div>
+        <p class="status-note">ML &amp; Signal Processing Lab · Advisor: Dr. Bhiksha Raj · Carnegie Mellon University</p>
+        <a class="text-link" href="../index.html#projects">full research index ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Eman Ansar</small>
+      <a class="text-link" href="../index.html">front page</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
