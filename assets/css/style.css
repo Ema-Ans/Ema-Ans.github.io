@@ -13727,3 +13727,55 @@ body h2{
     gap: 18px;
   }
 }
+
+/* Dark masthead contrast: keep every title and route legible on black. */
+.site-header,
+.home-page .site-header,
+.project-page .site-header,
+.poems-index-page .site-header{
+  background: rgba(13, 9, 10, 0.98);
+  border-bottom-color: rgba(243, 235, 221, 0.2);
+}
+
+.site-header .logo,
+.home-page .site-header .logo,
+.project-page .site-header .logo,
+.poems-index-page .site-header .logo{
+  color: var(--paper);
+}
+
+.site-header .masthead-lockup span{
+  color: color-mix(in srgb, var(--paper) 62%, transparent);
+}
+
+.site-header .nav a,
+.home-page .site-header .nav a,
+.project-page .site-header .nav a,
+.poems-index-page .site-header .nav a{
+  color: color-mix(in srgb, var(--paper) 76%, transparent);
+}
+
+.site-header .nav a:hover,
+.site-header .nav a:focus-visible,
+.site-header .nav a[aria-current],
+.home-page .site-header .nav a:hover,
+.home-page .site-header .nav a:focus-visible,
+.home-page .site-header .nav a[aria-current],
+.project-page .site-header .nav a:hover,
+.project-page .site-header .nav a:focus-visible,
+.project-page .site-header .nav a[aria-current],
+.poems-index-page .site-header .nav a:hover,
+.poems-index-page .site-header .nav a:focus-visible,
+.poems-index-page .site-header .nav a[aria-current]{
+  color: #FFF8ED;
+}
+
+.site-header .nav a:focus-visible,
+.site-header .logo:focus-visible{
+  outline: 1px solid var(--red-bright);
+  outline-offset: 5px;
+}
+
+.home-page .site-header .nav a::after{
+  background: var(--red-bright);
+}
