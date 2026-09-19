@@ -1,26 +1,13 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const root = document.documentElement;
-const btn = document.getElementById("themeToggle");
-const saved = localStorage.getItem("theme");
-if (saved) root.setAttribute("data-theme", saved);
-
-if (btn) {
-  btn.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "light" ? "" : "light";
-    if (next) root.setAttribute("data-theme", next);
-    else root.removeAttribute("data-theme");
-    localStorage.setItem("theme", next || "dark");
-  });
-}
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
 // JOURNAL
 async function loadJournal() {
-  const res = await fetch('data/journal.json');
-  const entries = await res.json();
-
   const container = document.getElementById('journal-list');
   if (!container) return;
+
+  const res = await fetch('data/journal.json');
+  const entries = await res.json();
 
   entries.forEach(entry => {
     const el = document.createElement('div');
@@ -43,11 +30,11 @@ loadJournal();
 
 // POEMS
 async function loadPoems() {
-  const res = await fetch('data/poems.json');
-  const poems = await res.json();
-
   const container = document.getElementById('poem-list');
   if (!container) return;
+
+  const res = await fetch('data/poems.json');
+  const poems = await res.json();
 
   poems.forEach(poem => {
     const el = document.createElement('div');

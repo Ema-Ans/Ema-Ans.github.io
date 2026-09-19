@@ -225,3 +225,158 @@ svg [fill="#1f1b2b"] {
     font-size: 0.85rem;
   }
 }
+
+/* The individual poems are the Arts & Letters pages of the same issue. */
+:root {
+  --bg-deep: #F3EBDD;
+  --paper-dark: #F3EBDD;
+  --paper-warm: #E8DDCC;
+  --text-ink: #171312;
+  --text-faded: #6C625D;
+  --accent-lilac: #86182A;
+  --accent-faded: #A45763;
+  --sepia-stain: #86182A;
+  --border-antique: #C7B8A6;
+  --poem-paper: #F3EBDD;
+  --poem-paper-deep: #E8DDCC;
+  --poem-paper-edge: #C7B8A6;
+  --poem-ink: #171312;
+  --poem-ink-soft: #4E4743;
+}
+
+html,
+body{
+  background: #F3EBDD !important;
+  color: #171312 !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+}
+
+body *{
+  font-family: 'Newsreader', Georgia, serif !important;
+}
+
+.site-nav,
+.site-nav a,
+.nav,
+.nav a,
+.postcard-header,
+.postcard-date,
+.photo-label,
+.page-count,
+.back-link,
+.eyebrow,
+.metadata,
+.poem-meta{
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+.site-header{
+  background: rgba(243, 235, 221, 0.97) !important;
+  border-bottom: 1px solid #C7B8A6 !important;
+  backdrop-filter: none !important;
+}
+
+.header-inner{
+  padding: 12px 0 10px !important;
+}
+
+.nav{
+  flex-wrap: wrap;
+  gap: 8px 16px !important;
+}
+
+.site-title,
+.site-nav a,
+.back-link{
+  color: #171312 !important;
+}
+
+.logo{
+  color: #171312 !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+}
+
+.nav a{
+  color: #6C625D !important;
+}
+
+.nav a:hover,
+.nav a[aria-current]{
+  color: #86182A !important;
+}
+
+.postcard-header{
+  margin: 22px 0 18px !important;
+  padding-bottom: 9px !important;
+  border-bottom-color: #C7B8A6 !important;
+}
+
+.postcard-title{
+  color: #171312 !important;
+}
+
+.stamp{
+  background: #E8DDCC !important;
+  border-color: #86182A !important;
+  box-shadow: none !important;
+}
+
+.postcard-date{
+  background: transparent !important;
+  border-color: #C7B8A6 !important;
+  border-radius: 0 !important;
+  color: #86182A !important;
+}
+
+.poem-journal{
+  background: #F3EBDD;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(23, 19, 18, 0.018) 0 1px, transparent 1px 4px),
+    linear-gradient(135deg, rgba(255,255,255,.24), rgba(232,221,204,.35));
+  border: 1px solid #C7B8A6;
+  border-top: 3px double #2B2523;
+  border-radius: 0;
+  margin: 10px 0 28px !important;
+  padding: 40px 44px 38px;
+  box-shadow: none;
+}
+
+.poem-journal::before,
+.poem-journal::after{
+  display: none;
+}
+
+.poem-text,
+.poem-text strong,
+.section-title,
+.archival-note,
+.archival-note p,
+.archival-note div{
+  color: #171312 !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+}
+
+.section-title{
+  border-left-color: #86182A;
+}
+
+.archival-note{
+  background: rgba(232, 221, 204, 0.48);
+  border-color: #C7B8A6;
+  border-left-color: #86182A;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.archival-note span,
+.archival-note div[style*="italic"],
+.signature,
+.page-count{
+  color: #86182A !important;
+}
+
+@media (max-width: 720px){
+  .poem-journal{
+    padding: 28px 24px;
+  }
+}
