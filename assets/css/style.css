@@ -13117,7 +13117,7 @@ body h2{
 
 .technical-ledger-entry{
   display: grid;
-  grid-template-columns: 34px minmax(0, 1.35fr) minmax(235px, 0.65fr);
+  grid-template-columns: 34px 118px minmax(0, 1.35fr) minmax(225px, 0.65fr);
   gap: clamp(18px, 3vw, 40px);
   align-items: start;
   padding: 25px 0 27px;
@@ -13131,6 +13131,41 @@ body h2{
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.08em;
+}
+
+.technical-ledger-peek{
+  align-self: start;
+  min-width: 0;
+  margin: 0;
+  border-left: 3px solid var(--oxblood);
+  background: color-mix(in srgb, var(--paper-deep) 72%, var(--paper));
+}
+
+.technical-ledger-peek a{
+  display: block;
+}
+
+.technical-ledger-peek img{
+  width: 100%;
+  height: 88px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.84) contrast(0.98);
+}
+
+.technical-ledger-peek-contain img{
+  padding: 4px;
+  object-fit: contain;
+}
+
+.technical-ledger-peek a:hover img,
+.technical-ledger-peek a:focus-visible img{
+  filter: saturate(1) contrast(1);
+}
+
+.technical-ledger-peek a:focus-visible{
+  outline: 1px solid var(--oxblood);
+  outline-offset: 4px;
 }
 
 .technical-ledger-main{
@@ -13209,11 +13244,15 @@ body h2{
 
 @media (max-width: 840px){
   .technical-ledger-entry{
-    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-columns: 28px 104px minmax(0, 1fr);
+  }
+
+  .technical-ledger-main{
+    grid-column: 3;
   }
 
   .technical-ledger-side{
-    grid-column: 2;
+    grid-column: 2 / 4;
     padding: 13px 0 0;
     border-top: 1px solid var(--line);
     border-left: 0;
@@ -13227,13 +13266,17 @@ body h2{
   }
 
   .technical-ledger-entry{
-    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-columns: 24px 86px minmax(0, 1fr);
     gap: 12px;
     padding: 22px 0 24px;
   }
 
   .technical-ledger-main h3{
     font-size: clamp(1.45rem, 7vw, 1.85rem);
+  }
+
+  .technical-ledger-peek img{
+    height: 72px;
   }
 }
 
@@ -13778,4 +13821,254 @@ body h2{
 
 .home-page .site-header .nav a::after{
   background: var(--red-bright);
+}
+
+/* Research Rooms: keep the short QCRI stop tidy and group 2024 recognition beside QSIURP. */
+.qcri-title{
+  white-space: nowrap;
+}
+
+@media (max-width: 760px){
+  .qcri-title{
+    white-space: normal;
+  }
+}
+
+/* Research Rooms spacing: keep the timeline continuous rather than poster-like. */
+.rooms-heading{
+  margin-bottom: clamp(24px, 3vw, 36px);
+}
+
+.rooms-timeline .timeline-year{
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.rooms-timeline .timeline-year:first-child{
+  margin-top: 0;
+}
+
+.rooms-timeline .timeline-milestone{
+  margin-bottom: 6px;
+}
+
+.rooms-timeline .timeline-milestone + .timeline-year{
+  margin-top: 5px;
+}
+
+.rooms-timeline .room-featured,
+.rooms-timeline .room-current{
+  margin-bottom: 10px;
+  padding-top: 13px;
+  padding-bottom: 19px;
+}
+
+.rooms-timeline .room-entry:not(.room-featured):not(.room-current),
+.rooms-timeline .room-compact,
+.rooms-timeline .room-branch,
+.rooms-timeline .side-branches .room-entry{
+  margin-bottom: 8px;
+  padding-top: 9px;
+  padding-bottom: 13px;
+}
+
+.rooms-timeline .room-featured + .room-compact{
+  margin-top: -2px;
+}
+
+@media (max-width: 700px){
+  .rooms-heading{
+    margin-bottom: 20px;
+  }
+
+  .rooms-timeline .room-featured,
+  .rooms-timeline .room-current{
+    padding-bottom: 17px;
+  }
+}
+
+.front-investigations .featured-project-link,
+.front-investigations .text-link,
+.front-investigations .earlier-grid a,
+.rooms-timeline .room-links a{
+  color: var(--ink);
+}
+
+/* Center the teaching thesis as the hinge between the introduction and essay. */
+.teaching-thesis{
+  max-width: 23ch;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 22px 0 0;
+  border-top: 3px solid var(--oxblood);
+  border-left: 0;
+  text-align: center;
+}
+
+@media (max-width: 620px){
+  .teaching-thesis{
+    max-width: 20ch;
+    padding-top: 17px;
+  }
+}
+
+/* QSIURP is a compact featured stop; its side notes should not set a poster-height row. */
+.rooms-timeline .qsiurp-entry{
+  margin-top: -6px;
+  margin-bottom: 4px;
+  padding-top: 7px;
+  padding-bottom: 12px;
+}
+
+.rooms-timeline .qsiurp-entry h3{
+  font-size: clamp(1.9rem, 2.65vw, 2.35rem);
+}
+
+.qsiurp-entry .room-side{
+  padding-top: 0;
+}
+
+.rooms-timeline .qsiurp-entry .room-side .room-awards span{
+  padding-block: 1px;
+  font-size: 0.84rem;
+  line-height: 1.34;
+}
+
+.qsiurp-entry .room-field-note{
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.qsiurp-entry .room-field-note p{
+  font-size: 0.84rem;
+  line-height: 1.36;
+}
+
+@media (max-width: 700px){
+  .rooms-timeline .qsiurp-entry{
+    margin-top: 0;
+    padding-top: 10px;
+  }
+}
+
+/* Centered education-number reveal with a small editorial drumroll. */
+.education-number-stage{
+  width: min(620px, 100%);
+  margin: clamp(42px, 6vw, 70px) auto clamp(44px, 6vw, 72px);
+  padding: 22px clamp(18px, 4vw, 42px) 24px;
+  text-align: center;
+}
+
+.education-number-stage > summary{
+  justify-items: center;
+}
+
+.education-number-stage > summary strong{
+  margin-top: 2px;
+}
+
+.education-number-reveal > summary .number-drumroll{
+  display: flex;
+  max-width: none;
+  justify-content: center;
+  gap: 5px;
+  color: var(--oxblood);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.number-drumroll i{
+  display: inline-block;
+  font-style: normal;
+}
+
+.education-number-stage:not([open]) .number-drumroll i{
+  animation: drumroll-dot 900ms ease-in-out infinite;
+}
+
+.education-number-stage:not([open]) .number-drumroll i:nth-child(2){
+  animation-delay: 120ms;
+}
+
+.education-number-stage:not([open]) .number-drumroll i:nth-child(3){
+  animation-delay: 240ms;
+}
+
+@keyframes drumroll-dot{
+  0%, 60%, 100%{ transform: translateY(0); opacity: 0.35; }
+  30%{ transform: translateY(-4px); opacity: 1; }
+}
+
+.education-number-stage .education-number-answer{
+  text-align: center;
+}
+
+.teaching-closing .education-number-stage .education-number-answer > p{
+  max-width: 30ch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.education-number-stage .education-number-note{
+  max-width: 52ch;
+  margin: 22px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+.teaching-philosophy-grid{
+  grid-template-columns: minmax(0, 780px);
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .education-number-stage:not([open]) .number-drumroll i{
+    animation: none;
+  }
+}
+
+/* Front-page scandal teaser: treat it as a real sidebar headline. */
+.home-page .hero-margin .editorial-callout{
+  max-width: none;
+  margin-top: 22px;
+  padding: 14px 0 15px;
+  border-top: 4px double var(--oxblood);
+  border-bottom: 2px solid color-mix(in srgb, var(--ink) 74%, transparent);
+  background: transparent;
+}
+
+.home-page .hero-margin .editorial-callout .callout-label{
+  margin-bottom: 11px;
+  padding: 4px 8px 3px;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.home-page .hero-margin .editorial-callout > p:not(.callout-label){
+  max-width: 17ch;
+  color: var(--ink);
+  font-size: clamp(1.32rem, 1.7vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.home-page .hero-margin .callout-index-route{
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top-color: color-mix(in srgb, var(--oxblood) 42%, var(--line));
+  font-size: 0.58rem;
+  letter-spacing: 0.085em;
+  line-height: 1.5;
+}
+
+.home-page .hero-margin .editorial-callout-link:hover,
+.home-page .hero-margin .editorial-callout-link:focus-visible{
+  padding-left: 10px;
 }
