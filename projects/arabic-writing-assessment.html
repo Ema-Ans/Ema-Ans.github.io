@@ -6,7 +6,7 @@
   <title>Arabic Writing Assessment | Eman Ansar</title>
   <meta
     name="description"
-    content="QNRF-funded Educational AI research on cross-prompt generalization for Arabic writing assessment."
+    content="National Research Fund–supported educational AI research on cross-prompt generalization for Arabic writing assessment."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,11 +34,11 @@
     <section class="project-hero arabic-hero brief-hero">
       <div class="container">
         <div class="project-topline"><p>LANGUAGE DESK // 04</p><a href="../index.html#projects">research index ↙</a></div>
-        <p class="project-status"><a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">QNRF</a>-FUNDED RESEARCH · 2025</p>
+        <p class="project-status"><a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">NATIONAL RESEARCH FUND</a>–SUPPORTED RESEARCH · 2025</p>
         <h1>Arabic Writing Assessment</h1>
         <p class="project-subtitle">Can a model learn writing quality rather than memorizing the question?</p>
         <div class="brief-hero-copy">
-          <p>As part of a <a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">Qatar National Research Fund</a>–supported collaboration between <a class="entity-link" href="https://www.qatar.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon University Qatar</a> and <a class="entity-link" href="https://www.qu.edu.qa/en-us/about/" target="_blank" rel="noopener noreferrer">Qatar University</a>, I worked on automated Arabic writing assessment in low-resource settings.</p>
+          <p>As part of a <a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">National Research Fund</a>–supported collaboration between <a class="entity-link" href="https://www.qatar.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon</a> and <a class="entity-link" href="https://www.qu.edu.qa/en-us/about/" target="_blank" rel="noopener noreferrer">Qatar University</a>, I worked on automated Arabic writing assessment in low-resource settings.</p>
           <p>My focus was cross-prompt generalization: training on writing from several prompts, then evaluating whether the model could score essays responding to a prompt it had never seen before.</p>
         </div>
         <figure class="project-hero-photo"><img src="../assets/img/editorial/arabic-writing-v2.png" alt="Arabic essays, scoring rubrics, annotations, and assessment materials arranged on a desk" /><figcaption>Arabic writing // prompts change, rubrics change, the model still has to behave.</figcaption></figure>
@@ -51,7 +51,7 @@
       <div><dt>Evaluation</dt><dd>Leave-one-prompt-out evaluation across eight writing prompts.</dd></div>
       <div><dt>Approaches</dt><dd>PAIR-Net · neural pairwise scoring<br />ALiF-Net · Arabic linguistic feature modeling</dd></div>
       <div><dt>My role</dt><dd>Cross-prompt evaluation · model implementation · linguistic feature engineering · augmentation experiments · reproducibility pipeline</dd></div>
-      <div><dt>Project context</dt><dd><a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">QNRF</a>-funded <a class="entity-link" href="https://www.qatar.cmu.edu/" target="_blank" rel="noopener noreferrer">CMU-Q</a> × <a class="entity-link" href="https://www.qu.edu.qa/en-us/about/" target="_blank" rel="noopener noreferrer">Qatar University</a> research initiative</dd></div>
+      <div><dt>Project context</dt><dd><a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">National Research Fund</a>–supported <a class="entity-link" href="https://www.qatar.cmu.edu/" target="_blank" rel="noopener noreferrer">CMU</a> × <a class="entity-link" href="https://www.qu.edu.qa/en-us/about/" target="_blank" rel="noopener noreferrer">Qatar University</a> research initiative</dd></div>
     </dl></div></section>
 
     <section class="project-section" aria-labelledby="cross-prompt-heading"><div class="container brief-container prose-layout"><div class="brief-heading"><p>the problem</p><h2 id="cross-prompt-heading">Scoring the Writing, Not the Prompt</h2></div><div class="brief-prose"><p>Most automated essay-scoring systems perform best when training and testing happen on the same writing prompt. That is convenient experimentally, but awkward in real educational settings where new questions appear all the time.</p><p>We asked whether Arabic writing quality could be modeled across prompts rather than rebuilding a scoring system every time the question changed.</p></div><figure class="heldout-figure full-span"><div class="heldout-seen"><p>prompts seen during training</p><div><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span></div></div><div class="heldout-model"><i>↓</i><strong>one scoring model</strong><small>learn across prompts</small><i>↓</i></div><div class="heldout-unseen"><p>unseen prompt</p><span>08</span><b>?</b></div><figcaption>train on seven // test on the eighth // rotate across all eight prompts</figcaption></figure></div></section>
@@ -72,7 +72,7 @@
 
     <section class="project-section compact-methods" aria-labelledby="arabic-methods-heading"><div class="container brief-container"><div class="brief-heading inline-heading"><p>methods</p><h2 id="arabic-methods-heading">Methods</h2></div><p class="method-line">Arabic NLP · cross-prompt evaluation · pairwise regression · cross-attention · linguistic feature engineering · cross-lingual augmentation · AraBERT · CAMeL Tools · QWK</p></div></section>
 
-    <section class="project-section chapter-context" aria-labelledby="context-heading"><div class="container brief-container prose-layout"><div class="brief-heading"><p>project context</p><h2 id="context-heading"><a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">QNRF</a>-Funded Arabic Writing Assessment Project</h2></div><div class="brief-prose"><p><a class="entity-link" href="https://www.qatar.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon University Qatar</a> × <a class="entity-link" href="https://www.qu.edu.qa/en-us/about/" target="_blank" rel="noopener noreferrer">Qatar University</a></p><p>Advisor: <a class="entity-link" href="https://scholars.cmu.edu/1839-houda-bouamor" target="_blank" rel="noopener noreferrer">Houda Bouamor</a></p><a class="text-link" href="../index.html#projects">full research index ↓</a></div></div></section>
+    <section class="project-section chapter-context" aria-labelledby="context-heading"><div class="container brief-container prose-layout"><div class="brief-heading"><p>project context</p><h2 id="context-heading"><a class="entity-link" href="https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund" target="_blank" rel="noopener noreferrer">National Research Fund</a>–Supported Arabic Writing Assessment Project</h2></div><div class="brief-prose"><p><a class="entity-link" href="https://www.qatar.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon</a> × <a class="entity-link" href="https://www.qu.edu.qa/en-us/about/" target="_blank" rel="noopener noreferrer">Qatar University</a></p><p>Advisor: <a class="entity-link" href="https://scholars.cmu.edu/1839-houda-bouamor" target="_blank" rel="noopener noreferrer">Houda Bouamor</a> (Qatar)</p><a class="text-link" href="../index.html#projects">full research index ↓</a></div></div></section>
   </main>
 
   <footer class="site-footer">
