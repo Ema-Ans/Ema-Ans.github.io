@@ -14105,23 +14105,23 @@ body h2{
   padding-left: 10px;
 }
 
-/* Mobile hero: keep the photo and headline paired, then give the biography
-   a full-width row so it cannot be pushed into an implicit, clipped column. */
+/* Mobile hero: stack the portrait above the introduction so no copy is
+   constrained to a narrow column beside the image. */
 @media (max-width: 640px){
   .home-editorial .hero-editorial{
-    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 18px;
     padding: 18px 0 24px;
   }
 
   .home-editorial .hero-main{
-    display: contents;
+    display: block;
   }
 
   .home-editorial .hero-photo-wrap{
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    max-width: none;
+    grid-column: auto;
+    grid-row: auto;
+    max-width: 112px;
   }
 
   .home-editorial .hero-portrait{
@@ -14130,28 +14130,28 @@ body h2{
   }
 
   .home-editorial .hero-main .section-label{
-    grid-column: 2;
-    grid-row: 1;
-    align-self: end;
+    grid-column: auto;
+    grid-row: auto;
+    align-self: auto;
   }
 
   .home-editorial .hero-main h1{
-    grid-column: 2;
-    grid-row: 2;
-    font-size: clamp(3rem, 15vw, 4.2rem);
-    line-height: 0.88;
+    grid-column: auto;
+    grid-row: auto;
+    font-size: clamp(3.2rem, 14vw, 4.2rem);
+    line-height: 0.93;
   }
 
   .home-editorial .hero-deck{
-    grid-column: 2;
-    grid-row: 3;
+    grid-column: auto;
+    grid-row: auto;
     margin: 12px 0 10px;
-    font-size: 1.1rem;
+    font-size: clamp(1.2rem, 5.5vw, 1.45rem);
   }
 
   .home-editorial .lead{
-    grid-column: 1 / -1;
-    grid-row: 4;
-    font-size: 0.88rem;
+    grid-column: auto;
+    grid-row: auto;
+    font-size: 0.96rem;
   }
 }
