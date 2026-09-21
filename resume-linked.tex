@@ -1,0 +1,362 @@
+
+
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+%-------------------------
+% COLOR & PAGE SETUP
+%-------------------------
+\definecolor{accent}{HTML}{86182A}
+\definecolor{subtlegray}{RGB}{75, 75, 75}
+\definecolor{dategray}{RGB}{100, 100, 100}
+
+\geometry{letterpaper, margin=0.5in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+%-------------------------
+% SECTION FORMATTING
+%-------------------------
+\titleformat{\section}{
+  \color{accent}
+  \raggedright
+  \large
+  \bfseries
+}{}{0em}{}[
+  \color{accent}\titlerule
+]
+
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+
+%-------------------------
+% CUSTOM COMMANDS
+%-------------------------
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small\color{dategray}#2} \\
+      {\small#3} & {\small\color{dategray}#4} \\
+    \end{tabular*}
+    \vspace{-3pt}
+}
+
+\newcommand{\resumeSubheadingTwo}[2]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small\color{dategray}#2} \\
+    \end{tabular*}
+    \vspace{-3pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[
+    leftmargin=0in,
+    label={},
+    itemsep=3pt,
+    topsep=1pt,
+    parsep=0pt
+  ]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[
+    leftmargin=0.15in,
+    label=\raisebox{0.2ex}{\tiny$\bullet$},
+    labelsep=0.4em,
+    itemsep=1.5pt,
+    parsep=0pt,
+    topsep=2pt
+  ]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\newcommand{\resumeSubItemListStart}{
+  \begin{itemize}[
+    leftmargin=0.15in,
+    label=\raisebox{0.1ex}{\tiny$\circ$},
+    labelsep=0.3em,
+    itemsep=1pt,
+    parsep=0pt,
+    topsep=1pt
+  ]
+}
+\newcommand{\resumeSubItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+% Consistent visible treatment for clickable names, projects, and artifacts.
+\newcommand{\resumelink}[2]{\href{#1}{\textcolor{accent}{#2}}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\fontsize{22}{24}\selectfont\bfseries Eman Ansar}\\[4pt]
+    {\small
+    \href{https://ema-ans.github.io}{\faGlobe\ \textcolor{accent}{ema-ans.github.io}} \quad\textcolor{dategray}{$|$}\quad
+    \href{mailto:eansar@connect.ust.hk}{\faEnvelope\ \textcolor{accent}{eansar@connect.ust.hk}} \quad\textcolor{dategray}{$|$}\quad
+    \href{https://www.linkedin.com/in/emaans5056}{\faLinkedin\ \textcolor{accent}{linkedin.com/in/emaans5056}}
+    }\\[4pt]
+    {\small\color{subtlegray}\textit{%
+    Human-Centered AI \quad$\cdot$\quad
+    Multimodal ML \quad$\cdot$\quad
+    HCI \quad$\cdot$\quad
+    Computational Behavioral Analysis \quad$\cdot$\quad
+    Computer Vision  \quad$\cdot$\quad InfoVis% 
+    }}
+\end{center}
+\vspace{-4pt}
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+
+\resumeSubHeadingListStart
+
+  % ==================== HKUST ====================
+  \item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\resumelink{https://www.hkust.edu.hk/}{The Hong Kong University of Science \& Technology}} & {\small\color{dategray}Sep 2025 -- May 2027} \\
+    {\small\textbf{M.Phil. in Computer Science \& Engineering} \quad$\cdot$\quad Advisor: \resumelink{https://cse.hkust.edu.hk/admin/people/faculty/profile/arpit}{Arpit Narechania} \quad$\cdot$\quad \textbf{CGPA: 4.20/4.30}} & \\
+  \end{tabular*}
+  \vspace{-2pt}
+
+  \begin{itemize}[leftmargin=0.15in, label=\raisebox{0.2ex}{\tiny$\bullet$}, itemsep=2.5pt, topsep=2pt, parsep=0pt]
+    \item Thesis: \resumelink{https://ema-ans.github.io/projects/no-single-tell.html}{Human-centered AI studying reasoning via behavioral measurement, decision modeling, and visualization}.
+    
+    \item \textit{\resumelink{https://ema-ans.github.io/projects/no-single-tell.html}{Visible Behavior in Elite Chess}} \hfill \textcolor{accent}{\textit{(ACM CHI 2027, under review)}}
+      \begin{itemize}[leftmargin=0.12in, label=\raisebox{0.1ex}{\tiny$\circ$}, itemsep=1pt, topsep=1pt]
+        \item Built behavioral framework linking body language to board states and engine analysis; analyzed 1,270 episodes, uncovering person-specific posture and gaze habits that disprove universal tells.
+      \end{itemize}
+
+    \item \textit{\resumelink{https://ema-ans.github.io/projects/choice-complexity.html}{Choice Complexity \& Human Decision-Making}} \hfill \textcolor{accent}{\textit{(CogSci 2027, in preparation)}}
+      \begin{itemize}[leftmargin=0.12in, label=\raisebox{0.1ex}{\tiny$\circ$}, itemsep=1pt, topsep=1pt]
+        \item Developed entropy-based computational measures of choice environments from engine-evaluated moves to link choice structure directly to human think time and decision quality.
+      \end{itemize}
+
+    \item \textit{\resumelink{https://ema-ans.github.io/projects/multilingual-visualization.html}{Multilingual Visualization Interpretation}} \hfill \textcolor{accent}{\textit{(IEEE TVCG, in preparation)}}
+      \begin{itemize}[leftmargin=0.12in, label=\raisebox{0.1ex}{\tiny$\circ$}, itemsep=1pt, topsep=1pt]
+        \item Designed a multi-stage study measuring language and notation effects on visualization understanding, creating new task protocols and human-coding frameworks.
+      \end{itemize}
+
+    \item \textcolor{accent}{\faAward}~Fully Funded Postgraduate Research Studentship \quad
+          \textcolor{accent}{\faAward}~3MT First Runner-Up \quad
+          \textcolor{accent}{\faAward}~KAUST MenaML Selected Scholar
+  \end{itemize}
+
+  \vspace{4pt}
+
+  % ==================== CMU ====================
+  \item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\resumelink{https://www.cmu.edu/}{Carnegie Mellon University}} & {\small\color{dategray}Sep 2021 -- May 2025} \\
+    {\small\textbf{B.S. in Computer Science} \quad$\cdot$\quad Advisor: \resumelink{https://lti.cmu.edu/people/faculty/raj-bhiksha.html}{Bhiksha Raj} \quad$\cdot$\quad CGPA: 3.2/4.0 (ML GPA 4.0/4.0)} & \\
+  \end{tabular*}
+  \vspace{-2pt}
+
+  \begin{itemize}[leftmargin=0.15in, label=\raisebox{0.2ex}{\tiny$\bullet$}, itemsep=2.5pt, topsep=2pt, parsep=0pt]
+    \item Thesis: \resumelink{https://ema-ans.github.io/projects/speech-audio-pretraining.html}{Exploration of Efficient Pre-training Techniques for Speech and Audio Large Language Models}.
+    
+    \item \textcolor{accent}{\faAward}~Judith A. Resnik Award Nominee ('25) \quad
+          \textcolor{accent}{\faAward}~Early Research Award ('25) \quad
+          \textcolor{accent}{\faAward}~College Honors ('25)
+
+    \item \textcolor{accent}{\faAward}~Best Undergraduate Research ('23) \quad
+          \textcolor{accent}{\faAward}~Most Promising Proposal ('22) \quad
+          \textcolor{accent}{\faAward}~\$4,600 Summer Research Grant ('24)
+
+    \item First CMU-Q Machine Learning concentration graduate; cohort's only Computer Science honors thesis (2025).
+  \end{itemize}
+
+\resumeSubHeadingListEnd
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {\resumelink{https://ema-ans.github.io/projects/arabic-writing-assessment.html}{Research Assistant} $|$ \resumelink{https://tdv.motc.gov.qa/Research-and-Development/Qatar-National-Research-Fund}{Qatar National Research Fund} $|$ \resumelink{https://www.cmu.edu/}{Carnegie Mellon University}}{Apr 2025 -- Aug 2025}
+    {Advisor: \resumelink{https://scholars.cmu.edu/1839-houda-bouamor}{Dr. Houda Bouamor}}{}
+    \resumeItemListStart
+      \item Developed prompt-agnostic Arabic writing assessment across eight prompts and multiple Arabic corpora, contributing to the region's first automated writing-proficiency system.
+      \item Co-developed PAIR-Net for cross-prompt scoring, integrating linguistic features and cross-lingual augmentation to improve generalization across writing prompts.
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {\resumelink{https://ema-ans.github.io/projects/speech-audio-pretraining.html}{Honors Thesis Researcher} $|$ \resumelink{https://mlsp.cs.cmu.edu/}{ML \& Signal Processing Lab} $|$ \resumelink{https://www.cmu.edu/}{Carnegie Mellon University}}{May 2024 -- May 2025}
+    {Advisor: \resumelink{https://lti.cmu.edu/people/faculty/raj-bhiksha.html}{Dr. Bhiksha Raj}}{}
+    \resumeItemListStart
+      \item Investigated compute-efficient speech representations, compressing LibriSpeech spectrograms from $128 \times 128$ to $16 \times 16$ while preserving acoustic structure at $\sim$28 dB PSNR.
+      \item Generated 10,000 synthetic speech-error samples through controlled phoneme perturbations on TIMIT and trained a 3-class severity classifier achieving 78\% held-out accuracy.
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {\resumelink{https://ema-ans.github.io/projects/thermal-solar-vision.html}{Undergraduate Researcher} $|$ \resumelink{https://cmu-impactlab.org/}{IMPAQT Lab} $|$ \resumelink{https://www.cmu.edu/}{Carnegie Mellon University}}{May 2023 -- Jul 2025}
+    {Advisor: \resumelink{https://www.efeoflushing.com/}{Dr. Eduardo Feo-Flushing}}{}
+    \resumeItemListStart
+      \item Built a close-range solar-panel imagery dataset and benchmarked classical feature detectors and descriptors under controlled image transformations.
+      \item Led experimental design, dataset preparation, and evaluation through first-author publication at IEEE VCIP 2024; received CMU's Best Undergraduate Research Award.
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {\resumelink{https://ema-ans.github.io/\#rooms}{Undergraduate Research Fellow} $|$ \resumelink{https://www.cmu.edu/}{Carnegie Mellon University}}{May 2024 -- Jan 2025}
+    {Advisor: \resumelink{https://www.csd.cmu.edu/people/faculty/gianni-di-caro}{Dr. Gianni Di Caro}}{}
+    \resumeItemListStart
+      \item Proposed and developed deep-learning pipelines for crisis information extraction and resource planning on the 25-class TREC-IS dataset; received a \$4,600 research fellowship and Early Research Award.
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Deep Learning Research Intern $|$ \resumelink{https://www.hamad.qa/EN/Education-and-research/Medical_Research/Pages/default.aspx}{Surgical Research Lab} $|$ \resumelink{https://www.hamad.qa/}{Hamad Medical Corporation}}{Jun 2024 -- Aug 2024}
+    {Advisor: \resumelink{https://www.hamad.qa/EN/All-Events/9SRIS2019/HMC-Surgical-Research-Department/Pages/Shidin-Balakrishnan.aspx}{Dr. Shidin Balakrishnan}}{}
+    \resumeItemListStart
+      \item Fine-tuned SAM, SegFormer, and YOLOv8 for surgical-image segmentation and instrument detection, improving robustness on domain-specific clinical imagery.
+    \resumeItemListEnd
+\newpage
+  \resumeSubheading
+    {AI Cybersecurity Research Intern $|$ \resumelink{https://www.hbku.edu.qa/en/qcri/about}{Qatar Computing Research Institute}}{May 2023 -- Jul 2025}
+    {Advisors: \resumelink{https://www.hbku.edu.qa/en/staff/husrev-taha-sencar}{Dr. Husrev Taha Sencar} \& \resumelink{https://www.hbku.edu.qa/en/staff/ahmed-lekssays}{Dr. Ahmed Lekssays}}{}
+    \resumeItemListStart
+      \item Applied STIX and knowledge-graph methods, including AttacKG, to transform real-world cyber-threat reports into structured representations for downstream analysis.
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% \newpage
+
+%-----------PUBLICATIONS-----------
+\section{Publications \& Manuscripts}
+
+\begin{itemize}[
+  leftmargin=0.18in,
+  label=\raisebox{0.1ex}{\tiny$\circ$},
+  labelsep=0.4em,
+  itemsep=2.5pt,
+  parsep=0pt,
+  topsep=1pt
+]
+  \item\small{\textbf{Ansar, E.}, Zewil, S., Maksood, F. Z., \& Feo-Flushing, E. (2024). \textit{\resumelink{https://ema-ans.github.io/projects/thermal-solar-vision.html}{Performance Evaluation of Feature Detectors and Descriptors with Close-Range Solar Panel Images.}} \textcolor{accent}{IEEE VCIP 2024.} \resumelink{https://doi.org/10.1109/VCIP63160.2024.10849783}{[DOI]}}
+  \item\small{\textbf{Ansar, E.}, Narechania, A., \& Sinha, A. \textit{\resumelink{https://ema-ans.github.io/projects/no-single-tell.html}{No Single Tell: Studying Context-Dependent Visible Behavior During Extended Decision Making in Elite Chess.}} \textcolor{accent}{Under review, ACM CHI 2027.}}
+  \item\small{\textbf{Ansar, E.}, Paik, M., \& Narechania, A. \textit{\resumelink{https://ema-ans.github.io/projects/choice-complexity.html}{Does Choice Complexity Impair Decision-Making in Chess?}} \textcolor{accent}{In preparation, CogSci 2027.}}
+  \item\small{\textbf{Ansar, E.}, Cao, Z., \& Narechania, A. \textit{\resumelink{https://ema-ans.github.io/projects/multilingual-visualization.html}{Formative Study to Quantify Differences in Multilingual Chart Interpretations.}} \textcolor{accent}{In preparation, IEEE TVCG.}}
+  \item\small{Hannan, S. A., Bukhari, H., Cantalapiedra, T., \textbf{Ansar, E.}, Baali, M., Singh, R., \& Raj, B. (2026). \textit{\resumelink{https://arxiv.org/abs/2601.01798}{VerLM: Explaining Face Verification Using Natural Language.}} \textcolor{accent}{arXiv:2601.01798.}}
+\end{itemize}
+
+%-----------TEACHING EXPERIENCE-----------
+\section{Teaching Experience}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheadingTwo
+    {Teaching Assistant $|$ \resumelink{https://ema-ans.github.io/\#teaching}{COMP 4211: Machine Learning} $|$ \resumelink{https://www.hkust.edu.hk/}{HKUST}}{Jan 2026 -- May 2026}
+  \resumeItemListStart
+    \item Led lab tutorials and developed ML instructional notebooks; voted best TA across both lecture sections.
+  \resumeItemListEnd
+
+  \resumeSubheadingTwo
+    {Teaching Assistant $|$ \resumelink{https://ema-ans.github.io/\#teaching}{11-785: Introduction to Deep Learning} $|$ \resumelink{https://www.cmu.edu/}{CMU}}{Jun 2024 -- May 2025}
+  \resumeItemListStart
+    \item TAed CMU's graduate deep learning course for two semesters; co-developed assignments with \resumelink{https://lti.cmu.edu/people/faculty/raj-bhiksha.html}{Prof. Bhiksha Raj}.
+  \resumeItemListEnd
+
+  \resumeSubheadingTwo
+    {Lead Teaching Assistant $|$ \resumelink{https://ema-ans.github.io/\#teaching}{15-288: Machine Learning in a Nutshell} $|$ \resumelink{https://www.cmu.edu/}{CMU}}{Jan 2025 -- May 2025}
+  \resumeItemListStart
+    \item Led recitations, mentored capstones, and delivered guest lectures on Transformers, self-attention, and generative AI.
+  \resumeItemListEnd
+
+  \resumeSubheadingTwo
+    {Teaching Assistant $|$ \resumelink{https://ema-ans.github.io/\#teaching}{15-110: Principles of Computing} $|$ \resumelink{https://www.cmu.edu/}{CMU}}{Jan 2024 -- May 2024}
+  \resumeItemListStart
+    \item Led recitations and office hours on Python, algorithmic reasoning, and introductory computer science.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SELECTED INDUSTRY EXPERIENCE-----------
+\section{Selected Industry Experience}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Artificial Intelligence Intern $|$ Microsoft}{Jun 2024 -- Aug 2024}
+    {\textcolor{accent}{\faAward}~\textit{2nd Place, Microsoft Qatar Internship Innovation Competition}}{}
+  \resumeItemListStart
+    \item Led a five-person team in developing a real-time multilingual captioning prototype using Azure and Power Apps, integrating live transcription, translation, and accessibility features.
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Backend Software Engineer Intern $|$ Snoonu}{Jun 2024 -- Aug 2024}
+    {\textcolor{accent}{\faAward}~\textit{Most Promising Project, Qatar's first tech startup to surpass QAR 1B valuation}}{}
+  \resumeItemListStart
+    \item Built a scalable shopper-operations backend using \textbf{.NET 8, MongoDB, and Docker}, supporting 1,000+ orders and 500+ inventory items through modular services and unit-tested APIs.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TALKS & PRESENTATIONS-----------
+\section{Selected Talks \& Presentations}
+
+\begin{itemize}[
+  leftmargin=0.18in,
+  label=\raisebox{0.1ex}{\tiny$\circ$},
+  labelsep=0.4em,
+  itemsep=2pt,
+  parsep=0pt,
+  topsep=1pt
+]
+  \item\small{\textbf{\resumelink{https://3mt.hkust.edu.hk/news/2026-hkust-3mtr-competition}{Three Minute Thesis (3MT)}} --- Hong Kong University of Science and Technology, 2026. \textcolor{accent}{\textit{Youngest competitor; presented M.Phil. research on HCI and visible behavior in elite chess. First Runner-up.}}}
+  \item\small{\textbf{IEEE VCIP 2024} --- \textit{\resumelink{https://doi.org/10.1109/VCIP63160.2024.10849783}{Performance Evaluation of Feature Detectors and Descriptors with Close-Range Solar Panel Images.}} \textcolor{accent}{\textit{First-author conference presentation.}}}
+  \item\small{\textbf{\resumelink{https://ema-ans.github.io/\#podium}{Guest Lecturer, Machine Learning}} --- Carnegie Mellon University Qatar, 2025. \textcolor{accent}{\textit{Delivered three lectures on Transformers, self-attention, and generative AI.}}}
+\end{itemize}
+
+%-----------ACADEMIC SERVICE-----------
+\section{Academic Service}
+
+\begin{itemize}[
+  leftmargin=0.18in,
+  label=\raisebox{0.1ex}{\tiny$\circ$},
+  labelsep=0.4em,
+  itemsep=2pt,
+  parsep=0pt,
+  topsep=1pt
+]
+  \item\small{\textbf{Student Ambassador $|$ Department of Computer Science \& Engineering $|$ HKUST}\\}
+  \item\small{\textbf{Academic Review Board Member $|$ Carnegie Mellon University}\\}
+  \item\small{\textbf{Executive Board Member $|$ Student-Taught Courses (StuCo) $|$ Carnegie Mellon University}\\}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Selected Technical Projects}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheadingTwo
+    {\resumelink{https://ema-ans.github.io/\#technical-detours}{Go Small or Go Home: Lightweight Generative Models} $|$ CMU}{2024}
+  \resumeItemListStart
+    \item Applied quantization, pruning, and distillation to generative models, achieving up to 82\% faster inference, 98\% model-size reduction, and 91\% lower memory use with $<$1\% quality loss. \textcolor{accent}{\faAward}~\textit{Best Generative AI Project among 300+ graduate-course projects.} \resumelink{https://ema-ans.github.io/assets/docs/go-small-or-go-home-poster.pdf}{[Poster]}
+  \resumeItemListEnd
+
+  \resumeSubheadingTwo
+    {\resumelink{https://ema-ans.github.io/\#technical-detours}{Apple Silicon Acceleration for Needle} $|$ CMU}{2024}
+  \resumeItemListStart
+    \item Built a Metal-based tensor backend for Apple M-series GPUs, implementing core tensor operations and benchmarking performance across CPU, CUDA, and M1--M4 hardware. \textcolor{accent}{\faAward}~\textit{Top-Scoring Final Project.} \resumelink{https://youtu.be/MrolRcMDa90?si=pSbrbi2nPNr5Fig6}{[Presentation]}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

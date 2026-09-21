@@ -8933,6 +8933,38 @@ select{
   max-width: 27ch;
 }
 
+.thesis-doi-record{
+  display: grid;
+  gap: 6px;
+  margin: 22px 0 0;
+  padding: 14px 0;
+  border-top: 3px double var(--oxblood);
+  border-bottom: 1px solid var(--line);
+}
+
+.thesis-doi-record span{
+  color: var(--oxblood);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.64rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.thesis-doi-record a{
+  width: fit-content;
+  color: var(--ink);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.thesis-doi-record a:hover,
+.thesis-doi-record a:focus-visible{
+  color: var(--oxblood);
+}
+
 .output-links{
   display: flex;
   flex-wrap: wrap;
