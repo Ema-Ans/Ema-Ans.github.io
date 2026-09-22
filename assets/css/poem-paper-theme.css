@@ -380,3 +380,77 @@ body *{
     padding: 28px 24px;
   }
 }
+
+/* Use the portfolio's shared editorial masthead around each poem. The page
+   itself stays paper-toned, while the header remains consistent with Poems,
+   Notebook, and the home page. */
+.site-header{
+  background: rgba(13, 9, 10, 0.98) !important;
+  border-bottom-color: rgba(243, 235, 221, 0.2) !important;
+}
+
+.site-header .header-inner{
+  align-items: center;
+  min-height: 66px;
+  gap: 28px;
+  padding: 9px 0;
+}
+
+.site-header .masthead-lockup{
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.site-header .masthead-lockup .logo{
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.site-header .logo{
+  color: #F3EBDD !important;
+}
+
+.site-header .masthead-lockup span{
+  color: rgba(243, 235, 221, 0.62) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 0.52rem;
+  letter-spacing: 0.09em;
+}
+
+.site-header .nav a{
+  color: rgba(243, 235, 221, 0.76) !important;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header .nav{
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px 18px !important;
+}
+
+.site-header .nav a:hover,
+.site-header .nav a:focus-visible,
+.site-header .nav a[aria-current]{
+  color: #FFF8ED !important;
+}
+
+@media (max-width: 700px){
+  .site-header{
+    position: relative;
+  }
+
+  .site-header .header-inner{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .site-header .nav{
+    justify-content: flex-start;
+    gap: 7px 14px !important;
+  }
+}

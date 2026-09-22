@@ -5,11 +5,13 @@
 }
 
 .poems-index-page .site-header{
-  background: rgba(243, 235, 221, 0.97);
+  background: rgba(13, 9, 10, 0.98);
+  border-bottom-color: rgba(243, 235, 221, 0.2);
   backdrop-filter: none;
 }
 
 .poems-index-page .nav a{
+  color: rgba(243, 235, 221, 0.76);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.67rem;
   letter-spacing: 0.05em;
@@ -17,7 +19,7 @@
 }
 
 .poems-index-page .nav a[aria-current="page"]{
-  color: var(--oxblood);
+  color: #FFF8ED;
 }
 
 .poems-hero{
