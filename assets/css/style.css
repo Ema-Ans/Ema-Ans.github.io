@@ -14155,3 +14155,12 @@ body h2{
     font-size: 0.96rem;
   }
 }
+
+/* Keep navigation available on narrow screens, including Notebook pages. */
+@media (max-width: 700px){
+  .site-header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+}

@@ -438,9 +438,27 @@ body *{
   color: #FFF8ED !important;
 }
 
+.postcard-header{
+  border-bottom: 3px double #171312 !important;
+}
+
+.postcard-title{
+  color: #171312 !important;
+}
+
+.postcard-date,
+.section-title,
+.archival-note span,
+.signature,
+.page-count{
+  color: #86182A !important;
+}
+
 @media (max-width: 700px){
   .site-header{
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .site-header .header-inner{

@@ -23,6 +23,36 @@
 }
 
 .poems-hero{
+  border-top: 4px double var(--ink);
+}
+
+.poems-topline,
+.poems-hero .section-label,
+.archive-heading .section-label,
+.archive-heading-meta,
+.poem-entry time,
+.poems-index-page .text-link,
+.read-poem{
+  color: var(--oxblood);
+}
+
+.poems-hero h1,
+.archive-heading h2,
+.compendium-outro h2,
+.poem-entry-copy h3{
+  color: var(--ink);
+}
+
+.poems-hero h2{
+  color: var(--oxblood);
+}
+
+.poem-entry:hover h3,
+.poem-entry:focus-visible h3{
+  color: var(--oxblood);
+}
+
+.poems-hero{
   padding: clamp(2.25rem, 4.5vw, 3.75rem) 0 clamp(2.25rem, 4vw, 3.5rem);
   border-bottom: 1px solid var(--border);
 }
@@ -290,7 +320,9 @@
 
 @media (max-width: 620px){
   .poems-index-page .site-header{
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .poems-index-page .header-inner{
