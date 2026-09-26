@@ -1,0 +1,101 @@
+/* Three Minute Thesis screening room. */
+.presentation-hero{
+  min-height: calc(100vh - 86px);
+  padding: clamp(42px, 7vw, 92px) 0 70px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--paper) 88%, transparent), transparent 62%),
+    var(--paper);
+}
+
+.presentation-shell{
+  max-width: 1180px;
+}
+
+.presentation-hero h1{
+  max-width: 980px;
+  margin: 18px 0 8px;
+  font-size: clamp(3.1rem, 8vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.presentation-deck{
+  max-width: 760px;
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.presentation-player{
+  margin: 0;
+}
+
+.presentation-player video{
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border: 1px solid var(--ink);
+  box-shadow: 12px 12px 0 var(--oxblood);
+}
+
+.presentation-player figcaption{
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.presentation-notes{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.presentation-notes > p{
+  max-width: 710px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.presentation-links,
+.three-minute-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.presentation-links{
+  justify-content: flex-end;
+}
+
+@media (max-width: 700px){
+  .presentation-hero{
+    padding-top: 34px;
+  }
+
+  .presentation-hero h1{
+    font-size: clamp(3rem, 16vw, 4.8rem);
+  }
+
+  .presentation-player video{
+    box-shadow: 6px 6px 0 var(--oxblood);
+  }
+
+  .presentation-notes{
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-links{
+    justify-content: flex-start;
+  }
+}
