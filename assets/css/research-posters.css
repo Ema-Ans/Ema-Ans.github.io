@@ -1,0 +1,174 @@
+/* An always-open magazine poster rail beside Research Rooms. */
+.scandal-poster-column{
+  position: static;
+  top: auto;
+  padding-left: clamp(16px, 2vw, 24px);
+}
+
+.scandal-poster-column .scandal-desk-heading{
+  margin-bottom: 14px;
+}
+
+.scandal-poster-column .scandal-desk-heading span{
+  display: block;
+  max-width: 24ch;
+}
+
+.scandal-posters{
+  display: grid;
+  gap: clamp(18px, 2.5vw, 28px);
+}
+
+.scandal-poster{
+  min-width: 0;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.scandal-poster:first-child{
+  padding-top: 0;
+}
+
+.scandal-poster:last-child{
+  border-bottom: 0;
+}
+
+.scandal-poster figure{
+  margin: 0 0 11px;
+  padding: 6px;
+  background: color-mix(in srgb, var(--paper-deep) 78%, var(--paper));
+  border: 1px solid var(--line);
+  box-shadow: 5px 5px 0 color-mix(in srgb, var(--oxblood) 82%, transparent);
+  transform: rotate(-0.35deg);
+}
+
+.scandal-poster:nth-child(even) figure{
+  transform: rotate(0.45deg);
+}
+
+.scandal-poster img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: grayscale(0.28) sepia(0.06) contrast(1.04);
+}
+
+.scandal-poster-label{
+  margin: 0 0 7px;
+  color: var(--oxblood);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.scandal-poster h4{
+  margin: 0 0 7px;
+  color: var(--ink);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.28rem, 1.8vw, 1.62rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.scandal-poster-copy > p:not(.scandal-poster-label){
+  margin: 0 0 9px;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.47;
+}
+
+.scandal-poster small{
+  display: block;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.055em;
+  line-height: 1.45;
+  text-transform: lowercase;
+}
+
+@media (max-width: 1080px){
+  .scandal-poster-column{
+    order: 0;
+    padding: 24px 0 0;
+    border-top: 4px double var(--oxblood);
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  .scandal-posters{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px clamp(20px, 4vw, 42px);
+  }
+
+  .scandal-poster:nth-last-child(-n + 2){
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 640px){
+  .scandal-poster-column{
+    margin-top: 8px;
+  }
+
+  .scandal-posters{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .scandal-poster,
+  .scandal-poster:first-child{
+    display: grid;
+    grid-template-columns: minmax(96px, 0.38fr) minmax(0, 1fr);
+    gap: 15px;
+    align-items: start;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .scandal-poster:nth-last-child(2){
+    border-bottom: 1px solid var(--line);
+  }
+
+  .scandal-poster figure{
+    margin: 0;
+    padding: 4px;
+    box-shadow: 3px 3px 0 color-mix(in srgb, var(--oxblood) 82%, transparent);
+    transform: none;
+  }
+
+  .scandal-poster:nth-child(even) figure{
+    transform: none;
+  }
+
+  .scandal-poster img{
+    aspect-ratio: 3 / 4;
+  }
+
+  .scandal-poster h4{
+    font-size: clamp(1.18rem, 5.6vw, 1.42rem);
+  }
+
+  .scandal-poster-copy > p:not(.scandal-poster-label){
+    font-size: 0.82rem;
+    line-height: 1.42;
+  }
+}
+
+@media (max-width: 380px){
+  .scandal-poster,
+  .scandal-poster:first-child{
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .scandal-poster-copy > p:not(.scandal-poster-label){
+    display: none;
+  }
+}
