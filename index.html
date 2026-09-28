@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/home-sidebar.css" />
 </head>
 <body class="home-page home-editorial">
   <header class="site-header">
@@ -59,11 +60,40 @@
               <p><span>current question</span>What does thinking look like from the outside?</p>
               <p><span>working across</span>vision · behavior · language · interaction</p>
             </div>
-            <a class="editorial-callout editorial-callout-reveal editorial-callout-link" href="#scandal-index" aria-label="Open the full scandal index">
-              <p class="callout-label"><span aria-hidden="true">✦</span> SCANDAL</p>
-              <p>sources allege she actually enjoys teaching</p>
-              <span class="callout-index-route">06 reports // open the scandal index ↓</span>
-            </a>
+            <aside class="scandal-desk scandal-desk-front" id="scandal-index" aria-labelledby="scandal-desk-title">
+              <div class="scandal-desk-heading">
+                <p>Side column</p>
+                <h2 id="scandal-desk-title">The Scandal Index</h2>
+                <span>front-page edition · open a report for evidence</span>
+              </div>
+              <div class="scandal-headlines">
+                <button type="button" class="scandal-headline" data-scandal-key="teaching" aria-haspopup="dialog" aria-controls="scandal-dialog">
+                  <span>✦ Scandal</span>
+                  <strong>sources allege she actually enjoys teaching</strong>
+                </button>
+                <button type="button" class="scandal-headline" data-scandal-key="butterfly" aria-haspopup="dialog" aria-controls="scandal-dialog">
+                  <span>✦ Field report</span>
+                  <strong>local butterfly requests immediate co-authorship</strong>
+                </button>
+                <button type="button" class="scandal-headline" data-scandal-key="bamboo" aria-haspopup="dialog" aria-controls="scandal-dialog">
+                  <span>✦ Cultural incident</span>
+                  <strong>friendship campaign accidentally targets elders</strong>
+                </button>
+                <button type="button" class="scandal-headline" data-scandal-key="debugging" aria-haspopup="dialog" aria-controls="scandal-dialog">
+                  <span>✦ Debugging bulletin</span>
+                  <strong>code works; giant crabs called to verify</strong>
+                </button>
+                <button type="button" class="scandal-headline" data-scandal-key="three-mt" aria-haspopup="dialog" aria-controls="scandal-dialog">
+                  <span>✦ Stage report</span>
+                  <strong>witnesses report an alarming amount of conviction</strong>
+                </button>
+                <button type="button" class="scandal-headline" data-scandal-key="running" aria-haspopup="dialog" aria-controls="scandal-dialog">
+                  <span>✦ Dawn patrol</span>
+                  <strong>5:00 a.m. runner reportedly knows every retiree on the route</strong>
+                </button>
+              </div>
+              <div class="scandal-hover-preview" id="scandal-hover-preview" aria-hidden="true"></div>
+            </aside>
           </aside>
         </div>
       </div>
@@ -190,7 +220,7 @@
           </div>
         </header>
 
-        <div class="rooms-spread">
+        <div class="rooms-spread rooms-spread-solo">
           <div class="rooms-timeline">
             <div class="timeline-year" aria-label="2022"><span>2022</span></div>
             <article class="timeline-milestone">
@@ -320,40 +350,6 @@
             </article>
           </div>
 
-          <aside class="scandal-desk" id="scandal-index" aria-labelledby="scandal-desk-title">
-            <div class="scandal-desk-heading">
-              <p>Side column</p>
-              <h3 id="scandal-desk-title">The Scandal Index</h3>
-              <span>hover to preview · click for evidence</span>
-            </div>
-            <div class="scandal-headlines">
-              <button type="button" class="scandal-headline" data-scandal-key="teaching" aria-haspopup="dialog" aria-controls="scandal-dialog">
-                <span>✦ Scandal</span>
-                <strong>sources allege she actually enjoys teaching</strong>
-              </button>
-              <button type="button" class="scandal-headline" data-scandal-key="butterfly" aria-haspopup="dialog" aria-controls="scandal-dialog">
-                <span>✦ Field report</span>
-                <strong>local butterfly requests immediate co-authorship</strong>
-              </button>
-              <button type="button" class="scandal-headline" data-scandal-key="bamboo" aria-haspopup="dialog" aria-controls="scandal-dialog">
-                <span>✦ Cultural incident</span>
-                <strong>friendship campaign accidentally targets elders</strong>
-              </button>
-              <button type="button" class="scandal-headline" data-scandal-key="debugging" aria-haspopup="dialog" aria-controls="scandal-dialog">
-                <span>✦ Debugging bulletin</span>
-                <strong>code works; giant crabs called to verify</strong>
-              </button>
-              <button type="button" class="scandal-headline" data-scandal-key="three-mt" aria-haspopup="dialog" aria-controls="scandal-dialog">
-                <span>✦ Stage report</span>
-                <strong>witnesses report an alarming amount of conviction</strong>
-              </button>
-              <button type="button" class="scandal-headline" data-scandal-key="running" aria-haspopup="dialog" aria-controls="scandal-dialog">
-                <span>✦ Dawn patrol</span>
-                <strong>5:00 a.m. runner reportedly knows every retiree on the route</strong>
-              </button>
-            </div>
-            <div class="scandal-hover-preview" id="scandal-hover-preview" aria-hidden="true"></div>
-          </aside>
         </div>
       </div>
     </section>
