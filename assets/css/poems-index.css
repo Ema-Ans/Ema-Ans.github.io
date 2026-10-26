@@ -256,6 +256,102 @@
   font-size: 1.08rem;
 }
 
+.reader-notes{
+  padding: 48px 0 52px;
+  border-top: 1px solid var(--border);
+  background: var(--note-bg);
+}
+
+.reader-notes-heading{
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 12px 40px;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.reader-notes-heading .section-label{
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.reader-notes-heading h2{
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.reader-notes-heading > p:last-child{
+  max-width: 34ch;
+  margin: 0;
+  color: var(--muted);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+.reader-notes-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.reader-note{
+  position: relative;
+  display: block;
+  padding: 24px 24px 21px;
+  border: 1px solid var(--note-border);
+  background: rgba(243, 235, 221, 0.48);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.reader-note:hover,
+.reader-note:focus-visible{
+  background: rgba(243, 235, 221, 0.78);
+  transform: translateY(-2px);
+}
+
+.reader-note:focus-visible{
+  outline: 1px solid var(--note);
+  outline-offset: 5px;
+}
+
+.reader-note-mark{
+  display: block;
+  margin-bottom: 14px;
+  color: var(--oxblood);
+  font-size: 1.15rem;
+}
+
+.reader-note blockquote{
+  max-width: 34ch;
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: clamp(1.2rem, 2vw, 1.48rem);
+  line-height: 1.3;
+}
+
+.reader-note cite{
+  display: block;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.reader-note cite em{
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.05em;
+  text-transform: none;
+}
+
 .paper-archive{
   padding: 42px 0 46px;
   background: var(--bg-soft);
@@ -303,7 +399,8 @@
 
 @media (max-width: 800px){
   .poems-hero-grid,
-  .compendium-outro-grid{
+  .compendium-outro-grid,
+  .reader-notes-heading{
     grid-template-columns: 1fr;
     gap: 26px;
   }
@@ -388,5 +485,9 @@
 
   .archive-note{
     margin-right: 0;
+  }
+
+  .reader-notes-grid{
+    grid-template-columns: 1fr;
   }
 }
