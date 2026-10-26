@@ -210,12 +210,88 @@
 }
 
 .poem-likes{
-  padding-left: 14px;
-  border-left: 1px solid var(--border);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  min-width: 82px;
+  padding: 6px 9px;
+  border: 1px solid var(--note-border);
+  background: var(--note-bg);
+  color: var(--oxblood);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.poem-likes > span{
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.18rem;
+  line-height: 0.8;
+}
+
+.poem-likes strong{
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.poem-likes small{
+  color: var(--muted);
+  font-size: 0.52rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.poem-reader-note{
+  display: block;
+  margin: -4px 0 17px 142px;
+  padding: 11px 15px 12px;
+  border-left: 2px solid var(--note-border);
+  background: rgba(134, 24, 42, 0.035);
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.poem-reader-note:hover,
+.poem-reader-note:focus-visible{
+  background: var(--note-bg);
+  border-left-color: var(--oxblood);
+}
+
+.poem-reader-note:focus-visible{
+  outline: 1px solid var(--note);
+  outline-offset: 3px;
+}
+
+.reader-note-label{
+  display: block;
+  margin-bottom: 4px;
+  color: var(--oxblood);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.56rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.poem-reader-note q{
+  display: block;
+  max-width: 68ch;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.poem-reader-note cite{
+  display: block;
+  margin-top: 5px;
   color: var(--muted);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem;
+  font-size: 0.55rem;
+  font-style: normal;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .poem-entry img{
@@ -476,6 +552,10 @@
 
   .poem-entry-copy{
     grid-row: 3;
+  }
+
+  .poem-reader-note{
+    margin: -3px 0 15px;
   }
 
   .poem-entry-copy h3{
