@@ -42,11 +42,28 @@
   transform: rotate(-0.35deg);
 }
 
+.scandal-poster-trigger{
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.scandal-poster-trigger:focus-visible{
+  outline: 2px solid var(--oxblood);
+  outline-offset: 6px;
+}
+
 .scandal-poster:nth-child(even) figure{
   transform: rotate(0.45deg);
 }
 
-.scandal-poster img{
+.scandal-poster img,
+.scandal-poster video{
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -147,7 +164,8 @@
     transform: none;
   }
 
-  .scandal-poster img{
+  .scandal-poster img,
+  .scandal-poster video{
     aspect-ratio: 3 / 4;
   }
 
