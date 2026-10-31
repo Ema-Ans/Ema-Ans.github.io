@@ -262,6 +262,93 @@ h1, h2, h3, p{
   color: var(--text);
 }
 
+.hero-section-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0 0 22px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-section-links a{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-section-links a:hover,
+.hero-section-links a:focus-visible{
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.hero-section-links .section-link-papers{
+  color: var(--oxblood);
+}
+
+.hero-section-links .section-link-projects{
+  color: #35627A;
+}
+
+.hero-section-links .section-link-cv{
+  color: #8A6420;
+}
+
+.project-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: baseline;
+}
+
+.project-hero-video{
+  margin: 28px 0 0;
+}
+
+.project-hero-video figcaption{
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.behavior-video{
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  margin-top: 24px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.drive-link{
+  position: relative;
+  color: #35627A;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.drive-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.drive-link:hover{
+  color: var(--text);
+}
+
 .lead{
   max-width: 60ch;
   font-size: 1.03rem;
@@ -1272,6 +1359,38 @@ h1, h2, h3, p{
   background: var(--surface, #171012);
   border: 1px solid var(--border);
   border-radius: 3px;
+}
+
+.research-figure img{
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.research-figure-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 32px);
+  align-items: start;
+}
+
+.research-figure-stack{
+  display: grid;
+  gap: clamp(24px, 4vw, 42px);
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.research-figure-tall img{
+  width: min(100%, 760px);
+  margin-inline: auto;
+}
+
+.research-figure-tall figcaption{
+  width: min(100%, 760px);
+  margin-inline: auto;
 }
 
 .research-figure figcaption{
@@ -6707,6 +6826,13 @@ select{
   filter: grayscale(0.68) sepia(0.08) contrast(1.04);
 }
 
+.manuscript-photo img{
+  padding: clamp(8px, 1.5vw, 16px);
+  background: #fff;
+  object-fit: contain;
+  filter: none;
+}
+
 .project-photo figcaption,
 .project-hero-photo figcaption{
   margin-top: 8px;
@@ -7667,6 +7793,13 @@ select{
 .brief-hero .project-hero-photo img{
   max-height: 660px;
   object-fit: cover;
+}
+
+.brief-hero .project-hero-photo.manuscript-photo img{
+  box-sizing: border-box;
+  background: #fff;
+  object-fit: contain;
+  filter: none;
 }
 
 .hero-review-note{
@@ -8751,6 +8884,13 @@ select{
   object-fit: cover;
 }
 
+.earlier-grid .project-photo.manuscript-photo img{
+  box-sizing: border-box;
+  background: #fff;
+  object-fit: contain;
+  filter: none;
+}
+
 .earlier-grid .archive-deck{
   margin: 0 0 7px;
   color: var(--ink);
@@ -8769,6 +8909,24 @@ select{
 .earlier-grid > article > a{
   width: fit-content;
   margin-top: auto;
+}
+
+.archive-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: baseline;
+  margin-top: auto;
+}
+
+.archive-actions a{
+  width: fit-content;
+}
+
+@media (max-width: 720px){
+  .research-figure-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px){
@@ -11902,6 +12060,7 @@ body h2{
   .education-only-layout h2{
     max-width: 14ch;
   }
+
 }
 
 /* Applied Detours: one quick timeline, using the Research Rooms grammar. */
