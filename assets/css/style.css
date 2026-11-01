@@ -300,8 +300,17 @@ h1, h2, h3, p{
 .project-actions{
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 18px;
-  align-items: baseline;
+  column-gap: 22px;
+  row-gap: 12px;
+  align-items: center;
+}
+
+.project-actions > a{
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5em;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .project-hero-video{
