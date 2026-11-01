@@ -12056,6 +12056,61 @@ body h2{
   border-bottom: 0;
 }
 
+.education-institution{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 18px;
+  margin: 0 0 8px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.education-institution .entity-link{
+  font-weight: inherit;
+}
+
+.education-note .degree{
+  font-weight: 750;
+}
+
+.podium-spread{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(218px, 252px);
+  gap: clamp(30px, 4vw, 52px);
+  align-items: start;
+}
+
+.podium-main-column{
+  min-width: 0;
+}
+
+.podium-main-column .podium-ledger,
+.podium-main-column .podium-more{
+  width: 100%;
+}
+
+.podium-scandal-index{
+  top: 86px;
+  margin-top: 26px;
+}
+
+@media (max-width: 1080px){
+  .podium-spread{
+    grid-template-columns: 1fr;
+  }
+
+  .podium-scandal-index{
+    position: static;
+    margin-top: 20px;
+    padding: 20px 0 0;
+    border-top: 2px solid var(--oxblood);
+    border-left: 0;
+  }
+}
+
 @media (max-width: 820px){
   .printed-layout,
   .margins-layout,
@@ -12169,7 +12224,18 @@ body h2{
   line-height: 1.04;
 }
 
-.detour-main > p:not(.detour-meta){
+.detour-main .detour-role{
+  margin: 0 0 9px;
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 650;
+  letter-spacing: 0.035em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.detour-main > p:not(.detour-meta):not(.detour-role){
   max-width: 64ch;
   margin: 0;
   color: var(--ink-soft);
@@ -14331,4 +14397,100 @@ body h2{
     top: 0;
     z-index: 100;
   }
+}
+
+/* Research-room names use the same compact scale as the QCRI stop. */
+.rooms-timeline .room-entry h3,
+.rooms-timeline .room-featured h3,
+.rooms-timeline .room-current h3,
+.rooms-timeline .qsiurp-entry h3,
+.rooms-timeline .room-compact h3,
+.rooms-timeline .room-branch h3{
+  font-size: clamp(1.48rem, 2vw, 1.78rem);
+  line-height: 1.06;
+}
+
+/* Publications: separate the citation, status, and file actions. */
+.printed-list{
+  border-top: 3px double var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.printed-list li{
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px 0 22px;
+  border-top: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 30%, var(--line));
+}
+
+.printed-list li:last-child{
+  border-bottom: 0;
+}
+
+.printed-list li > span{
+  padding-top: 4px;
+  color: var(--oxblood);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.printed-list article{
+  min-width: 0;
+}
+
+.printed-list h3{
+  max-width: 38ch;
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.22rem, 1.7vw, 1.52rem);
+  font-weight: 550;
+  line-height: 1.18;
+}
+
+.printed-list article > p{
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+
+.printed-list .paper-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  margin-top: 11px;
+}
+
+.printed-list .paper-actions a{
+  color: var(--oxblood);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.035em;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--oxblood) 42%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+.printed-list .paper-actions a:hover,
+.printed-list .paper-actions a:focus-visible{
+  color: var(--red-bright);
+  text-decoration-color: currentColor;
+}
+
+.writing-scandal{
+  max-width: 270px;
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 2px solid var(--oxblood);
+}
+
+.writing-scandal .scandal-poster{
+  margin: 0;
 }
