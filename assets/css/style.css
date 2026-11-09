@@ -293,6 +293,10 @@ h1, h2, h3, p{
   color: #8A6420;
 }
 
+.hero-section-links .section-link-github{
+  color: #35627A;
+}
+
 .project-actions{
   display: flex;
   flex-wrap: wrap;
@@ -9161,6 +9165,10 @@ select{
   background: var(--paper);
   border-top: 5px solid var(--oxblood);
   border-bottom: 1px solid var(--line);
+}
+
+#why-i-teach{
+  scroll-margin-top: 74px;
 }
 
 .rooms-spread{
